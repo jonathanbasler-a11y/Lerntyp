@@ -29,7 +29,7 @@ export function Ueberzeugung({ itemId, onAntwort }: { itemId: 'U1' | 'U2' | 'U3'
           </button>
         ))}
       </div>
-      <VorleseKnopf />
+      <VorleseKnopf dateien={item ? [item.audio] : []} />
     </section>
   );
 }

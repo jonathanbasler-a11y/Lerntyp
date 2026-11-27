@@ -1,0 +1,130 @@
+[
+  {
+    "key": "start.titel",
+    "datei": "ui-start-titel.mp3"
+  },
+  {
+    "key": "start.untertitel",
+    "datei": "ui-start-untertitel.mp3"
+  },
+  {
+    "key": "lernausweis.titel",
+    "datei": "ui-lernausweis-titel.mp3"
+  },
+  {
+    "key": "lernausweis.hinweis",
+    "datei": "ui-lernausweis-hinweis.mp3"
+  },
+  {
+    "key": "fertig.titel",
+    "datei": "ui-fertig-titel.mp3"
+  },
+  {
+    "key": "fertig.text",
+    "datei": "ui-fertig-text.mp3"
+  },
+  {
+    "key": "kind.laedt.titel",
+    "datei": "ui-kind-laedt-titel.mp3"
+  },
+  {
+    "key": "kind.laedt.text",
+    "datei": "ui-kind-laedt-text.mp3"
+  },
+  {
+    "key": "kind.fehler.titel",
+    "datei": "ui-kind-fehler-titel.mp3"
+  },
+  {
+    "key": "kind.fehler.text",
+    "datei": "ui-kind-fehler-text.mp3"
+  },
+  {
+    "key": "kind.pausiert.titel",
+    "datei": "ui-kind-pausiert-titel.mp3"
+  },
+  {
+    "key": "kind.pausiert.text",
+    "datei": "ui-kind-pausiert-text.mp3"
+  },
+  {
+    "key": "kind.start.titel",
+    "datei": "ui-kind-start-titel.mp3"
+  },
+  {
+    "key": "kind.start.text",
+    "datei": "ui-kind-start-text.mp3"
+  },
+  {
+    "key": "kind.vermutung.titel",
+    "datei": "ui-kind-vermutung-titel.mp3"
+  },
+  {
+    "key": "kind.vermutung.text",
+    "datei": "ui-kind-vermutung-text.mp3"
+  },
+  {
+    "key": "kind.lernen.titel",
+    "datei": "ui-kind-lernen-titel.mp3"
+  },
+  {
+    "key": "kind.lernen.text",
+    "datei": "ui-kind-lernen-text.mp3"
+  },
+  {
+    "key": "kind.sterne.titel",
+    "datei": "ui-kind-sterne-titel.mp3"
+  },
+  {
+    "key": "kind.sterne.frage",
+    "datei": "ui-kind-sterne-frage.mp3"
+  },
+  {
+    "key": "kind.test.frage",
+    "datei": "ui-kind-test-frage.mp3"
+  },
+  {
+    "key": "kind.test.frage_verzoegert",
+    "datei": "ui-kind-test-frage-verzoegert.mp3"
+  },
+  {
+    "key": "kind.zuschauer.titel",
+    "datei": "ui-kind-zuschauer-titel.mp3"
+  },
+  {
+    "key": "kind.zuschauer.text",
+    "datei": "ui-kind-zuschauer-text.mp3"
+  },
+  {
+    "key": "kind.nach_vorne.titel",
+    "datei": "ui-kind-nach-vorne-titel.mp3"
+  },
+  {
+    "key": "kind.klassenergebnis.text",
+    "datei": "ui-kind-klassenergebnis-text.mp3"
+  },
+  {
+    "key": "kind.vergleich.text",
+    "datei": "ui-kind-vergleich-text.mp3"
+  },
+  {
+    "key": "kind.warten.titel",
+    "datei": "ui-kind-warten-titel.mp3"
+  },
+  {
+    "key": "kind.warten.text",
+    "datei": "ui-kind-warten-text.mp3"
+  },
+  {
+    "key": "kind.superkraft.frage",
+    "datei": "ui-kind-superkraft-frage.mp3"
+  },
+  {
+    "key": "kind.weiter_geht.titel",
+    "datei": "ui-kind-weiter-geht-titel.mp3"
+  },
+  {
+    "key": "kind.weiter_geht.text",
+    "datei": "ui-kind-weiter-geht-text.mp3"
+  }
+]

@@ -1,0 +1,1500 @@
+{
+  "version": "0.1",
+  "zweck": "Bilder für die Lerndetektive (docs/02 §5.1). Ein Gegenstand pro Bild, sofort eindeutig benennbar, ohne Schrift. Stil: .art-style.json, Thema 'objekt'.",
+  "ablage": "ComfyUI-Ausgabe nach art/ausgabe/<id>.png (1024×1024), dann npm run bilder:konvertieren -- art/ausgabe",
+  "seed": 20261127,
+  "aufloesung": "1024x1024",
+  "stapelgroesse": 20,
+  "pruefung": [
+    "Ist der Gegenstand sofort erkennbar?",
+    "Keine Buchstaben, Zahlen oder schriftähnlichen Kringel?",
+    "Nur ein Gegenstand, keine Personen?",
+    "Passt der Stil zu den anderen Bildern?"
+  ],
+  "items": [
+    {
+      "id": "blume",
+      "wort": "Blume",
+      "set": "A",
+      "prompt": "a simple stylized flower with five round pink petals, yellow center, green stem with two leaves",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "vase"
+      ],
+      "hinweis": "Benennungsrisiko: Kinder könnten die Art nennen (Tulpe, Rose); bewusst allgemein halten"
+    },
+    {
+      "id": "bruecke",
+      "wort": "Brücke",
+      "set": "A",
+      "prompt": "a small arched stone bridge over a little stream",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "people",
+        "cars"
+      ]
+    },
+    {
+      "id": "buch",
+      "wort": "Buch",
+      "set": "A",
+      "prompt": "a closed hardcover book with a plain red cover, slightly angled",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "title",
+        "letters on the cover"
+      ]
+    },
+    {
+      "id": "elefant",
+      "wort": "Elefant",
+      "set": "A",
+      "prompt": "a grey elephant, full body, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "fahrrad",
+      "wort": "Fahrrad",
+      "set": "A",
+      "prompt": "a bicycle, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "rider",
+        "person"
+      ]
+    },
+    {
+      "id": "fisch",
+      "wort": "Fisch",
+      "set": "A",
+      "prompt": "a blue fish with fins, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "aquarium",
+        "bowl"
+      ],
+      "hinweis": "Nicht golden, sonst „Goldfisch“"
+    },
+    {
+      "id": "geige",
+      "wort": "Geige",
+      "set": "A",
+      "prompt": "a violin with its bow lying next to it",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "handschuh",
+      "wort": "Handschuh",
+      "set": "A",
+      "prompt": "a single knitted wool glove with five fingers",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "mitten"
+      ],
+      "hinweis": "Fünf Finger, kein Fäustling"
+    },
+    {
+      "id": "pilz",
+      "wort": "Pilz",
+      "set": "A",
+      "prompt": "a mushroom with a brown cap and a white stem",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "red cap with white dots"
+      ],
+      "hinweis": "Kein Fliegenpilz, sonst „Fliegenpilz“"
+    },
+    {
+      "id": "puppe",
+      "wort": "Puppe",
+      "set": "A",
+      "prompt": "a toy doll with yellow hair wearing a simple dress, standing",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "teddy bear"
+      ]
+    },
+    {
+      "id": "tasse",
+      "wort": "Tasse",
+      "set": "A",
+      "prompt": "a cup with a handle on a small saucer",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "mug"
+      ],
+      "hinweis": "Mit Untertasse, damit es nicht als „Becher“ gilt"
+    },
+    {
+      "id": "zitrone",
+      "wort": "Zitrone",
+      "set": "A",
+      "prompt": "a yellow lemon",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "lemon slices"
+      ]
+    },
+    {
+      "id": "ananas",
+      "wort": "Ananas",
+      "set": "B",
+      "prompt": "a pineapple with green leaves",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "auto",
+      "wort": "Auto",
+      "set": "B",
+      "prompt": "a small red car, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "license plate text",
+        "people"
+      ]
+    },
+    {
+      "id": "brot",
+      "wort": "Brot",
+      "set": "B",
+      "prompt": "a round loaf of bread",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "slices",
+        "knife"
+      ]
+    },
+    {
+      "id": "ente",
+      "wort": "Ente",
+      "set": "B",
+      "prompt": "a mallard duck with a green head, side view, standing",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "rubber duck",
+        "goose"
+      ],
+      "hinweis": "Echte Ente; eine Gummiente hieße „Quietscheente“"
+    },
+    {
+      "id": "glocke",
+      "wort": "Glocke",
+      "set": "B",
+      "prompt": "a golden bell with a clapper",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "church"
+      ]
+    },
+    {
+      "id": "jacke",
+      "wort": "Jacke",
+      "set": "B",
+      "prompt": "an empty blue zip-up jacket, front view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person",
+        "hood text"
+      ]
+    },
+    {
+      "id": "maus",
+      "wort": "Maus",
+      "set": "B",
+      "prompt": "a small grey mouse with a long tail, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "computer mouse"
+      ],
+      "hinweis": "Tier, keine Computermaus"
+    },
+    {
+      "id": "schaukel",
+      "wort": "Schaukel",
+      "set": "B",
+      "prompt": "a playground swing hanging from a wooden frame",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "children",
+        "slide"
+      ]
+    },
+    {
+      "id": "stuhl",
+      "wort": "Stuhl",
+      "set": "B",
+      "prompt": "a simple wooden chair, three-quarter view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "tafel",
+      "wort": "Tafel",
+      "set": "B",
+      "prompt": "an empty green school chalkboard on a wooden stand",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "writing",
+        "chalk text",
+        "numbers"
+      ],
+      "hinweis": "Die Tafel muss völlig leer sein"
+    },
+    {
+      "id": "wolke",
+      "wort": "Wolke",
+      "set": "B",
+      "prompt": "a white fluffy cloud with soft light grey shading",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "rain",
+        "sun"
+      ],
+      "hinweis": "Wolke muss sich vom weißen Hintergrund abheben (Umriss)"
+    },
+    {
+      "id": "zahnbuerste",
+      "wort": "Zahnbürste",
+      "set": "B",
+      "prompt": "a toothbrush",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "toothpaste tube"
+      ]
+    },
+    {
+      "id": "biene",
+      "wort": "Biene",
+      "set": "C",
+      "prompt": "a honeybee with yellow and black stripes and wings",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "flower"
+      ]
+    },
+    {
+      "id": "brief",
+      "wort": "Brief",
+      "set": "C",
+      "prompt": "a closed paper envelope with a postage stamp",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "writing",
+        "address",
+        "letters"
+      ],
+      "hinweis": "Keine Schrift auf dem Umschlag"
+    },
+    {
+      "id": "bus",
+      "wort": "Bus",
+      "set": "C",
+      "prompt": "a yellow city bus, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "route number",
+        "people"
+      ]
+    },
+    {
+      "id": "ei",
+      "wort": "Ei",
+      "set": "C",
+      "prompt": "a single brown chicken egg",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "easter decoration",
+        "colored egg"
+      ],
+      "hinweis": "Nicht bemalt, sonst „Osterei“"
+    },
+    {
+      "id": "feder",
+      "wort": "Feder",
+      "set": "C",
+      "prompt": "a single bird feather",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "bird"
+      ]
+    },
+    {
+      "id": "giraffe",
+      "wort": "Giraffe",
+      "set": "C",
+      "prompt": "a giraffe, full body, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "klavier",
+      "wort": "Klavier",
+      "set": "C",
+      "prompt": "an upright piano with a closed lid and visible keys",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "grand piano",
+        "person"
+      ],
+      "hinweis": "Klavier, kein Flügel"
+    },
+    {
+      "id": "luftballon",
+      "wort": "Luftballon",
+      "set": "C",
+      "prompt": "a red balloon with a string",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "many balloons"
+      ]
+    },
+    {
+      "id": "stiefel",
+      "wort": "Stiefel",
+      "set": "C",
+      "prompt": "a single brown leather boot",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "rubber boot"
+      ],
+      "hinweis": "Lederstiefel; ein Gummistiefel hieße „Gummistiefel“"
+    },
+    {
+      "id": "tomate",
+      "wort": "Tomate",
+      "set": "C",
+      "prompt": "a red tomato",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "slices"
+      ]
+    },
+    {
+      "id": "topf",
+      "wort": "Topf",
+      "set": "C",
+      "prompt": "a cooking pot with a lid and two handles",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "stove",
+        "food"
+      ]
+    },
+    {
+      "id": "treppe",
+      "wort": "Treppe",
+      "set": "C",
+      "prompt": "a short wooden staircase with five steps",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "banane",
+      "wort": "Banane",
+      "set": "D",
+      "prompt": "a yellow banana",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "bunch"
+      ]
+    },
+    {
+      "id": "bett",
+      "wort": "Bett",
+      "set": "D",
+      "prompt": "a bed with a pillow and a blanket",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "birne",
+      "wort": "Birne",
+      "set": "D",
+      "prompt": "a green pear",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "light bulb"
+      ],
+      "hinweis": "Obst, keine Glühbirne"
+    },
+    {
+      "id": "flasche",
+      "wort": "Flasche",
+      "set": "D",
+      "prompt": "an empty glass bottle",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "label"
+      ]
+    },
+    {
+      "id": "floete",
+      "wort": "Flöte",
+      "set": "D",
+      "prompt": "a recorder flute",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ],
+      "hinweis": "Blockflöte: „Blockflöte“ zählt als richtig benannt"
+    },
+    {
+      "id": "frosch",
+      "wort": "Frosch",
+      "set": "D",
+      "prompt": "a green frog sitting",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "crown"
+      ]
+    },
+    {
+      "id": "giesskanne",
+      "wort": "Gießkanne",
+      "set": "D",
+      "prompt": "a green watering can",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "flowers",
+        "water"
+      ]
+    },
+    {
+      "id": "gitarre",
+      "wort": "Gitarre",
+      "set": "D",
+      "prompt": "an acoustic guitar",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "gurke",
+      "wort": "Gurke",
+      "set": "D",
+      "prompt": "a green cucumber",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "pickle jar",
+        "slices"
+      ]
+    },
+    {
+      "id": "hammer",
+      "wort": "Hammer",
+      "set": "D",
+      "prompt": "a hammer with a wooden handle",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "nails"
+      ]
+    },
+    {
+      "id": "hose",
+      "wort": "Hose",
+      "set": "D",
+      "prompt": "a pair of blue trousers lying flat",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "igel",
+      "wort": "Igel",
+      "set": "D",
+      "prompt": "a hedgehog, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "apples on spines"
+      ]
+    },
+    {
+      "id": "kaktus",
+      "wort": "Kaktus",
+      "set": "D",
+      "prompt": "a green cactus in a small clay pot",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "katze",
+      "wort": "Katze",
+      "set": "D",
+      "prompt": "a sitting cat, front view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "kette",
+      "wort": "Kette",
+      "set": "D",
+      "prompt": "a necklace of colorful round beads",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "metal chain",
+        "anchor chain"
+      ],
+      "hinweis": "Halskette, keine Metallkette"
+    },
+    {
+      "id": "koffer",
+      "wort": "Koffer",
+      "set": "D",
+      "prompt": "a closed suitcase with a handle",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "stickers"
+      ]
+    },
+    {
+      "id": "kreisel",
+      "wort": "Kreisel",
+      "set": "D",
+      "prompt": "a colorful toy spinning top",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "krone",
+      "wort": "Krone",
+      "set": "D",
+      "prompt": "a golden crown with jewels",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "kuchen",
+      "wort": "Kuchen",
+      "set": "D",
+      "prompt": "a round plain sponge cake dusted with powdered sugar on a plate",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "layered cream cake",
+        "candles"
+      ],
+      "hinweis": "Einfacher Kuchen; Sahnetorte hieße „Torte“"
+    },
+    {
+      "id": "kaese",
+      "wort": "Käse",
+      "set": "D",
+      "prompt": "a wedge of yellow cheese with holes",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "mouse"
+      ]
+    },
+    {
+      "id": "mond",
+      "wort": "Mond",
+      "set": "D",
+      "prompt": "a yellow crescent moon",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "face",
+        "stars"
+      ]
+    },
+    {
+      "id": "muetze",
+      "wort": "Mütze",
+      "set": "D",
+      "prompt": "a knitted winter hat with a pom-pom",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "pferd",
+      "wort": "Pferd",
+      "set": "D",
+      "prompt": "a brown horse, full body, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "rider"
+      ]
+    },
+    {
+      "id": "rakete",
+      "wort": "Rakete",
+      "set": "D",
+      "prompt": "a rocket",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "flags"
+      ]
+    },
+    {
+      "id": "roller",
+      "wort": "Roller",
+      "set": "D",
+      "prompt": "a kick scooter for children, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "motor scooter",
+        "person"
+      ],
+      "hinweis": "Tretroller, kein Motorroller"
+    },
+    {
+      "id": "schal",
+      "wort": "Schal",
+      "set": "D",
+      "prompt": "a striped knitted scarf",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "schiff",
+      "wort": "Schiff",
+      "set": "D",
+      "prompt": "a big ship with a smokestack on water, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "small boat"
+      ],
+      "hinweis": "Großes Schiff, kein Boot"
+    },
+    {
+      "id": "schluessel",
+      "wort": "Schlüssel",
+      "set": "D",
+      "prompt": "a single house key",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "keyring with many keys"
+      ]
+    },
+    {
+      "id": "schnecke",
+      "wort": "Schnecke",
+      "set": "D",
+      "prompt": "a snail with a spiral shell",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "schraube",
+      "wort": "Schraube",
+      "set": "D",
+      "prompt": "a metal screw",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "screwdriver"
+      ]
+    },
+    {
+      "id": "sonne",
+      "wort": "Sonne",
+      "set": "D",
+      "prompt": "a yellow sun with rays",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "face"
+      ]
+    },
+    {
+      "id": "spiegel",
+      "wort": "Spiegel",
+      "set": "D",
+      "prompt": "a round wall mirror with a wooden frame",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "reflection of a person"
+      ]
+    },
+    {
+      "id": "teller",
+      "wort": "Teller",
+      "set": "D",
+      "prompt": "an empty white plate",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "food",
+        "cutlery"
+      ]
+    },
+    {
+      "id": "trompete",
+      "wort": "Trompete",
+      "set": "D",
+      "prompt": "a golden trumpet",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "tuer",
+      "wort": "Tür",
+      "set": "D",
+      "prompt": "a closed wooden door with a door handle",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "house number"
+      ]
+    },
+    {
+      "id": "wuerfel",
+      "wort": "Würfel",
+      "set": "D",
+      "prompt": "a white die with black dots",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "two dice"
+      ]
+    },
+    {
+      "id": "anker",
+      "wort": "Anker",
+      "set": "E",
+      "prompt": "a ship anchor",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "chain",
+        "rope"
+      ]
+    },
+    {
+      "id": "apfel",
+      "wort": "Apfel",
+      "set": "E",
+      "prompt": "a red apple with a leaf",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ball",
+      "wort": "Ball",
+      "set": "E",
+      "prompt": "a red rubber ball with a white stripe",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "football",
+        "basketball"
+      ],
+      "hinweis": "Kein Fußball, sonst „Fußball“"
+    },
+    {
+      "id": "baum",
+      "wort": "Baum",
+      "set": "E",
+      "prompt": "a leafy deciduous tree with a brown trunk",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "fir tree",
+        "apples"
+      ],
+      "hinweis": "Laubbaum, keine Tanne"
+    },
+    {
+      "id": "besen",
+      "wort": "Besen",
+      "set": "E",
+      "prompt": "a broom",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "witch"
+      ]
+    },
+    {
+      "id": "blatt",
+      "wort": "Blatt",
+      "set": "E",
+      "prompt": "a single green oval leaf",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "maple leaf"
+      ],
+      "hinweis": "Allgemeines Blatt, sonst „Ahornblatt“"
+    },
+    {
+      "id": "brezel",
+      "wort": "Brezel",
+      "set": "E",
+      "prompt": "a soft pretzel with coarse salt",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ],
+      "hinweis": "Schwäbische Brezel, in BW vertraut"
+    },
+    {
+      "id": "brille",
+      "wort": "Brille",
+      "set": "E",
+      "prompt": "a pair of eyeglasses",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "sunglasses",
+        "person"
+      ],
+      "hinweis": "Normale Brille, keine Sonnenbrille"
+    },
+    {
+      "id": "erdbeere",
+      "wort": "Erdbeere",
+      "set": "E",
+      "prompt": "a red strawberry with green leaves",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "eule",
+      "wort": "Eule",
+      "set": "E",
+      "prompt": "an owl sitting on a branch",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "fenster",
+      "wort": "Fenster",
+      "set": "E",
+      "prompt": "a closed window with a white frame and four panes",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "house",
+        "curtains"
+      ]
+    },
+    {
+      "id": "flugzeug",
+      "wort": "Flugzeug",
+      "set": "E",
+      "prompt": "a passenger airplane flying, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "logo"
+      ]
+    },
+    {
+      "id": "geschenk",
+      "wort": "Geschenk",
+      "set": "E",
+      "prompt": "a gift box with a ribbon and a bow",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "tag text"
+      ]
+    },
+    {
+      "id": "globus",
+      "wort": "Globus",
+      "set": "E",
+      "prompt": "a globe on a stand",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "country names"
+      ],
+      "hinweis": "Der Globus darf keine Schrift tragen"
+    },
+    {
+      "id": "hund",
+      "wort": "Hund",
+      "set": "E",
+      "prompt": "a sitting dog, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "kamm",
+      "wort": "Kamm",
+      "set": "E",
+      "prompt": "a comb",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "brush"
+      ]
+    },
+    {
+      "id": "kerze",
+      "wort": "Kerze",
+      "set": "E",
+      "prompt": "a lit candle",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "candlestick with several candles"
+      ]
+    },
+    {
+      "id": "krokodil",
+      "wort": "Krokodil",
+      "set": "E",
+      "prompt": "a green crocodile, full body, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "lampe",
+      "wort": "Lampe",
+      "set": "E",
+      "prompt": "a table lamp with a lampshade",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "desk"
+      ]
+    },
+    {
+      "id": "leiter",
+      "wort": "Leiter",
+      "set": "E",
+      "prompt": "a wooden ladder",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "pinguin",
+      "wort": "Pinguin",
+      "set": "E",
+      "prompt": "a penguin standing",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "regenschirm",
+      "wort": "Regenschirm",
+      "set": "E",
+      "prompt": "an open red umbrella",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person",
+        "rain"
+      ]
+    },
+    {
+      "id": "rucksack",
+      "wort": "Rucksack",
+      "set": "E",
+      "prompt": "a blue backpack",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "schere",
+      "wort": "Schere",
+      "set": "E",
+      "prompt": "a pair of scissors",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "paper"
+      ]
+    },
+    {
+      "id": "schildkroete",
+      "wort": "Schildkröte",
+      "set": "E",
+      "prompt": "a tortoise, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "schmetterling",
+      "wort": "Schmetterling",
+      "set": "E",
+      "prompt": "a colorful butterfly with open wings",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "flower"
+      ]
+    },
+    {
+      "id": "schultuete",
+      "wort": "Schultüte",
+      "set": "E",
+      "prompt": "a large colorful paper cone for the first school day (German Schultüte), decorated with stars, closed at the top with tissue paper",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "child"
+      ],
+      "hinweis": "SDXL kennt Schultüten kaum: genau prüfen, notfalls neu erzeugen"
+    },
+    {
+      "id": "sofa",
+      "wort": "Sofa",
+      "set": "E",
+      "prompt": "a sofa with cushions",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "stern",
+      "wort": "Stern",
+      "set": "E",
+      "prompt": "a yellow five-pointed star",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "sky"
+      ]
+    },
+    {
+      "id": "saege",
+      "wort": "Säge",
+      "set": "E",
+      "prompt": "a hand saw with a wooden handle",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "wood"
+      ]
+    },
+    {
+      "id": "tisch",
+      "wort": "Tisch",
+      "set": "E",
+      "prompt": "a wooden table",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "chairs",
+        "food"
+      ]
+    },
+    {
+      "id": "traktor",
+      "wort": "Traktor",
+      "set": "E",
+      "prompt": "a green tractor, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "farmer"
+      ]
+    },
+    {
+      "id": "uhr",
+      "wort": "Uhr",
+      "set": "E",
+      "prompt": "a round wall clock with hands and hour marks",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "numbers",
+        "digits"
+      ],
+      "hinweis": "Nur Striche, KEINE Zahlen auf dem Zifferblatt"
+    },
+    {
+      "id": "vulkan",
+      "wort": "Vulkan",
+      "set": "E",
+      "prompt": "an erupting volcano",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "people"
+      ]
+    },
+    {
+      "id": "zange",
+      "wort": "Zange",
+      "set": "E",
+      "prompt": "a pair of pliers",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "zug",
+      "wort": "Zug",
+      "set": "E",
+      "prompt": "a red passenger train with locomotive, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "people"
+      ]
+    },
+    {
+      "id": "gabel",
+      "wort": "Gabel",
+      "set": "F",
+      "prompt": "a fork",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "knife",
+        "plate"
+      ]
+    },
+    {
+      "id": "hubschrauber",
+      "wort": "Hubschrauber",
+      "set": "F",
+      "prompt": "a helicopter, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "kirsche",
+      "wort": "Kirsche",
+      "set": "F",
+      "prompt": "a pair of red cherries on one stem",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "kuh",
+      "wort": "Kuh",
+      "set": "F",
+      "prompt": "a black and white cow, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "lineal",
+      "wort": "Lineal",
+      "set": "F",
+      "prompt": "a wooden ruler with tick marks",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "numbers",
+        "digits"
+      ],
+      "hinweis": "Nur Striche, KEINE Zahlen"
+    },
+    {
+      "id": "loeffel",
+      "wort": "Löffel",
+      "set": "F",
+      "prompt": "a spoon",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "fork",
+        "bowl"
+      ]
+    },
+    {
+      "id": "muschel",
+      "wort": "Muschel",
+      "set": "F",
+      "prompt": "a scallop seashell",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "beach"
+      ]
+    },
+    {
+      "id": "pinsel",
+      "wort": "Pinsel",
+      "set": "F",
+      "prompt": "a paintbrush with a little paint on the tip",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "paint box"
+      ]
+    },
+    {
+      "id": "rutsche",
+      "wort": "Rutsche",
+      "set": "F",
+      "prompt": "a playground slide with a ladder",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "children",
+        "swing"
+      ]
+    },
+    {
+      "id": "schwein",
+      "wort": "Schwein",
+      "set": "F",
+      "prompt": "a pink pig, side view",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers"
+      ]
+    },
+    {
+      "id": "trommel",
+      "wort": "Trommel",
+      "set": "F",
+      "prompt": "a drum with two drumsticks",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "person"
+      ]
+    },
+    {
+      "id": "zelt",
+      "wort": "Zelt",
+      "set": "F",
+      "prompt": "a camping tent",
+      "nicht": [
+        "text",
+        "letters",
+        "numbers",
+        "people"
+      ]
+    }
+  ]
+}

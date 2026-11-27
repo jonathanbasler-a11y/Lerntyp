@@ -1,5 +1,6 @@
 import { LerndetektiveDatenSchema, type Item } from '@lerntyp/shared';
 import roh from '@data/lerndetektive/experiment.json';
+import bilderRoh from '@data/lerndetektive/bilder.json';
 import platzhalterRoh from '@data/lerndetektive/platzhalter.json';
 
 /** Inhalte der Lerndetektive, beim Start gegen das Schema geprüft (Quelle: /data). */
@@ -17,3 +18,6 @@ export function itemFuer(id: string): Item {
   if (!it) throw new Error(`Unbekanntes Item „${id}“`);
   return it;
 }
+
+/** Items mit echtem Bild (data/lerndetektive/bilder.json, erzeugt von `npm run bilder:pruefen`); alle anderen zeigen den Platzhalter. */
+export const echteBilder: ReadonlySet<string> = new Set(bilderRoh.vorhanden);

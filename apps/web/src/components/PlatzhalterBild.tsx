@@ -1,5 +1,5 @@
 import type { Item } from '@lerntyp/shared';
-import { platzhalter } from '../lerndetektive/daten';
+import { echteBilder, platzhalter } from '../lerndetektive/daten';
 import { t } from '../text';
 
 function hash(s: string): number {
@@ -10,9 +10,13 @@ function hash(s: string): number {
 
 /**
  * Platzhalterbild (ohne sichtbaren Text, nur `aria-label`): Farbe und Form nur nach Kategorie, ohne Buchstaben und ohne Wort,
- * damit die Bedingung „bild“ das Wort nicht verrät. Die echten Illustrationen kommen später.
+ * damit die Bedingung „bild“ das Wort nicht verrät. Steht das Item in data/lerndetektive/bilder.json, zeigt die Komponente
+ * stattdessen das echte Bild (`public/bilder/<id>.webp`, dekorativ: `alt=""`, ohne Text).
  */
-export function PlatzhalterBild({ item }: { item: Item }) {
+export function PlatzhalterBild({ item, echte = echteBilder }: { item: Item; echte?: ReadonlySet<string> }) {
+  if (echte.has(item.id)) {
+    return <img className="platzhalter" src={`${import.meta.env.BASE_URL}bilder/${item.id}.webp`} alt="" draggable={false} width={512} height={512} data-testid="echtes-bild" />;
+  }
   const stil = platzhalter[item.kategorie] ?? { farbe: '#6c7a84', form: 'M10 10H90V90H10Z' };
   const h = hash(item.id);
   const drehung = ((h % 5) - 2) * 7;

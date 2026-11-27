@@ -1,0 +1,13 @@
+{
+  "style_suffix": ", simple flat children's book illustration, single object, centered, isolated on plain white background, soft friendly colours, clear dark outlines, no text, no letters, no numbers",
+  "themes": {
+    "objekt": "one everyday object for 9-10 year old children, prototypical and instantly recognizable, square composition, object fills about 70 percent of the frame"
+  },
+  "projekt": {
+    "ausgabe": "art/ausgabe/<id>.png",
+    "ziel": "apps/web/public/bilder/<id>.webp (512x512, via npm run bilder:konvertieren)",
+    "aufloesung": "1024x1024",
+    "seed_fest": 20261127,
+    "prompts": "art/lerndetektive-prompts.json"
+  }
+}

@@ -91,7 +91,9 @@ Antwortformat: drei Bildkarten.
   - Bildhaftigkeit
   - **Benennungs-Übereinstimmung** (Kinder nennen das Bild eindeutig gleich, z. B. nicht *Tasse/Becher*)
 - **Bilder:** eigene, einheitliche, schlichte Illustrationen (keine Fremd-Cliparts, keine Fotos von Marken). Die Benennungs-Übereinstimmung wird in R1 mit 10–15 Kindern geprüft. Items unter 80 % Übereinstimmung werden ersetzt.
-- **Audio:** vorproduzierte Sprachaufnahmen (eine Sprecherin oder ein Sprecher, neutral, Normlautstärke) und keine Sprachsynthese aus der Cloud.
+- **Audio:** vorproduzierte Audiodateien, einmalig erzeugt mit der Offline-Sprachsynthese **Piper**, Stimme `de_DE-thorsten-high` (eine männliche Stimme, neutral, Normlautstärke −16 LUFS). Keine Sprachausgabe zur Laufzeit, keine Anfrage an fremde Dienste. Eine einzige synthetische Stimme standardisiert Aussprache und Tempo für alle Wörter. Erzeugung: `npm run audio:erzeugen` (Skript `scripts/audio/erzeugen.py`, Liste in `data/audio/manifest.json`).
+  - *Lizenz:* Der Thorsten-Datensatz steht unter CC0. Das Modell wurde aus Pipers englischer Stimme „lessac“ feinjustiert; deren Datensatz-Lizenz ist für eine spätere kommerzielle Nutzung *zu verifizieren (R0)*.
+  - *Verständlichkeit* der synthetischen Stimme für Kinder (auch DaZ) wird in R1 geprüft ([05](05-forschungsplan.md) L6).
 
 **Warum bekannte Dinge statt Fantasiewesen oder Fremdwörter?** Die Aufgabe misst, ob ein Kind sich merkt, *welche* Dinge gezeigt wurden (episodisches Gedächtnis). Das hat drei Vorteile:
 - Es ist ohne Vorwissen fair.

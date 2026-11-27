@@ -29,7 +29,7 @@ export function Vorliebe({ itemId, onAntwort }: { itemId: 'V1' | 'V2' | 'V3' | '
           </button>
         ))}
       </div>
-      <VorleseKnopf />
+      <VorleseKnopf dateien={item ? [item.audio] : []} />
     </section>
   );
 }

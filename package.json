@@ -21,7 +21,10 @@
     "icons": "node scripts/gen-icons.mjs",
     "e2e": "playwright test -c apps/web/playwright.config.ts --trace off",
     "prebuild": "npm run validate:data",
-    "prebuild:live": "npm run validate:data"
+    "prebuild:live": "npm run validate:data",
+    "audio:erzeugen": "python3 -I scripts/audio/erzeugen.py",
+    "bilder:konvertieren": "node scripts/bilder/konvertieren.mjs",
+    "bilder:pruefen": "tsx scripts/bilder/pruefen.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

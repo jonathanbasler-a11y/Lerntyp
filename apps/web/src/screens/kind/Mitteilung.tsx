@@ -12,7 +12,7 @@ export function Mitteilung({ id, titel, text, weiter }: { id: string; titel: Tex
           {t(weiter.label)}
         </button>
       )}
-      <VorleseKnopf />
+      <VorleseKnopf keys={[titel, text]} />
     </section>
   );
 }

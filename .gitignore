@@ -14,3 +14,6 @@ test-results/
 dist-live/
 apps/web/dev-dist/
 playwright/.cache/
+
+# Bildausgabe aus ComfyUI (nur lokal)
+art/ausgabe/

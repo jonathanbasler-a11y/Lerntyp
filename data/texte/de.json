@@ -154,5 +154,15 @@
   "beamer.sofort_sr": "sofort",
   "beamer.woche_sr": "nach 1 Woche",
   "demo.steuerung.klein": "Demo-Steuerung",
-  "beamer.woche_legende": "Nach 1 Woche: dunkler Rand, Gittermuster"
+  "beamer.woche_legende": "Nach 1 Woche: dunkler Rand, Gittermuster",
+  "audio.check_satz": "Kannst du mich gut hören?",
+  "benennen.kopf": "Für Erwachsene: Benennungstest",
+  "benennen.hinweis": "Jedes Bild einzeln zeigen. Das Kind sagt, was es sieht. Danach „Wort zeigen“. Es wird nichts gespeichert.",
+  "benennen.fortschritt": "Bild {n} von {gesamt}",
+  "benennen.wort_zeigen": "Wort zeigen",
+  "benennen.wort_verbergen": "Wort verbergen",
+  "benennen.weiter": "Weiter",
+  "benennen.zurueck": "Zurück",
+  "benennen.bild_fehlt": "Noch kein echtes Bild, Platzhalter",
+  "benennen.ende": "Das war das letzte Bild."
 }

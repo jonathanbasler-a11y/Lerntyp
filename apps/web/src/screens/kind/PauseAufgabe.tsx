@@ -37,7 +37,7 @@ export function PauseAufgabe({ dauer_ms, onFertig }: { dauer_ms: number; onFerti
           </button>
         ))}
       </div>
-      <VorleseKnopf />
+      <VorleseKnopf keys={['kind.sterne.titel', 'kind.sterne.frage']} />
     </section>
   );
 }
