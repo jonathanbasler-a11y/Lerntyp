@@ -1,0 +1,17 @@
+{
+  "hinweis": "Platzhalter für Bilder: Farbe und Form je Kategorie, ohne Buchstaben und ohne Wort. Die echten Illustrationen kommen später (02 §5.1).",
+  "kategorien": {
+    "tiere": { "farbe": "#c8762b", "form": "M50 8L92 40L76 90H24L8 40Z" },
+    "haushalt": { "farbe": "#4a7fb5", "form": "M16 16H84V84H16Z" },
+    "essen": { "farbe": "#b8483f", "form": "M50 12A38 38 0 1 1 49.99 12Z" },
+    "natur": { "farbe": "#3f8f5a", "form": "M50 8L92 50L50 92L8 50Z" },
+    "fahrzeuge": { "farbe": "#6b5aa8", "form": "M50 10L90 84H10Z" },
+    "haus": { "farbe": "#8a6a3f", "form": "M28 12H72L94 50L72 88H28L6 50Z" },
+    "kleidung": { "farbe": "#b0457f", "form": "M50 8L61 38L93 38L67 57L77 90L50 70L23 90L33 57L7 38L39 38Z" },
+    "musik": { "farbe": "#2f8f94", "form": "M38 10H62V38H90V62H62V90H38V62H10V38H38Z" },
+    "spielzeug": { "farbe": "#c2a122", "form": "M10 70A40 40 0 0 1 90 70Z" },
+    "sonstiges": { "farbe": "#6c7a84", "form": "M60 10A40 40 0 1 0 90 60A32 32 0 1 1 60 10Z" },
+    "werkzeug": { "farbe": "#5c6f3a", "form": "M10 30H90V70H10Z" },
+    "schule": { "farbe": "#a3503a", "form": "M50 8C50 8 84 46 84 64A34 34 0 0 1 16 64C16 46 50 8 50 8Z" }
+  }
+}
