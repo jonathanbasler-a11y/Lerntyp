@@ -24,7 +24,7 @@ export function Lernausweis({ onWaehle, onZurueck }: { onWaehle: (alias: string)
         <button type="button" className="btn btn-quiet" onClick={onZurueck}>
           {t('lernausweis.zurueck')}
         </button>
-        <VorleseKnopf />
+        <VorleseKnopf keys={['lernausweis.titel', 'lernausweis.hinweis']} />
       </div>
     </section>
   );

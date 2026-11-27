@@ -8,7 +8,7 @@ test('Kind-Durchlauf: Hauptstunde, Klassenergebnis, Woche später, Folgestunde b
   await expect(page.getByTestId('demo-banner')).toHaveText('Demo – nur Dummy-Daten');
   await expect(page.getByTestId('demo-steuerung')).toContainText('Demo: Lehrkraft-Steuerung');
 
-  // Ton-Check (Demo: „Ton folgt“), dann Überzeugungen vorher
+  // Ton-Check (check.mp3 vorhanden), dann Überzeugungen vorher
   await toncheck(page);
   await ueberzeugungen(page);
 
@@ -172,4 +172,88 @@ test('Manifest hat Scope und Kurzname', async ({ page, request }) => {
   const m = await res.json();
   expect(m.scope).toBe(BASE);
   expect(m.short_name).toBe('Lerndetektive');
+});
+
+test.describe('Audio und Bilder', () => {
+  test('Ton-Check findet check.mp3: kein „Ton folgt“', async ({ page }) => {
+    await alsKind(page);
+    await expect(page.getByTestId('schritt-start')).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Ton testen' })).toBeVisible();
+    await expect(page.getByTestId('ton-folgt')).toHaveCount(0);
+  });
+
+  test('Fehlt check.mp3, zeigt der Ton-Check „Ton folgt“ und blockiert nicht', async ({ page }) => {
+    await page.route('**/audio/check.mp3', (r) => r.fulfill({ status: 404, body: '' }));
+    await alsKind(page);
+    await expect(page.getByTestId('ton-folgt')).toBeVisible();
+    await page.getByTestId('audio-weiter').click();
+    await expect(page.getByTestId('schritt-ueberzeugung')).toBeVisible();
+  });
+
+  test('Vorlese-Knopf spielt die Aussage nur auf Tipp (u1.mp3)', async ({ page }) => {
+    const mp3: string[] = [];
+    page.on('request', (r) => {
+      const m = /\/audio\/([a-z0-9-]+\.mp3)$/.exec(new URL(r.url()).pathname);
+      if (m?.[1]) mp3.push(m[1]);
+    });
+    await alsKind(page);
+    await toncheck(page);
+    await expect(page.getByTestId('schritt-ueberzeugung')).toHaveAttribute('data-item', 'U1');
+    await page.waitForTimeout(300);
+    expect(mp3.filter((n) => n === 'u1.mp3')).toEqual([]); // kein Autoplay
+    await expect(page.getByTestId('vorlesen')).toBeEnabled();
+    await page.getByTestId('vorlesen').click();
+    await expect.poll(() => mp3.includes('u1.mp3')).toBe(true);
+  });
+
+  test('Lernphase (Bedingung Wort/Bild+Wort) fordert die Wort-Audiodatei an', async ({ page }) => {
+    test.setTimeout(120_000);
+    const mp3: string[] = [];
+    page.on('request', (r) => {
+      const m = /\/audio\/([a-z0-9]+\.mp3)$/.exec(new URL(r.url()).pathname);
+      if (m?.[1]) mp3.push(m[1]);
+    });
+    await alsKind(page);
+    await toncheck(page);
+    await ueberzeugungen(page);
+    await freigeben(page);
+    await vorlieben(page);
+    await page.getByTestId('vermutung-weiter').click();
+    await freigeben(page);
+    await page.getByTestId('lernen-los').click();
+    await expect(page.getByTestId('schritt-warten')).toBeVisible({ timeout: 60_000 });
+    const woerter = mp3.filter((n) => !/^(check|u\d|v\d)\.mp3$/.test(n));
+    expect(woerter.length).toBeGreaterThan(10);
+  });
+
+  test('Benennungstest: Wort erst nach „Wort zeigen“, nichts gespeichert, keine fremden Hosts', async ({ page, baseURL }) => {
+    const host = new URL(baseURL ?? '').host;
+    const fremd: string[] = [];
+    const posts: string[] = [];
+    page.on('request', (r) => {
+      const u = new URL(r.url());
+      if (u.protocol === 'data:' || u.protocol === 'blob:') return;
+      if (u.host !== host) fremd.push(r.url());
+      if (r.method() !== 'GET' && r.method() !== 'HEAD') posts.push(r.method());
+    });
+    await page.goto(`${BASE}?benennen=1`);
+    await expect(page.getByRole('heading', { name: 'Für Erwachsene: Benennungstest' })).toBeVisible();
+    await expect(page.getByTestId('benennen-fortschritt')).toHaveText('Bild 1 von 120');
+    const buehne = page.locator('.benennen-buehne');
+    const id = await buehne.getAttribute('data-item');
+    await expect(page.getByTestId('platzhalter-bild')).toBeVisible(); // noch keine echten Bilder
+    await expect(page.getByTestId('benennen-wort')).toBeHidden();
+    await expect(page.getByTestId('benennen-wort')).toHaveText('');
+    await page.getByTestId('benennen-wort-zeigen').click();
+    await expect(page.getByTestId('benennen-wort')).toBeVisible();
+    await expect(page.getByTestId('benennen-wort')).not.toHaveText('');
+    await page.getByTestId('benennen-weiter').click();
+    await expect(page.getByTestId('benennen-fortschritt')).toHaveText('Bild 2 von 120');
+    await expect(page.getByTestId('benennen-wort')).toBeHidden(); // beim Weiterblättern wieder verborgen
+    expect(await buehne.getAttribute('data-item')).not.toBe(id);
+    await page.getByTestId('benennen-zurueck').click();
+    await expect(page.getByTestId('benennen-fortschritt')).toHaveText('Bild 1 von 120');
+    expect(fremd).toEqual([]);
+    expect(posts).toEqual([]);
+  });
 });

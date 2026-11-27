@@ -1,0 +1,1122 @@
+[
+  {
+    "datei": "blume.mp3",
+    "text": "Blume",
+    "sha256": "906c6a0ed3efb38fae24acaff9efa1b52389e4e0a6acdff9e68c140478362103",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "bruecke.mp3",
+    "text": "Brücke",
+    "sha256": "a63bff5162ca2137821d9226a4ddc60828cc6c82d4e954adee61dfa33fe28e29",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "buch.mp3",
+    "text": "Buch",
+    "sha256": "5f36321c429928f458b772bbf5d63c4e51236c98f80144303c2541e4a3e1a55c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "elefant.mp3",
+    "text": "Elefant",
+    "sha256": "9c0d5d91b62084e68fa9f18d1450dd0c2b2ca0663163c26963d3a91c1bad2665",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "fahrrad.mp3",
+    "text": "Fahrrad",
+    "sha256": "6c966afb1bc294d825bb75247af72c005c80a0a38b255e4670458cf62820b982",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "fisch.mp3",
+    "text": "Fisch",
+    "sha256": "e5c286bb5e8314c9f6173dde74c704b7cf2207a1042df7f2513dba36190dfe4d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "geige.mp3",
+    "text": "Geige",
+    "sha256": "ce40cdff6e1104ecf8a109efda6f94717bf176baf988527f4f39300e6391fe11",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "handschuh.mp3",
+    "text": "Handschuh",
+    "sha256": "b9579d748f5c6a50a79da57dac5627d77769276a32b1a05e8326ed30b042069a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pilz.mp3",
+    "text": "Pilz",
+    "sha256": "dd12db9683fb66acb9d90e35980e7b3cee2bdafbc2b58727550e1a4d3466d4d3",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "puppe.mp3",
+    "text": "Puppe",
+    "sha256": "9ebc8f1b4c4e23afb4d536aad8a4494c14d05ce3e742c884def46794317eb5c9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "tasse.mp3",
+    "text": "Tasse",
+    "sha256": "38f92fa979173e9e01c75d16d164f0ecb8a4e67c121e334af0585a31ac2d9607",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "zitrone.mp3",
+    "text": "Zitrone",
+    "sha256": "d06917f3eee44a5ffbb79cfa6140ae27bd0908ec49335850e87d150066727868",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ananas.mp3",
+    "text": "Ananas",
+    "sha256": "5616070bca9916d34cb14cb6eefa175288af64f4421895f31486262a2a816370",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "auto.mp3",
+    "text": "Auto",
+    "sha256": "0286249762f7c94349cdc0ba3bb2255baf9a80036e2193ead1d77696f888582f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "brot.mp3",
+    "text": "Brot",
+    "sha256": "ef53751671e5219919b139afb43865b325192727a2f1ca216b018d4509abb57f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ente.mp3",
+    "text": "Ente",
+    "sha256": "569642411fb7c410af85ffb56364870f1bbf1c108676b8ba36aa329bf4cd5fe5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "glocke.mp3",
+    "text": "Glocke",
+    "sha256": "d5abcd38a56bf9119363dbc415b7da27b944c0cd1e47a03eabc506a55e8e0d06",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "jacke.mp3",
+    "text": "Jacke",
+    "sha256": "2d3af8db3690a876fd754f6f3591dc57db9bfcab91c9666bfc29f680bdb1145d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "maus.mp3",
+    "text": "Maus",
+    "sha256": "51c62d69a62c78d9a8335b92025008fb49c7aea47a92271f07b54a6590820e25",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schaukel.mp3",
+    "text": "Schaukel",
+    "sha256": "bbe187f533b2a0dbb0dc5a365470f1ae9cca1e566861d5a8790abae2a40c5aca",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "stuhl.mp3",
+    "text": "Stuhl",
+    "sha256": "947f9e7b2620e0d62572d0d4c6009b3977207ff46a5f256b7cfaeb3c3518e72d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "tafel.mp3",
+    "text": "Tafel",
+    "sha256": "5b937f54c4a3e6a7422fe42dc1d299a36c4c8263292c9257197f5426c4dad87a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "wolke.mp3",
+    "text": "Wolke",
+    "sha256": "3a1338ef215e8415265abb1a4b41ca314ab7a7a7ebcc6e8f0aa341f3dbc4063c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "zahnbuerste.mp3",
+    "text": "Zahnbürste",
+    "sha256": "86f803700a1c9f01cc025537c33558abbb0b8f82c73c6434fe388a158702fc55",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "biene.mp3",
+    "text": "Biene",
+    "sha256": "49530e11d87d958956db5e2acbb11da37f964fd521dbb5afda67caaa5e3c9adc",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "brief.mp3",
+    "text": "Brief",
+    "sha256": "ac40ae1e8d41291c59c7f09640725d31f88930b2074aad8adb17959d97bc1497",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "bus.mp3",
+    "text": "Bus",
+    "sha256": "bb3d83ff198b139d1037d5db0fddf97b2e0129f7ce67dc9d16fdeb56f4ee00d8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ei.mp3",
+    "text": "Ei",
+    "sha256": "a252f7aeeb243472c688c66638f40ed9fb12f55ad74b5047ac9ee7ee97690476",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "feder.mp3",
+    "text": "Feder",
+    "sha256": "8d0a36e2d012c7b20fcadf5ea3735ad08517a379e5b66db02884721da1eb8eee",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "giraffe.mp3",
+    "text": "Giraffe",
+    "sha256": "56151fd506603705af3ffb8012ff68bc69eb664fa1015db3eec4fc356b12fb53",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "klavier.mp3",
+    "text": "Klavier",
+    "sha256": "bb815bb06befa141e34d015019740c7f97bfb23eb7042cd315a06851c6dbcbeb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "luftballon.mp3",
+    "text": "Luftballon",
+    "sha256": "1721824e93b04222317a8e813b81aec564669367b475c920dba06931388237f0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "stiefel.mp3",
+    "text": "Stiefel",
+    "sha256": "c38738ff2373ec28ac5453d3bb143f869e4a4deaf876d6cd04304bf6caf34230",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "tomate.mp3",
+    "text": "Tomate",
+    "sha256": "96eaefafc3db56ca49863a066b13a6a3c8139d28b49f083673c219bbd81f294e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "topf.mp3",
+    "text": "Topf",
+    "sha256": "56f85b2732075259c336a53cb8a2a95b494affa7247550bd49ea14ff5431fc7a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "treppe.mp3",
+    "text": "Treppe",
+    "sha256": "a7e8564d5f62e5d00ead9e55c81709a0772d69437e89c70750c3199ad0ac08e0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "banane.mp3",
+    "text": "Banane",
+    "sha256": "a2df25966b3283049808cd437c806a17903b09de0df719aa0e3e296ef3ef0c66",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "bett.mp3",
+    "text": "Bett",
+    "sha256": "e65491290432b96b206040e1bb0ff1b617cb80010dc2700f357dd451a670f3a2",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "birne.mp3",
+    "text": "Birne",
+    "sha256": "ef4c3c5605a2fdf359c3a2d91552588f097bfc866020e330a9b59dfc8e6b34c8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "flasche.mp3",
+    "text": "Flasche",
+    "sha256": "7033e3f022d3debcbdf275047bce8a8b55c92724d2903733a55b87ea04e8f1b3",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "floete.mp3",
+    "text": "Flöte",
+    "sha256": "61110c1bc13da0c5f34728d9817990d705678383c77731d864eb71f049642ab8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "frosch.mp3",
+    "text": "Frosch",
+    "sha256": "e006d852a61a315f74b4bc346ac447ffc5dab61a0d7e10a343f62794aa4503e9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "giesskanne.mp3",
+    "text": "Gießkanne",
+    "sha256": "014e84de233763cfbe492bb02b4445a6a44d75729c471d4b372ec97c29e5b3ae",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "gitarre.mp3",
+    "text": "Gitarre",
+    "sha256": "744f57f6387911677f3a44e3a8ec529265cd841ec550aa656b7309df57bfe55f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "gurke.mp3",
+    "text": "Gurke",
+    "sha256": "d38a9d10d17d18a115df2c9d5b4019a3cc903e8cf60a4e8c22548db7dea9949f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "hammer.mp3",
+    "text": "Hammer",
+    "sha256": "c157cbf647f56e730a083e3cfd4de511b593e9f0e665b0b81fed4815137358ce",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "hose.mp3",
+    "text": "Hose",
+    "sha256": "5ffdfd6dc15c249900c4ff65101e48b9ea41039413c939484bcd4f0bd197dbf8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "igel.mp3",
+    "text": "Igel",
+    "sha256": "d09c3c3ea5761004204b586a0892c7fce634224b163e1d6757c761f69c4680a5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kaktus.mp3",
+    "text": "Kaktus",
+    "sha256": "a6e2b59abd0363b75b9413cc22c73c783866f1a22509a80d15793f142791696e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "katze.mp3",
+    "text": "Katze",
+    "sha256": "cf95e1c70fb246cfd40858dd984943c6616662811a1f638a6c6dbb2a5476c3d6",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kette.mp3",
+    "text": "Kette",
+    "sha256": "e8dd439fa94cfa26f6013c28d71de455a0f534eecdb9e8c09f22bd85daff52ac",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "koffer.mp3",
+    "text": "Koffer",
+    "sha256": "c87ecc82c4d9bc7e4813b247f2703d2a51da3ffb4ddd00b270b9662df6a539cf",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kreisel.mp3",
+    "text": "Kreisel",
+    "sha256": "13bf7a59736c9b168bcb7a43fb2a38a8755066ed745a405d4ed78e9757c35ee4",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "krone.mp3",
+    "text": "Krone",
+    "sha256": "ec7a92296c27a17fa277140d91ae452aecac51e959afc7931c0dced51ec8f54b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kuchen.mp3",
+    "text": "Kuchen",
+    "sha256": "5217cbb8e93d1d18a2f10f3d2d3181d3f2a6f3eaf4d03a7e81b14b89e0b7349b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kaese.mp3",
+    "text": "Käse",
+    "sha256": "f9eeb52c9bc41ee560ba93468b92317220be4939954e8b50591b8b71accc53ae",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "mond.mp3",
+    "text": "Mond",
+    "sha256": "d658cc20598bfe993777244935e9503a1241329522c7bddbb656391608c8bf36",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "muetze.mp3",
+    "text": "Mütze",
+    "sha256": "d539e8aa3b7191bdc0e26937dc220791f1621c90fc4d1c38032fd1d8f3756e3f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pferd.mp3",
+    "text": "Pferd",
+    "sha256": "954f0a2d53ee0f5de357e00c89653ff7c635eab3d88c3bad4f222af027a1d0c3",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "rakete.mp3",
+    "text": "Rakete",
+    "sha256": "4a141e3ef159a39afdd040d4c0bf533bf75110f8abfbd427691a15bb2d8b8d4f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "roller.mp3",
+    "text": "Roller",
+    "sha256": "4c5811fcb4a6d2d1809d06c60a3447443fae5ea7bcb87ac2fc1a57facdbd05de",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schal.mp3",
+    "text": "Schal",
+    "sha256": "4c01b97dffc9a4ec4a172725309a56a4487dfa5d413ee657abaf18d61f9c7c5a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schiff.mp3",
+    "text": "Schiff",
+    "sha256": "be67b72b0c691391279cc37bb431d42406a3637d29d5bc70d97a062620691f48",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schluessel.mp3",
+    "text": "Schlüssel",
+    "sha256": "1fbd7a00cacba0b89a31bb00cd29e60d3f86c08dd7806bbe891642214672af0c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schnecke.mp3",
+    "text": "Schnecke",
+    "sha256": "d53395f8d8d8d3ee04ef443cb5499973f70b919aba2ff0edb7b20ae6126ab1f5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schraube.mp3",
+    "text": "Schraube",
+    "sha256": "210bc2ae6314dcc34ae47b50e31f99f1bf7d433648f135c36c98458d31ed2efb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "sonne.mp3",
+    "text": "Sonne",
+    "sha256": "85139e8cc79d75353ee04b04ab8118a99a2285da46bd72cbf1814ff1e41300c2",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "spiegel.mp3",
+    "text": "Spiegel",
+    "sha256": "5231a0fe3633e1e73470853fbe6d584ea16c57e3cf893e604444924aa00849fe",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "teller.mp3",
+    "text": "Teller",
+    "sha256": "67b8670003f5919366c09e8db438e1ca22da69a48224b95cf553fff6ea265626",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "trompete.mp3",
+    "text": "Trompete",
+    "sha256": "7dcfb186e024f6cc510bcb6a9735c79c0b6d46f2fd0b4009549aec3631ab1007",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "tuer.mp3",
+    "text": "Tür",
+    "sha256": "1cff8a95c840c89adb7b2cdbfc63d228355d76ec79cab441a86568ae4a0ef76d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "wuerfel.mp3",
+    "text": "Würfel",
+    "sha256": "b53263308c73625f2d682ad7f6110612b8b2a5815b27f82b8d67a424932b4eb7",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "anker.mp3",
+    "text": "Anker",
+    "sha256": "9b9faa667af0e9b93b91f38d1f54a6be59e301335011e8650c3987995109d524",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "apfel.mp3",
+    "text": "Apfel",
+    "sha256": "c55dcf4319da59a31ea115103f6fc8b17e86817cd27c652a87b0ec16ea9a443b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ball.mp3",
+    "text": "Ball",
+    "sha256": "ae5859eceacb8896e342285cc697d159a0107f1347a2fb94382029f2226d5444",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "baum.mp3",
+    "text": "Baum",
+    "sha256": "430db59c91b31244a51e4a2736215f1d94ae8c792f44cabdcedbe7dea7e21729",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "besen.mp3",
+    "text": "Besen",
+    "sha256": "11d3bd453a13d5d0c78b1397461898de41d8d5f40b3c25e54d3fad232e34c43c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "blatt.mp3",
+    "text": "Blatt",
+    "sha256": "9aee3b7acf705bf77a7e0e6aa15a7c4e9ff4c84218f59c840024622d5a67a796",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "brezel.mp3",
+    "text": "Brezel",
+    "sha256": "18da139b95ecfd8c426b089538d602a376aaf7c811ebb1caf6e18441738e6f2a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "brille.mp3",
+    "text": "Brille",
+    "sha256": "157abca2ca9c0c553945e339ff126deac35a898ab87ed012251655a9b3c555ac",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "erdbeere.mp3",
+    "text": "Erdbeere",
+    "sha256": "33d0ffb3cdb79c946b0277aa0699543eab3b47c63ad4957998bff4d529287ecb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "eule.mp3",
+    "text": "Eule",
+    "sha256": "0ad448de77b6091431ada233d76f71960e953b020a8fef1ebaed7a3f44aa0249",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "fenster.mp3",
+    "text": "Fenster",
+    "sha256": "22c9783f5077bb8db7af2cb5f2a669cb2ae906d3160b30bed46f72479fa9f4be",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "flugzeug.mp3",
+    "text": "Flugzeug",
+    "sha256": "b1cba0fae462eb852fcd29f00ea67f5796b574ccee97493320a7c92ba08945d8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "geschenk.mp3",
+    "text": "Geschenk",
+    "sha256": "4c3f36e7bdb77a8092090d27b6f746548f26a7657ed01ec8aee6305a8c0e1f99",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "globus.mp3",
+    "text": "Globus",
+    "sha256": "336a7f11f6f1fd1fc7b09fa4d424c4693dacf37a819e3a016f7dda89c730ca90",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "hund.mp3",
+    "text": "Hund",
+    "sha256": "92a95fa02cbca8493aca80cf6ef5df9afd3a8d22ca7caa1bc4056ae1fa7e70d0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kamm.mp3",
+    "text": "Kamm",
+    "sha256": "19e451f03aec04559f31bb43d197401ddadb156400075e3b3c3152f3ae730b8a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kerze.mp3",
+    "text": "Kerze",
+    "sha256": "1779a661ce1dafc738ed1b1e5c0d00e5dfe35a100171fd82d5ee5aad7f04f371",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "krokodil.mp3",
+    "text": "Krokodil",
+    "sha256": "f1142f0fdbdd3c40143a8c4a34a8387d93c1960cb3933a0ed09f1cad6f7b1fa8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "lampe.mp3",
+    "text": "Lampe",
+    "sha256": "9471c6375e05ea34e059445ab1bd6baff3515b59eb3a154c5db9b5653d8f1dce",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "leiter.mp3",
+    "text": "Leiter",
+    "sha256": "22fd4db0e3cde426fc8024d622cf2df304ed03b3d596cfc8bdab2f7cef165e6b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pinguin.mp3",
+    "text": "Pinguin",
+    "sha256": "0bf83ff3617d7ab2bc13223f61fbb6c2a851257553d009ee04186acee09d0f41",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "regenschirm.mp3",
+    "text": "Regenschirm",
+    "sha256": "6e85c58890bda7a498e2a9140bd19aae7dc35b66bf56a375f90a972d7692a209",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "rucksack.mp3",
+    "text": "Rucksack",
+    "sha256": "1ccb66c8ff92a72d77eddc3a6256f1ca9c5ba2ed770c967b041eb84a234573c7",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schere.mp3",
+    "text": "Schere",
+    "sha256": "e6532e1b964c2ef602ae65967f297f80fe2214ef0fbc16e6928ebca0ce741a95",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schildkroete.mp3",
+    "text": "Schildkröte",
+    "sha256": "e3ab9b19e26a4d1e81e45d6c8aa6cdf5c032915a167cc499d03d5260a21cb0a2",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schmetterling.mp3",
+    "text": "Schmetterling",
+    "sha256": "d7e3dabc2c95c4c440ee57fb2883188e7f46a9cf51e94674f0e80f7d6db092c4",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schultuete.mp3",
+    "text": "Schultüte",
+    "sha256": "651c247870e20b0bcdbe4e373efe17a2e799dd19afc0941a5527bd5b6c8447af",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "sofa.mp3",
+    "text": "Sofa",
+    "sha256": "643aa97e949c9c353aaff710e5adddb2017ecf3ae9d5cf563bc85c18e5d3aa2c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "stern.mp3",
+    "text": "Stern",
+    "sha256": "e4a41c66866bd166fbc0f685dbd7fe28b7bc1e62c018067ef8e203a35eaf210b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "saege.mp3",
+    "text": "Säge",
+    "sha256": "13a711b271274c9899d5f84178e133ca3801c44132a49d581dceb560baa96e44",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "tisch.mp3",
+    "text": "Tisch",
+    "sha256": "354bc956b8a4b6bb6d047bb65ad26beae32115577ac211a210f023853f992fa4",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "traktor.mp3",
+    "text": "Traktor",
+    "sha256": "7f8a2ae644b85a1d15f2995bcb7b157a57a621cb982374f7ebeb08fd77053125",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "uhr.mp3",
+    "text": "Uhr",
+    "sha256": "4221b9b808159cb280f2c4564de85bc47b8bcd51d0e52748e2a1694eb8e76807",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "vulkan.mp3",
+    "text": "Vulkan",
+    "sha256": "705cf66058dbc5f928db85fa069818070963d5429712aad9a43700138fb52371",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "zange.mp3",
+    "text": "Zange",
+    "sha256": "ecc932d497b8a3a9e0cabae9e703e0e1b96712603be59179c4fdbc7661f9938e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "zug.mp3",
+    "text": "Zug",
+    "sha256": "f8737ae629e339bdf7053e0db47202d9d76ac98ffe8c70d5db8b2e1e7619851f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "gabel.mp3",
+    "text": "Gabel",
+    "sha256": "64ad012588145a4e3caa4a447b3c7b033d29fec108acaef289ea8a483c988706",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "hubschrauber.mp3",
+    "text": "Hubschrauber",
+    "sha256": "e450f4063a23be3c37b03c246e4380650be24a69040f9508c9cb4650b6c8612d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kirsche.mp3",
+    "text": "Kirsche",
+    "sha256": "35cd966e8e58531319cc1cb930b3eb46cd458bf9f19dd25c4cb5629d58963b43",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "kuh.mp3",
+    "text": "Kuh",
+    "sha256": "8d55bb870b658547ee6af185e6a5d105fcb8337f6e6b5086e54c86c8b6f703b1",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "lineal.mp3",
+    "text": "Lineal",
+    "sha256": "61a15765663d6b432eb85a2f4c70dc867e62008febd966ad0b9e949b2d7944a8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "loeffel.mp3",
+    "text": "Löffel",
+    "sha256": "07015b4f56629a35e95029e04f8f5b6164f06d851fb5036146b6a06498812f8c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "muschel.mp3",
+    "text": "Muschel",
+    "sha256": "5b8c4f2f60a274af7adda254c0689c7e23739f695bc79d25295add220967d743",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pinsel.mp3",
+    "text": "Pinsel",
+    "sha256": "7a33cf442e60bf207bd1bba0a20fdd313b88cc5ac6276e5d3ab91005d8a984c9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "rutsche.mp3",
+    "text": "Rutsche",
+    "sha256": "7d1affa5f00b017c420792940b9b73517a434f18a2430d44d44cb145c7fffc34",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "schwein.mp3",
+    "text": "Schwein",
+    "sha256": "acb514d5dc40df09af240a70f0eaf3ae7b14ffa83bb2ddbd88976aa4860552b4",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "trommel.mp3",
+    "text": "Trommel",
+    "sha256": "439a8ca0673e9ddc8bfc725368dc5e5ed7940ccebda8902aeb1742e71567d53b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "zelt.mp3",
+    "text": "Zelt",
+    "sha256": "e959087623bd9b85b5402575b20ac0b8427a6d70c6391da7b94f069333e5e108",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "u1.mp3",
+    "text": "Jedes Kind lernt nur auf eine Art richtig gut: entweder mit Bildern oder mit Hören.",
+    "sha256": "485593be025a000915d68bef2a21e1a2273f593563fd0d111b39dfed292f0ef4",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "u2.mp3",
+    "text": "Wie du lernst, steht seit deiner Geburt fest und ändert sich nie.",
+    "sha256": "31971132048329fca36bd7b95702e7e0083bad1c12e11dd4d292f65118a923b0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "u3.mp3",
+    "text": "Gut lernen kann jedes Kind üben.",
+    "sha256": "ba20eadfe726a13217cea32c145f18b99c5b3401744c1fe9781029cf4c2ddbdb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "v1.mp3",
+    "text": "Wenn dir jemand etwas Neues erklärt: Was hilft dir am meisten?",
+    "sha256": "68f2a91a22ff6159c21304560542d52887ba32a8b01aa0d4c0d4f052e8745ec0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "v2.mp3",
+    "text": "Wenn du dir etwas für einen Test merken willst: Wie machst du es am liebsten?",
+    "sha256": "7ce4ccfef63a29bc817940d2dbe5094632a24d18e243879d82f310cd6af6a593",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "v3.mp3",
+    "text": "Welche Erklärung magst du am liebsten?",
+    "sha256": "82239c9ad98e4c71acfd29942a04e2ba353234e006e9dba37888b73573d92547",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "v4.mp3",
+    "text": "Gleich zeigen wir dir viele Dinge. Was glaubst du: Wie merkst du sie dir am besten?",
+    "sha256": "9dfc082410acd38fb76b0f48c3b5e0c09d090cd40bbc7e1ae2586e9e97e04953",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "check.mp3",
+    "text": "Kannst du mich gut hören?",
+    "sha256": "c5f07a6e8e60587848b647175b57e7dee69ccf85f24f8d34b88974d6df44a319",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-start-titel.mp3",
+    "text": "Willkommen!",
+    "sha256": "8623eab123a96f1629a74f5ea7105e6d0e5b0d5481027f3a8ccd146165032bef",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-start-untertitel.mp3",
+    "text": "Wir finden gemeinsam heraus, wie du lernst.",
+    "sha256": "1cf3666d45c2ede0b042e3944d8d2e6d5b0290dd2e14f16d2183d462755aaf09",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-lernausweis-titel.mp3",
+    "text": "Dein Lernausweis",
+    "sha256": "9a0905921079783c7ec3d3f58c59c1cee9cd51c004866a257b09f1791e8cadce",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-lernausweis-hinweis.mp3",
+    "text": "Tippe auf deinen Ausweis.",
+    "sha256": "c1c5745f94ed084dd7a35e4d6129f54743a5dff3905ad3f39cc67be7567b1858",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-fertig-titel.mp3",
+    "text": "Fertig für heute",
+    "sha256": "f8c04a94e6bb824baf7cde4a84e11f3ab6f943264cad4275d59c9d019c1025ea",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-fertig-text.mp3",
+    "text": "Danke fürs Mitmachen. Bis zum nächsten Mal!",
+    "sha256": "29ca5446267dbcd4b747e8ed4e158215af06b47ac28e1792b121ebe820da8d5e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-laedt-titel.mp3",
+    "text": "Einen Moment",
+    "sha256": "26548db62b3b82355bcea22c981813887f029b8725a5c064a3ef472cef730dcc",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-laedt-text.mp3",
+    "text": "Es lädt gleich.",
+    "sha256": "08172a86aedf9d6687fd3f141a25a54d5508f0679ea5293f23add0ef732e9ca8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-fehler-titel.mp3",
+    "text": "Das geht gerade nicht",
+    "sha256": "f83670878fd89cc7166b3aad8048cee1304bbfac727953a85cd97592167cabd6",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-fehler-text.mp3",
+    "text": "Bitte sag deiner Lehrkraft Bescheid.",
+    "sha256": "d20a036d518701fb5c60e9d85d7f5740bef59a90e537b110cf1474ea0ff75cb8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-pausiert-titel.mp3",
+    "text": "Pause",
+    "sha256": "858e4ba7a29fd38b630ed73a79e2738333b3fc6778fafa90252f5556c1262fdc",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-pausiert-text.mp3",
+    "text": "Nimm dir Zeit. Wenn du bereit bist, geht es weiter.",
+    "sha256": "f784fbf19f26b9f174971e41a9b05db74381404671623f64a40ae016ee5aac37",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-start-titel.mp3",
+    "text": "Ton-Check",
+    "sha256": "2d523cec663a5c80d415db955d4e40c95d6ba6a7bb7173ede2694822d0d64109",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-start-text.mp3",
+    "text": "Setz die Kopfhörer auf. Dann geht es los.",
+    "sha256": "81cc30b47abc3cc9b86c1122be99e4867929578ccf295ab678146ddf62622b5a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-vermutung-titel.mp3",
+    "text": "Deine Vermutung ist notiert.",
+    "sha256": "97909cf498f38e02fee39e1d0ad67c031e069b41007527146dc291ef00d8e56d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-vermutung-text.mp3",
+    "text": "Gleich prüfen wir sie als Detektive!",
+    "sha256": "7bb6e73badb21c3be71204bccaac079d2d8508247626c0f05a6036515bdfbedc",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-lernen-titel.mp3",
+    "text": "Merk dir die Dinge",
+    "sha256": "8ed3592b8384406b938e3e73a439cca48e294e15ce37fa03cf94f02bdcbf1f5a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-lernen-text.mp3",
+    "text": "Schau und hör genau hin. Jedes Ding ist für alle gleich lange zu sehen: Das ist eine Detektiv-Regel.",
+    "sha256": "b5203a9f3ca5eb6dfb6bcb0c555729bf58d07c15c9d620a47456e9946680d20a",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-sterne-titel.mp3",
+    "text": "Sterne zählen",
+    "sha256": "a61f01d0db11b6d7c6418af1b57b7a784dd3263a9d1d3e20690b00e4d3e8196e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-sterne-frage.mp3",
+    "text": "Wie viele Sterne siehst du?",
+    "sha256": "1af90a720d4daf1a7bd8ba8ea342bff6b5109d00fe7af244d35c07eeba266799",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-test-frage.mp3",
+    "text": "War dieses Ding vorhin dabei?",
+    "sha256": "9be79b73e153ba94d5683f7023a5726995b4689c1a2e4910fddbfa4677835eb3",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-test-frage-verzoegert.mp3",
+    "text": "War dieses Ding letzte Woche dabei?",
+    "sha256": "b4c83939f0051024736a2974ae2c08de14157d69f1b4cc328c9e410de7f3b299",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-zuschauer-titel.mp3",
+    "text": "Du schaust zu",
+    "sha256": "d5f7c8dcacfa20257a7770476796fdf52dc61bbbfb0836c48a5cd34762b61eb1",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-zuschauer-text.mp3",
+    "text": "Beobachte, wie die anderen Detektive arbeiten. Danach besprechen wir es zusammen.",
+    "sha256": "cecbd19c48238992b455b25e7e5c4af44cd8e94ffa42726479a30470592d0f17",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-nach-vorne-titel.mp3",
+    "text": "Schau nach vorne",
+    "sha256": "80d1552d3785cd00e17da54c08054d53f465f8026ae137dd295d41e6babb6a46",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-klassenergebnis-text.mp3",
+    "text": "Wir schauen uns gemeinsam an, was die Klasse herausgefunden hat.",
+    "sha256": "d2563183876cf9c95351f93babc9999cfa4d4af3c40cb63466c9d0dc32587458",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-vergleich-text.mp3",
+    "text": "Wir schauen gemeinsam an, was nach einer Woche noch da ist.",
+    "sha256": "e36eb98fb44dcce67cef724df6f24c6a754d61ec83d76a7ca5ccd0f2e2f8ad41",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-warten-titel.mp3",
+    "text": "Warte kurz.",
+    "sha256": "2d0f66486aaa1c9003a65cf941cdb8bee634d32a69a469cf9ac5605c8e3980c1",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-warten-text.mp3",
+    "text": "Gleich geht es weiter.",
+    "sha256": "1a6081bd3a31d54b14266026d65f86a2dbdad32e2ff763ab46a8c89ba2599e1f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-superkraft-frage.mp3",
+    "text": "Hast du diese Woche Doppelt merken ausprobiert? Also Bild und Wort zusammen.",
+    "sha256": "1c19628577dadc36ff5306570a150ef5dbacf4833c705570af68608184ac45cb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-weiter-geht-titel.mp3",
+    "text": "Weiter geht's",
+    "sha256": "37323103b646080ae1dc1aacda1b1048e77efe1f518754091131c9aa1661fed7",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-kind-weiter-geht-text.mp3",
+    "text": "Tippe, wenn du bereit bist.",
+    "sha256": "a5d18b9456b90fd60527f7dae351157bbaccc31d1dd99576b5b678c6b78c2a87",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  }
+]

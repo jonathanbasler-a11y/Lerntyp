@@ -3,6 +3,7 @@ import type { ApiClient } from './api/client';
 import { createApiClient } from './api/client';
 import { DemoBanner } from './components/DemoBanner';
 import { DemoSteuerung } from './components/DemoSteuerung';
+import { Benennen } from './screens/Benennen';
 import { Cockpit } from './screens/Cockpit';
 import { Kind } from './screens/Kind';
 import { Lernausweis } from './screens/Lernausweis';
@@ -28,6 +29,18 @@ export function App() {
     setAlias(null);
     setScreen('start');
   };
+
+  // Benennungstest (nur Demo): Werkzeug für Erwachsene, speichert und sendet nichts.
+  if (__DEMO__ && new URLSearchParams(window.location.search).get('benennen') === '1') {
+    return (
+      <div className="app">
+        <DemoBanner />
+        <main className="main">
+          <Benennen />
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className={__DEMO__ && screen === 'kind' ? 'app app-mit-demoleiste' : 'app'}>

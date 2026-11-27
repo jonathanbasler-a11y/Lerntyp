@@ -45,7 +45,7 @@ export function AudioStart({ onFertig }: { onFertig: (ok: boolean) => void }) {
           {t('kind.start.weiter')}
         </button>
       )}
-      <VorleseKnopf />
+      <VorleseKnopf keys={['kind.start.titel', 'kind.start.text']} />
     </section>
   );
 }

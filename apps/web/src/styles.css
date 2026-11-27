@@ -156,6 +156,10 @@ h2 { font-size: 1.2rem; margin: 8px 0 0; }
 .lern-wort { font-size: 4rem; font-weight: 700; margin: 0; line-height: 1.1; }
 .lern-wort-klein { font-size: 2.6rem; }
 .platzhalter { width: min(260px, 60vw); height: auto; }
+img.platzhalter { border-radius: 24px; background: #fff; }
+.benennen-buehne { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.benennen-buehne .platzhalter { width: min(440px, 70vw); }
+.benennen-wort { min-height: 5rem; }
 .test-wort { font-size: 3.6rem; font-weight: 700; margin: 12px 0; line-height: 1.1; }
 .btn-gross { min-width: 200px; min-height: 80px; font-size: 1.2rem; }
 .test-knoepfe { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: center; margin: 8px 0; }

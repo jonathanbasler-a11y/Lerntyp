@@ -14,7 +14,7 @@ export function Start({ onKind, onLehrkraft }: { onKind: () => void; onLehrkraft
           {t('start.lehrkraft')}
         </button>
       </div>
-      <VorleseKnopf />
+      <VorleseKnopf keys={['start.titel', 'start.untertitel']} />
     </section>
   );
 }

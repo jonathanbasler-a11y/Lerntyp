@@ -20,7 +20,7 @@ export async function textSammler(page: Page): Promise<void> {
       if (lernen)
         w.__lernen.push({
           bedingung: lernen.getAttribute('data-bedingung') ?? '',
-          bild: lernen.querySelector('[data-testid="platzhalter-bild"]') !== null,
+          bild: lernen.querySelector('[data-testid="platzhalter-bild"], [data-testid="echtes-bild"]') !== null,
           wort: lernen.querySelector<HTMLElement>('[data-testid="lernen-wort"]')?.textContent ?? '',
         });
     };
@@ -43,7 +43,8 @@ export async function alsKind(page: Page, url = SCHNELL, alias = 'Fuchs-27'): Pr
 
 export async function toncheck(page: Page): Promise<void> {
   await expect(page.getByTestId('schritt-start')).toBeVisible();
-  await expect(page.getByTestId('ton-folgt')).toBeVisible(); // Demo: keine Audio-Dateien, blockiert nie
+  await expect(page.getByTestId('audio-weiter')).toBeEnabled(); // check.mp3 ist da: kein „Ton folgt“
+  await expect(page.getByTestId('ton-folgt')).toHaveCount(0);
   await page.getByTestId('audio-weiter').click();
 }
 

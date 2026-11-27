@@ -19,7 +19,7 @@ export function Superkraft({ onAntwort }: { onAntwort: (antwort: Antwort) => voi
           </button>
         ))}
       </div>
-      <VorleseKnopf />
+      <VorleseKnopf keys={['kind.superkraft.frage']} />
     </section>
   );
 }

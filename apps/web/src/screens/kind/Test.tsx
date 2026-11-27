@@ -43,7 +43,7 @@ export function Test({ test, eintrag, audioOk, onAntwort }: { test: 'sofort' | '
           {t('kind.test.nicht_dabei')}
         </button>
       </div>
-      <VorleseKnopf />
+      <VorleseKnopf keys={[test === 'verzoegert' ? 'kind.test.frage_verzoegert' : 'kind.test.frage']} />
     </section>
   );
 }
