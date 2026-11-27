@@ -76,11 +76,14 @@ Antwortformat: drei Bildkarten.
 
 ### 5.1 Material
 
-- **72 konkrete, bekannte Dinge** (Nomen wie *Kerze*, *Schlüssel*, *Gießkanne*), aufgeteilt in **6 Sets à 12 (A–F)**:
+- **120 konkrete, bekannte Dinge** (Nomen wie *Kerze*, *Schlüssel*, *Gießkanne*), aufgeteilt in **6 Sets (A–F)**:
   - **A, B, C:** Lern-Sets.
-  - **D:** Ablenker für den Sofort-Test.
-  - **E:** Ablenker für den verzögerten Test.
-  - **F:** Reserve für Ersatz nach dem Pilot.
+  - **A, B, C** je 12 (die 36 Lern-Items).
+  - **D:** 36 Ablenker für den Sofort-Test.
+  - **E:** 36 Ablenker für den verzögerten Test.
+  - **F:** 12, daraus die 4 Puffer-Items der Lernphase; der Rest ist Reserve für Ersatz nach dem Pilot.
+
+  *Korrektur (Phase 2):* Die erste Fassung nannte 72 Dinge in 6 Sets à 12. Das widersprach §6.1 (je Test 36 alte **und** 36 neue Items): Mit nur 12 Ablenkern hätte jeder Test dreimal so viele alte wie neue Items, und die Fehlalarmquote stünde auf nur 12 Antworten. Die Set-Größen stehen in `data/lerndetektive/experiment.json` und werden vom Schema geprüft (D und E = Anzahl alter Items).
 - Die Sets werden abgeglichen nach:
   - Silbenzahl
   - Wortfrequenz im Kinderwortschatz (z. B. childLex; *Quelle zu verifizieren, R0*)
@@ -189,7 +192,8 @@ Grafik „Sofort vs. nach einer Woche“ pro Bedingung, für die ganze Klasse. B
 | Fall | Verhalten |
 |---|---|
 | Ton-Check fehlgeschlagen | Das Tablet meldet es der Lehrkraft (Cockpit). Wird der Ton nicht behoben, läuft das Experiment ohne Ton (`audio_ok=false`). Diese Daten gehen nicht in die Hauptauswertung ein, das Kind macht aber normal mit. |
-| Kind kommt zu spät | Es steigt bei der nächsten möglichen Phase ein. Ist die Lernphase verpasst, gibt es eine „Zuschauer-Rolle“ (es darf den Sofort-Test nicht machen) und eine kurze Ersatzaufgabe. |
+| Kind kommt zu spät | Es holt Überzeugungs-Aussagen (vorher) und Vorlieben nach, solange es noch nicht selbst gelernt hat, und lernt dann vollständig, falls die Lernphase noch freigegeben ist. Ist die Lehrkraft schon über die Lernphase hinaus, gibt es eine „Zuschauer-Rolle“ (keine Vorher-Messung, kein Sofort-Test, kein verzögerter Test) und eine kurze Ersatzaufgabe. |
+| Lehrkraft geht weiter, Kind noch nicht fertig | Die laufende Phase wird mit `abgebrochen=true` geschlossen; bereits gegebene Antworten bleiben gültig. Eine Lernphase wird nie neu gestartet. |
 | Kind fehlt in der Folgestunde | Nachholen bis +9 Tage ist möglich (Cockpit-Option). Danach fehlt der Wert. |
 | Gerätewechsel | Fortsetzen per Lernausweis. Bereits gezeigte Items werden nicht erneut gezeigt. Die Lernphase wird nicht neu gestartet; eine abgebrochene Lernphase wird markiert (`abgebrochen=true`). |
 | Kind ohne Forschungs-Einwilligung | Macht vollständig mit. Seine Daten zählen für die Klassengrafik, gehen aber nicht in den Forschungsexport ein ([04](04-datenschutz-genehmigungen.md)). |
@@ -197,7 +201,7 @@ Grafik „Sofort vs. nach einer Woche“ pro Bedingung, für die ganze Klasse. B
 
 ## 9. Ereignisse (Payloads)
 
-Alle Ereignisse nutzen den Envelope aus [03-architektur.md](03-architektur.md) §4.4 und tragen `modul: "lerndetektive"`.
+Alle Ereignisse nutzen den Envelope aus [03-architektur.md](03-architektur.md) §4.4 und tragen `modul: "lerndetektive"`. Payloads werden je **Modul und Typ** geprüft, weil derselbe Typ in anderen Modulen anders aufgebaut ist (z. B. `antwort_abgegeben` im Strategie-Parcours, 03 §4.4). Die modulübergreifenden Typen `pause` und `hilfe_angefordert` gelten auch hier. Umsetzung: `packages/shared/src/events.ts` und `packages/shared/src/lerndetektive/`.
 
 | `typ` | Payload |
 |---|---|

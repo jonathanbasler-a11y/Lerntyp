@@ -1,0 +1,1161 @@
+{
+  "version": "0.1",
+  "status": "entwurf",
+  "hinweis": "Entwurf: Itemliste vor R1 mit Kindern auf Benennungs-Übereinstimmung prüfen (02 §5.1, 05 L8). Set D und E haben je 36 Ablenker, damit jeder Test gleich viele alte und neue Items hat (02 §6.1). Bilder und Audio fehlen noch.",
+  "ablauf": {
+    "darbietung_ms": 4000,
+    "leer_ms": 1000,
+    "pause_aufgabe_ms": 60000,
+    "puffer_anfang": 2,
+    "puffer_ende": 2,
+    "max_gleiche_bedingung_folge": 2,
+    "max_gleiche_testart_folge": 4,
+    "mindestgruppe": 5,
+    "max_silben_abweichung": 0.2
+  },
+  "rotationen": {
+    "ROT1": {
+      "A": "wort",
+      "B": "bild",
+      "C": "bild_wort"
+    },
+    "ROT2": {
+      "A": "bild",
+      "B": "bild_wort",
+      "C": "wort"
+    },
+    "ROT3": {
+      "A": "bild_wort",
+      "B": "wort",
+      "C": "bild"
+    }
+  },
+  "ueberzeugungen": [
+    {
+      "id": "U1",
+      "text": "Jedes Kind lernt nur auf eine Art richtig gut: entweder mit Bildern oder mit Hören.",
+      "audio": "u1.mp3",
+      "richtung": "mythos"
+    },
+    {
+      "id": "U2",
+      "text": "Wie man am besten lernt, ist angeboren und bleibt immer gleich.",
+      "audio": "u2.mp3",
+      "richtung": "mythos"
+    },
+    {
+      "id": "U3",
+      "text": "Wie man am besten lernt, kann jedes Kind üben.",
+      "audio": "u3.mp3",
+      "richtung": "wachstum"
+    }
+  ],
+  "vorlieben": [
+    {
+      "id": "V1",
+      "text": "Wenn dir jemand etwas Neues erklärt: Was hilft dir am meisten?",
+      "audio": "v1.mp3",
+      "rolle": "vorliebe"
+    },
+    {
+      "id": "V2",
+      "text": "Wenn du dir etwas für einen Test merken willst: Wie machst du es am liebsten?",
+      "audio": "v2.mp3",
+      "rolle": "vorliebe"
+    },
+    {
+      "id": "V3",
+      "text": "Welche Erklärung magst du am liebsten?",
+      "audio": "v3.mp3",
+      "rolle": "vorliebe"
+    },
+    {
+      "id": "V4",
+      "text": "Gleich zeigen wir dir viele Dinge. Was glaubst du: Wie merkst du sie dir am besten?",
+      "audio": "v4.mp3",
+      "rolle": "vermutung"
+    }
+  ],
+  "items": [
+    {
+      "id": "blume",
+      "set": "A",
+      "wort": "Blume",
+      "bild": "blume.svg",
+      "audio": "blume.mp3",
+      "silben": 2,
+      "kategorie": "natur"
+    },
+    {
+      "id": "bruecke",
+      "set": "A",
+      "wort": "Brücke",
+      "bild": "bruecke.svg",
+      "audio": "bruecke.mp3",
+      "silben": 2,
+      "kategorie": "haus"
+    },
+    {
+      "id": "buch",
+      "set": "A",
+      "wort": "Buch",
+      "bild": "buch.svg",
+      "audio": "buch.mp3",
+      "silben": 1,
+      "kategorie": "schule"
+    },
+    {
+      "id": "elefant",
+      "set": "A",
+      "wort": "Elefant",
+      "bild": "elefant.svg",
+      "audio": "elefant.mp3",
+      "silben": 3,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "fahrrad",
+      "set": "A",
+      "wort": "Fahrrad",
+      "bild": "fahrrad.svg",
+      "audio": "fahrrad.mp3",
+      "silben": 2,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "fisch",
+      "set": "A",
+      "wort": "Fisch",
+      "bild": "fisch.svg",
+      "audio": "fisch.mp3",
+      "silben": 1,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "geige",
+      "set": "A",
+      "wort": "Geige",
+      "bild": "geige.svg",
+      "audio": "geige.mp3",
+      "silben": 2,
+      "kategorie": "musik"
+    },
+    {
+      "id": "handschuh",
+      "set": "A",
+      "wort": "Handschuh",
+      "bild": "handschuh.svg",
+      "audio": "handschuh.mp3",
+      "silben": 2,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "pilz",
+      "set": "A",
+      "wort": "Pilz",
+      "bild": "pilz.svg",
+      "audio": "pilz.mp3",
+      "silben": 1,
+      "kategorie": "essen"
+    },
+    {
+      "id": "puppe",
+      "set": "A",
+      "wort": "Puppe",
+      "bild": "puppe.svg",
+      "audio": "puppe.mp3",
+      "silben": 2,
+      "kategorie": "spielzeug"
+    },
+    {
+      "id": "tasse",
+      "set": "A",
+      "wort": "Tasse",
+      "bild": "tasse.svg",
+      "audio": "tasse.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "zitrone",
+      "set": "A",
+      "wort": "Zitrone",
+      "bild": "zitrone.svg",
+      "audio": "zitrone.mp3",
+      "silben": 3,
+      "kategorie": "essen"
+    },
+    {
+      "id": "ananas",
+      "set": "B",
+      "wort": "Ananas",
+      "bild": "ananas.svg",
+      "audio": "ananas.mp3",
+      "silben": 3,
+      "kategorie": "essen"
+    },
+    {
+      "id": "auto",
+      "set": "B",
+      "wort": "Auto",
+      "bild": "auto.svg",
+      "audio": "auto.mp3",
+      "silben": 2,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "brot",
+      "set": "B",
+      "wort": "Brot",
+      "bild": "brot.svg",
+      "audio": "brot.mp3",
+      "silben": 1,
+      "kategorie": "essen"
+    },
+    {
+      "id": "ente",
+      "set": "B",
+      "wort": "Ente",
+      "bild": "ente.svg",
+      "audio": "ente.mp3",
+      "silben": 2,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "glocke",
+      "set": "B",
+      "wort": "Glocke",
+      "bild": "glocke.svg",
+      "audio": "glocke.mp3",
+      "silben": 2,
+      "kategorie": "musik"
+    },
+    {
+      "id": "jacke",
+      "set": "B",
+      "wort": "Jacke",
+      "bild": "jacke.svg",
+      "audio": "jacke.mp3",
+      "silben": 2,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "maus",
+      "set": "B",
+      "wort": "Maus",
+      "bild": "maus.svg",
+      "audio": "maus.mp3",
+      "silben": 1,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "schaukel",
+      "set": "B",
+      "wort": "Schaukel",
+      "bild": "schaukel.svg",
+      "audio": "schaukel.mp3",
+      "silben": 2,
+      "kategorie": "spielzeug"
+    },
+    {
+      "id": "stuhl",
+      "set": "B",
+      "wort": "Stuhl",
+      "bild": "stuhl.svg",
+      "audio": "stuhl.mp3",
+      "silben": 1,
+      "kategorie": "haus"
+    },
+    {
+      "id": "tafel",
+      "set": "B",
+      "wort": "Tafel",
+      "bild": "tafel.svg",
+      "audio": "tafel.mp3",
+      "silben": 2,
+      "kategorie": "schule"
+    },
+    {
+      "id": "wolke",
+      "set": "B",
+      "wort": "Wolke",
+      "bild": "wolke.svg",
+      "audio": "wolke.mp3",
+      "silben": 2,
+      "kategorie": "natur"
+    },
+    {
+      "id": "zahnbuerste",
+      "set": "B",
+      "wort": "Zahnbürste",
+      "bild": "zahnbuerste.svg",
+      "audio": "zahnbuerste.mp3",
+      "silben": 3,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "biene",
+      "set": "C",
+      "wort": "Biene",
+      "bild": "biene.svg",
+      "audio": "biene.mp3",
+      "silben": 2,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "brief",
+      "set": "C",
+      "wort": "Brief",
+      "bild": "brief.svg",
+      "audio": "brief.mp3",
+      "silben": 1,
+      "kategorie": "sonstiges"
+    },
+    {
+      "id": "bus",
+      "set": "C",
+      "wort": "Bus",
+      "bild": "bus.svg",
+      "audio": "bus.mp3",
+      "silben": 1,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "ei",
+      "set": "C",
+      "wort": "Ei",
+      "bild": "ei.svg",
+      "audio": "ei.mp3",
+      "silben": 1,
+      "kategorie": "essen"
+    },
+    {
+      "id": "feder",
+      "set": "C",
+      "wort": "Feder",
+      "bild": "feder.svg",
+      "audio": "feder.mp3",
+      "silben": 2,
+      "kategorie": "natur"
+    },
+    {
+      "id": "giraffe",
+      "set": "C",
+      "wort": "Giraffe",
+      "bild": "giraffe.svg",
+      "audio": "giraffe.mp3",
+      "silben": 3,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "klavier",
+      "set": "C",
+      "wort": "Klavier",
+      "bild": "klavier.svg",
+      "audio": "klavier.mp3",
+      "silben": 2,
+      "kategorie": "musik"
+    },
+    {
+      "id": "luftballon",
+      "set": "C",
+      "wort": "Luftballon",
+      "bild": "luftballon.svg",
+      "audio": "luftballon.mp3",
+      "silben": 3,
+      "kategorie": "spielzeug"
+    },
+    {
+      "id": "stiefel",
+      "set": "C",
+      "wort": "Stiefel",
+      "bild": "stiefel.svg",
+      "audio": "stiefel.mp3",
+      "silben": 2,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "tomate",
+      "set": "C",
+      "wort": "Tomate",
+      "bild": "tomate.svg",
+      "audio": "tomate.mp3",
+      "silben": 3,
+      "kategorie": "essen"
+    },
+    {
+      "id": "topf",
+      "set": "C",
+      "wort": "Topf",
+      "bild": "topf.svg",
+      "audio": "topf.mp3",
+      "silben": 1,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "treppe",
+      "set": "C",
+      "wort": "Treppe",
+      "bild": "treppe.svg",
+      "audio": "treppe.mp3",
+      "silben": 2,
+      "kategorie": "haus"
+    },
+    {
+      "id": "banane",
+      "set": "D",
+      "wort": "Banane",
+      "bild": "banane.svg",
+      "audio": "banane.mp3",
+      "silben": 3,
+      "kategorie": "essen"
+    },
+    {
+      "id": "bett",
+      "set": "D",
+      "wort": "Bett",
+      "bild": "bett.svg",
+      "audio": "bett.mp3",
+      "silben": 1,
+      "kategorie": "haus"
+    },
+    {
+      "id": "birne",
+      "set": "D",
+      "wort": "Birne",
+      "bild": "birne.svg",
+      "audio": "birne.mp3",
+      "silben": 2,
+      "kategorie": "essen"
+    },
+    {
+      "id": "flasche",
+      "set": "D",
+      "wort": "Flasche",
+      "bild": "flasche.svg",
+      "audio": "flasche.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "floete",
+      "set": "D",
+      "wort": "Flöte",
+      "bild": "floete.svg",
+      "audio": "floete.mp3",
+      "silben": 2,
+      "kategorie": "musik"
+    },
+    {
+      "id": "frosch",
+      "set": "D",
+      "wort": "Frosch",
+      "bild": "frosch.svg",
+      "audio": "frosch.mp3",
+      "silben": 1,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "giesskanne",
+      "set": "D",
+      "wort": "Gießkanne",
+      "bild": "giesskanne.svg",
+      "audio": "giesskanne.mp3",
+      "silben": 3,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "gitarre",
+      "set": "D",
+      "wort": "Gitarre",
+      "bild": "gitarre.svg",
+      "audio": "gitarre.mp3",
+      "silben": 3,
+      "kategorie": "musik"
+    },
+    {
+      "id": "gurke",
+      "set": "D",
+      "wort": "Gurke",
+      "bild": "gurke.svg",
+      "audio": "gurke.mp3",
+      "silben": 2,
+      "kategorie": "essen"
+    },
+    {
+      "id": "hammer",
+      "set": "D",
+      "wort": "Hammer",
+      "bild": "hammer.svg",
+      "audio": "hammer.mp3",
+      "silben": 2,
+      "kategorie": "werkzeug"
+    },
+    {
+      "id": "hose",
+      "set": "D",
+      "wort": "Hose",
+      "bild": "hose.svg",
+      "audio": "hose.mp3",
+      "silben": 2,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "igel",
+      "set": "D",
+      "wort": "Igel",
+      "bild": "igel.svg",
+      "audio": "igel.mp3",
+      "silben": 2,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "kaktus",
+      "set": "D",
+      "wort": "Kaktus",
+      "bild": "kaktus.svg",
+      "audio": "kaktus.mp3",
+      "silben": 2,
+      "kategorie": "natur"
+    },
+    {
+      "id": "katze",
+      "set": "D",
+      "wort": "Katze",
+      "bild": "katze.svg",
+      "audio": "katze.mp3",
+      "silben": 2,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "kette",
+      "set": "D",
+      "wort": "Kette",
+      "bild": "kette.svg",
+      "audio": "kette.mp3",
+      "silben": 2,
+      "kategorie": "sonstiges"
+    },
+    {
+      "id": "koffer",
+      "set": "D",
+      "wort": "Koffer",
+      "bild": "koffer.svg",
+      "audio": "koffer.mp3",
+      "silben": 2,
+      "kategorie": "sonstiges"
+    },
+    {
+      "id": "kreisel",
+      "set": "D",
+      "wort": "Kreisel",
+      "bild": "kreisel.svg",
+      "audio": "kreisel.mp3",
+      "silben": 2,
+      "kategorie": "spielzeug"
+    },
+    {
+      "id": "krone",
+      "set": "D",
+      "wort": "Krone",
+      "bild": "krone.svg",
+      "audio": "krone.mp3",
+      "silben": 2,
+      "kategorie": "sonstiges"
+    },
+    {
+      "id": "kuchen",
+      "set": "D",
+      "wort": "Kuchen",
+      "bild": "kuchen.svg",
+      "audio": "kuchen.mp3",
+      "silben": 2,
+      "kategorie": "essen"
+    },
+    {
+      "id": "kaese",
+      "set": "D",
+      "wort": "Käse",
+      "bild": "kaese.svg",
+      "audio": "kaese.mp3",
+      "silben": 2,
+      "kategorie": "essen"
+    },
+    {
+      "id": "mond",
+      "set": "D",
+      "wort": "Mond",
+      "bild": "mond.svg",
+      "audio": "mond.mp3",
+      "silben": 1,
+      "kategorie": "natur"
+    },
+    {
+      "id": "muetze",
+      "set": "D",
+      "wort": "Mütze",
+      "bild": "muetze.svg",
+      "audio": "muetze.mp3",
+      "silben": 2,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "pferd",
+      "set": "D",
+      "wort": "Pferd",
+      "bild": "pferd.svg",
+      "audio": "pferd.mp3",
+      "silben": 1,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "rakete",
+      "set": "D",
+      "wort": "Rakete",
+      "bild": "rakete.svg",
+      "audio": "rakete.mp3",
+      "silben": 3,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "roller",
+      "set": "D",
+      "wort": "Roller",
+      "bild": "roller.svg",
+      "audio": "roller.mp3",
+      "silben": 2,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "schal",
+      "set": "D",
+      "wort": "Schal",
+      "bild": "schal.svg",
+      "audio": "schal.mp3",
+      "silben": 1,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "schiff",
+      "set": "D",
+      "wort": "Schiff",
+      "bild": "schiff.svg",
+      "audio": "schiff.mp3",
+      "silben": 1,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "schluessel",
+      "set": "D",
+      "wort": "Schlüssel",
+      "bild": "schluessel.svg",
+      "audio": "schluessel.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "schnecke",
+      "set": "D",
+      "wort": "Schnecke",
+      "bild": "schnecke.svg",
+      "audio": "schnecke.mp3",
+      "silben": 2,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "schraube",
+      "set": "D",
+      "wort": "Schraube",
+      "bild": "schraube.svg",
+      "audio": "schraube.mp3",
+      "silben": 2,
+      "kategorie": "werkzeug"
+    },
+    {
+      "id": "sonne",
+      "set": "D",
+      "wort": "Sonne",
+      "bild": "sonne.svg",
+      "audio": "sonne.mp3",
+      "silben": 2,
+      "kategorie": "natur"
+    },
+    {
+      "id": "spiegel",
+      "set": "D",
+      "wort": "Spiegel",
+      "bild": "spiegel.svg",
+      "audio": "spiegel.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "teller",
+      "set": "D",
+      "wort": "Teller",
+      "bild": "teller.svg",
+      "audio": "teller.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "trompete",
+      "set": "D",
+      "wort": "Trompete",
+      "bild": "trompete.svg",
+      "audio": "trompete.mp3",
+      "silben": 3,
+      "kategorie": "musik"
+    },
+    {
+      "id": "tuer",
+      "set": "D",
+      "wort": "Tür",
+      "bild": "tuer.svg",
+      "audio": "tuer.mp3",
+      "silben": 1,
+      "kategorie": "haus"
+    },
+    {
+      "id": "wuerfel",
+      "set": "D",
+      "wort": "Würfel",
+      "bild": "wuerfel.svg",
+      "audio": "wuerfel.mp3",
+      "silben": 2,
+      "kategorie": "spielzeug"
+    },
+    {
+      "id": "anker",
+      "set": "E",
+      "wort": "Anker",
+      "bild": "anker.svg",
+      "audio": "anker.mp3",
+      "silben": 2,
+      "kategorie": "sonstiges"
+    },
+    {
+      "id": "apfel",
+      "set": "E",
+      "wort": "Apfel",
+      "bild": "apfel.svg",
+      "audio": "apfel.mp3",
+      "silben": 2,
+      "kategorie": "essen"
+    },
+    {
+      "id": "ball",
+      "set": "E",
+      "wort": "Ball",
+      "bild": "ball.svg",
+      "audio": "ball.mp3",
+      "silben": 1,
+      "kategorie": "spielzeug"
+    },
+    {
+      "id": "baum",
+      "set": "E",
+      "wort": "Baum",
+      "bild": "baum.svg",
+      "audio": "baum.mp3",
+      "silben": 1,
+      "kategorie": "natur"
+    },
+    {
+      "id": "besen",
+      "set": "E",
+      "wort": "Besen",
+      "bild": "besen.svg",
+      "audio": "besen.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "blatt",
+      "set": "E",
+      "wort": "Blatt",
+      "bild": "blatt.svg",
+      "audio": "blatt.mp3",
+      "silben": 1,
+      "kategorie": "natur"
+    },
+    {
+      "id": "brezel",
+      "set": "E",
+      "wort": "Brezel",
+      "bild": "brezel.svg",
+      "audio": "brezel.mp3",
+      "silben": 2,
+      "kategorie": "essen"
+    },
+    {
+      "id": "brille",
+      "set": "E",
+      "wort": "Brille",
+      "bild": "brille.svg",
+      "audio": "brille.mp3",
+      "silben": 2,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "erdbeere",
+      "set": "E",
+      "wort": "Erdbeere",
+      "bild": "erdbeere.svg",
+      "audio": "erdbeere.mp3",
+      "silben": 3,
+      "kategorie": "essen"
+    },
+    {
+      "id": "eule",
+      "set": "E",
+      "wort": "Eule",
+      "bild": "eule.svg",
+      "audio": "eule.mp3",
+      "silben": 2,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "fenster",
+      "set": "E",
+      "wort": "Fenster",
+      "bild": "fenster.svg",
+      "audio": "fenster.mp3",
+      "silben": 2,
+      "kategorie": "haus"
+    },
+    {
+      "id": "flugzeug",
+      "set": "E",
+      "wort": "Flugzeug",
+      "bild": "flugzeug.svg",
+      "audio": "flugzeug.mp3",
+      "silben": 2,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "geschenk",
+      "set": "E",
+      "wort": "Geschenk",
+      "bild": "geschenk.svg",
+      "audio": "geschenk.mp3",
+      "silben": 2,
+      "kategorie": "sonstiges"
+    },
+    {
+      "id": "globus",
+      "set": "E",
+      "wort": "Globus",
+      "bild": "globus.svg",
+      "audio": "globus.mp3",
+      "silben": 2,
+      "kategorie": "schule"
+    },
+    {
+      "id": "hund",
+      "set": "E",
+      "wort": "Hund",
+      "bild": "hund.svg",
+      "audio": "hund.mp3",
+      "silben": 1,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "kamm",
+      "set": "E",
+      "wort": "Kamm",
+      "bild": "kamm.svg",
+      "audio": "kamm.mp3",
+      "silben": 1,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "kerze",
+      "set": "E",
+      "wort": "Kerze",
+      "bild": "kerze.svg",
+      "audio": "kerze.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "krokodil",
+      "set": "E",
+      "wort": "Krokodil",
+      "bild": "krokodil.svg",
+      "audio": "krokodil.mp3",
+      "silben": 3,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "lampe",
+      "set": "E",
+      "wort": "Lampe",
+      "bild": "lampe.svg",
+      "audio": "lampe.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "leiter",
+      "set": "E",
+      "wort": "Leiter",
+      "bild": "leiter.svg",
+      "audio": "leiter.mp3",
+      "silben": 2,
+      "kategorie": "werkzeug"
+    },
+    {
+      "id": "pinguin",
+      "set": "E",
+      "wort": "Pinguin",
+      "bild": "pinguin.svg",
+      "audio": "pinguin.mp3",
+      "silben": 3,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "regenschirm",
+      "set": "E",
+      "wort": "Regenschirm",
+      "bild": "regenschirm.svg",
+      "audio": "regenschirm.mp3",
+      "silben": 3,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "rucksack",
+      "set": "E",
+      "wort": "Rucksack",
+      "bild": "rucksack.svg",
+      "audio": "rucksack.mp3",
+      "silben": 2,
+      "kategorie": "kleidung"
+    },
+    {
+      "id": "schere",
+      "set": "E",
+      "wort": "Schere",
+      "bild": "schere.svg",
+      "audio": "schere.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "schildkroete",
+      "set": "E",
+      "wort": "Schildkröte",
+      "bild": "schildkroete.svg",
+      "audio": "schildkroete.mp3",
+      "silben": 3,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "schmetterling",
+      "set": "E",
+      "wort": "Schmetterling",
+      "bild": "schmetterling.svg",
+      "audio": "schmetterling.mp3",
+      "silben": 3,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "schultuete",
+      "set": "E",
+      "wort": "Schultüte",
+      "bild": "schultuete.svg",
+      "audio": "schultuete.mp3",
+      "silben": 3,
+      "kategorie": "schule"
+    },
+    {
+      "id": "sofa",
+      "set": "E",
+      "wort": "Sofa",
+      "bild": "sofa.svg",
+      "audio": "sofa.mp3",
+      "silben": 2,
+      "kategorie": "haus"
+    },
+    {
+      "id": "stern",
+      "set": "E",
+      "wort": "Stern",
+      "bild": "stern.svg",
+      "audio": "stern.mp3",
+      "silben": 1,
+      "kategorie": "natur"
+    },
+    {
+      "id": "saege",
+      "set": "E",
+      "wort": "Säge",
+      "bild": "saege.svg",
+      "audio": "saege.mp3",
+      "silben": 2,
+      "kategorie": "werkzeug"
+    },
+    {
+      "id": "tisch",
+      "set": "E",
+      "wort": "Tisch",
+      "bild": "tisch.svg",
+      "audio": "tisch.mp3",
+      "silben": 1,
+      "kategorie": "haus"
+    },
+    {
+      "id": "traktor",
+      "set": "E",
+      "wort": "Traktor",
+      "bild": "traktor.svg",
+      "audio": "traktor.mp3",
+      "silben": 2,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "uhr",
+      "set": "E",
+      "wort": "Uhr",
+      "bild": "uhr.svg",
+      "audio": "uhr.mp3",
+      "silben": 1,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "vulkan",
+      "set": "E",
+      "wort": "Vulkan",
+      "bild": "vulkan.svg",
+      "audio": "vulkan.mp3",
+      "silben": 2,
+      "kategorie": "natur"
+    },
+    {
+      "id": "zange",
+      "set": "E",
+      "wort": "Zange",
+      "bild": "zange.svg",
+      "audio": "zange.mp3",
+      "silben": 2,
+      "kategorie": "werkzeug"
+    },
+    {
+      "id": "zug",
+      "set": "E",
+      "wort": "Zug",
+      "bild": "zug.svg",
+      "audio": "zug.mp3",
+      "silben": 1,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "gabel",
+      "set": "F",
+      "wort": "Gabel",
+      "bild": "gabel.svg",
+      "audio": "gabel.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "hubschrauber",
+      "set": "F",
+      "wort": "Hubschrauber",
+      "bild": "hubschrauber.svg",
+      "audio": "hubschrauber.mp3",
+      "silben": 3,
+      "kategorie": "fahrzeuge"
+    },
+    {
+      "id": "kirsche",
+      "set": "F",
+      "wort": "Kirsche",
+      "bild": "kirsche.svg",
+      "audio": "kirsche.mp3",
+      "silben": 2,
+      "kategorie": "essen"
+    },
+    {
+      "id": "kuh",
+      "set": "F",
+      "wort": "Kuh",
+      "bild": "kuh.svg",
+      "audio": "kuh.mp3",
+      "silben": 1,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "lineal",
+      "set": "F",
+      "wort": "Lineal",
+      "bild": "lineal.svg",
+      "audio": "lineal.mp3",
+      "silben": 3,
+      "kategorie": "schule"
+    },
+    {
+      "id": "loeffel",
+      "set": "F",
+      "wort": "Löffel",
+      "bild": "loeffel.svg",
+      "audio": "loeffel.mp3",
+      "silben": 2,
+      "kategorie": "haushalt"
+    },
+    {
+      "id": "muschel",
+      "set": "F",
+      "wort": "Muschel",
+      "bild": "muschel.svg",
+      "audio": "muschel.mp3",
+      "silben": 2,
+      "kategorie": "natur"
+    },
+    {
+      "id": "pinsel",
+      "set": "F",
+      "wort": "Pinsel",
+      "bild": "pinsel.svg",
+      "audio": "pinsel.mp3",
+      "silben": 2,
+      "kategorie": "werkzeug"
+    },
+    {
+      "id": "rutsche",
+      "set": "F",
+      "wort": "Rutsche",
+      "bild": "rutsche.svg",
+      "audio": "rutsche.mp3",
+      "silben": 2,
+      "kategorie": "spielzeug"
+    },
+    {
+      "id": "schwein",
+      "set": "F",
+      "wort": "Schwein",
+      "bild": "schwein.svg",
+      "audio": "schwein.mp3",
+      "silben": 1,
+      "kategorie": "tiere"
+    },
+    {
+      "id": "trommel",
+      "set": "F",
+      "wort": "Trommel",
+      "bild": "trommel.svg",
+      "audio": "trommel.mp3",
+      "silben": 2,
+      "kategorie": "musik"
+    },
+    {
+      "id": "zelt",
+      "set": "F",
+      "wort": "Zelt",
+      "bild": "zelt.svg",
+      "audio": "zelt.mp3",
+      "silben": 1,
+      "kategorie": "haus"
+    }
+  ]
+}
