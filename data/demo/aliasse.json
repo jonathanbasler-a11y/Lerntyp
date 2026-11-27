@@ -1,0 +1,11 @@
+{
+  "sitzungscode": "DEMO-4711",
+  "aliasse": [
+    { "alias": "Fuchs-27", "symbol": "🦊" },
+    { "alias": "Igel-14", "symbol": "🦔" },
+    { "alias": "Eule-08", "symbol": "🦉" },
+    { "alias": "Hase-33", "symbol": "🐰" },
+    { "alias": "Otter-41", "symbol": "🦦" },
+    { "alias": "Dachs-19", "symbol": "🦡" }
+  ]
+}

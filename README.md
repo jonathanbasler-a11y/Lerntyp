@@ -15,6 +15,7 @@ Die Annahme, Kinder lernten besser, wenn der Unterricht zu ihrem „Lerntyp“ (
 | [docs/03-architektur.md](docs/03-architektur.md) | Systemarchitektur: Stack, Datenmodell, Offline-Sync, Hosting-Stufen |
 | [docs/04-datenschutz-genehmigungen.md](docs/04-datenschutz-genehmigungen.md) | Datenschutz, Rechtsrahmen, Genehmigungen, Entwürfe für Briefe und Einwilligungen |
 | [docs/05-forschungsplan.md](docs/05-forschungsplan.md) | Forschungsfragen, Phasen R0–R4, Studiendesign, Auswertungsplan |
+| [docs/06-familientest-leitfaden.md](docs/06-familientest-leitfaden.md) | Informeller Test der Demo mit eigenen Kindern: Ablauf, Beobachtungsbogen, Fragen |
 | [docs/research/00-dossier.md](docs/research/00-dossier.md) | Recherche-Dossier des Projektinhabers (Quellendokument) |
 | [PLAN.md](PLAN.md) | Build-Roadmap mit Phasen P1–P5 und Abnahmekriterien |
 | [CLAUDE.md](CLAUDE.md) | Regeln für KI-gestützte Entwicklungssitzungen |
