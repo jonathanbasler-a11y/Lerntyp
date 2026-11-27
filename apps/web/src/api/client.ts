@@ -1,4 +1,4 @@
-import type { EventEnvelope, PhaseFolge, PhaseHaupt, Rotation } from '@lerntyp/shared';
+import type { EventEnvelope, PhaseFolge, PhaseStunde, Rotation } from '@lerntyp/shared';
 
 export interface Teilnehmer {
   alias: string;
@@ -15,7 +15,7 @@ export interface BeitrittsAntwort {
 
 /** Stand der Sitzung: welche Stunde läuft und bis zu welcher Phase die Lehrkraft freigegeben hat. */
 export type SitzungsStand =
-  | { stunde: 'haupt'; sitzung: string; freigabe: PhaseHaupt; simuliert: boolean }
+  | { stunde: 'haupt'; sitzung: string; freigabe: PhaseStunde; simuliert: boolean }
   | { stunde: 'folge'; sitzung: string; freigabe: PhaseFolge; simuliert: boolean };
 
 /** Schnittstelle zwischen UI und Datenhaltung (03 §7.2). Demo: Mock-Adapter, Live: HTTP (ab Phase 3). */

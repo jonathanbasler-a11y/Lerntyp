@@ -1,6 +1,6 @@
 import {
   PHASEN_FOLGE,
-  PHASEN_HAUPT,
+  PHASEN_STUNDE,
   neuerSeed,
   parseEvent,
   rotationFuerBeitritt,
@@ -30,7 +30,7 @@ const sitzungsId = (stunde: 'haupt' | 'folge') => `demo-${demo.sitzungscode}-${s
 function neuerZustand(): Zustand {
   const simKinder = erzeugeSimKinder(simParameter);
   const z: Zustand = {
-    stand: { stunde: 'haupt', sitzung: sitzungsId('haupt'), freigabe: PHASEN_HAUPT[0], simuliert: true },
+    stand: { stunde: 'haupt', sitzung: sitzungsId('haupt'), freigabe: PHASEN_STUNDE[0], simuliert: true },
     ereignisse: [],
     teilnehmer: new Map(
       simKinder.map((k) => [k.alias, { alias: k.alias, rotation: k.rotation, seed: k.seed, simuliert: true } satisfies Teilnehmer]),
@@ -101,7 +101,7 @@ export function createMockClient(): ApiClient {
     },
     async setFreigabe(freigabe) {
       const z = zustand;
-      const erlaubt: readonly string[] = z.stand.stunde === 'haupt' ? PHASEN_HAUPT : PHASEN_FOLGE;
+      const erlaubt: readonly string[] = z.stand.stunde === 'haupt' ? PHASEN_STUNDE : PHASEN_FOLGE;
       if (!erlaubt.includes(freigabe)) throw new Error(`Phase „${freigabe}“ gehört nicht zur laufenden Stunde`);
       z.stand = { ...z.stand, freigabe } as SitzungsStand;
       laufeSimulation(z);

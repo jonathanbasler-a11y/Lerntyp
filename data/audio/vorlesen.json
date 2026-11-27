@@ -126,5 +126,157 @@
   {
     "key": "kind.weiter_geht.text",
     "datei": "ui-kind-weiter-geht-text.mp3"
+  },
+  {
+    "key": "parcours.station.s1.titel",
+    "datei": "ui-parcours-station-s1-titel.mp3"
+  },
+  {
+    "key": "parcours.station.s1.einleitung",
+    "datei": "ui-parcours-station-s1-einleitung.mp3"
+  },
+  {
+    "key": "parcours.station.s2.titel",
+    "datei": "ui-parcours-station-s2-titel.mp3"
+  },
+  {
+    "key": "parcours.station.s2.einleitung",
+    "datei": "ui-parcours-station-s2-einleitung.mp3"
+  },
+  {
+    "key": "parcours.station.s3.titel",
+    "datei": "ui-parcours-station-s3-titel.mp3"
+  },
+  {
+    "key": "parcours.station.s3.einleitung",
+    "datei": "ui-parcours-station-s3-einleitung.mp3"
+  },
+  {
+    "key": "parcours.planen.frage",
+    "datei": "ui-parcours-planen-frage.mp3"
+  },
+  {
+    "key": "parcours.planen.sicherheit",
+    "datei": "ui-parcours-planen-sicherheit.mp3"
+  },
+  {
+    "key": "parcours.smiley.1",
+    "datei": "ui-parcours-smiley-1.mp3"
+  },
+  {
+    "key": "parcours.smiley.2",
+    "datei": "ui-parcours-smiley-2.mp3"
+  },
+  {
+    "key": "parcours.smiley.3",
+    "datei": "ui-parcours-smiley-3.mp3"
+  },
+  {
+    "key": "parcours.smiley.4",
+    "datei": "ui-parcours-smiley-4.mp3"
+  },
+  {
+    "key": "parcours.pruefen.titel",
+    "datei": "ui-parcours-pruefen-titel.mp3"
+  },
+  {
+    "key": "parcours.pruefen.ziel_erreicht",
+    "datei": "ui-parcours-pruefen-ziel-erreicht.mp3"
+  },
+  {
+    "key": "parcours.pruefen.geholfen",
+    "datei": "ui-parcours-pruefen-geholfen.mp3"
+  },
+  {
+    "key": "parcours.pruefen.nichts",
+    "datei": "ui-parcours-pruefen-nichts.mp3"
+  },
+  {
+    "key": "parcours.s1.luecke",
+    "datei": "ui-parcours-s1-luecke.mp3"
+  },
+  {
+    "key": "parcours.s1.warum",
+    "datei": "ui-parcours-s1-warum.mp3"
+  },
+  {
+    "key": "parcours.s2.aufgabe",
+    "datei": "ui-parcours-s2-aufgabe.mp3"
+  },
+  {
+    "key": "parcours.s2.bloecke",
+    "datei": "ui-parcours-s2-bloecke.mp3"
+  },
+  {
+    "key": "parcours.s3.aufgabe",
+    "datei": "ui-parcours-s3-aufgabe.mp3"
+  },
+  {
+    "key": "parcours.richtig",
+    "datei": "ui-parcours-richtig.mp3"
+  },
+  {
+    "key": "parcours.warten",
+    "datei": "ui-parcours-warten.mp3"
+  },
+  {
+    "key": "strategie.gedaechtnis_training",
+    "datei": "ui-strategie-gedaechtnis-training.mp3"
+  },
+  {
+    "key": "strategie.haeppchen_lernen",
+    "datei": "ui-strategie-haeppchen-lernen.mp3"
+  },
+  {
+    "key": "strategie.doppelt_merken",
+    "datei": "ui-strategie-doppelt-merken.mp3"
+  },
+  {
+    "key": "strategie.mischen",
+    "datei": "ui-strategie-mischen.mp3"
+  },
+  {
+    "key": "strategie.warum_fragen",
+    "datei": "ui-strategie-warum-fragen.mp3"
+  },
+  {
+    "key": "strategie.beispiele",
+    "datei": "ui-strategie-beispiele.mp3"
+  },
+  {
+    "key": "profil.titel",
+    "datei": "ui-profil-titel.mp3"
+  },
+  {
+    "key": "profil.staerken",
+    "datei": "ui-profil-staerken.mp3"
+  },
+  {
+    "key": "profil.superkraft",
+    "datei": "ui-profil-superkraft.mp3"
+  },
+  {
+    "key": "profil.tipp",
+    "datei": "ui-profil-tipp.mp3"
+  },
+  {
+    "key": "profil.passt",
+    "datei": "ui-profil-passt.mp3"
+  },
+  {
+    "key": "profil.smiley.1",
+    "datei": "ui-profil-smiley-1.mp3"
+  },
+  {
+    "key": "profil.smiley.2",
+    "datei": "ui-profil-smiley-2.mp3"
+  },
+  {
+    "key": "profil.smiley.3",
+    "datei": "ui-profil-smiley-3.mp3"
+  },
+  {
+    "key": "profil.smiley.4",
+    "datei": "ui-profil-smiley-4.mp3"
   }
 ]

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { PHASEN_FOLGE, PHASEN_HAUPT } from '@lerntyp/shared';
+import { PHASEN_FOLGE, PHASEN_STUNDE } from '@lerntyp/shared';
 import type { ApiClient } from '../api/client';
 import { useStand } from '../lerndetektive/hooks';
 import { t, type TextKey } from '../text';
@@ -35,7 +35,7 @@ export function DemoSteuerung({ client, onLehrkraft, onStart }: { client: ApiCli
   const [eingeklappt, setEingeklappt] = useState(false);
   const ref = useLeistenHoehe();
   if (!stand) return null;
-  const phasen: readonly string[] = stand.stunde === 'haupt' ? PHASEN_HAUPT : PHASEN_FOLGE;
+  const phasen: readonly string[] = stand.stunde === 'haupt' ? PHASEN_STUNDE : PHASEN_FOLGE;
   const index = phasen.indexOf(stand.freigabe);
   const naechste = phasen[index + 1];
   const letzteHaupt = stand.stunde === 'haupt' && naechste === undefined;

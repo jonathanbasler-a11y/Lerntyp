@@ -1118,5 +1118,859 @@
     "sha256": "a5d18b9456b90fd60527f7dae351157bbaccc31d1dd99576b5b678c6b78c2a87",
     "stimme": "de_DE-thorsten-high (Piper)",
     "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-station-s1-titel.mp3",
+    "text": "Wort-Werkstatt",
+    "sha256": "651afe2be0a02442ba701360d9d7b65c3171fd6919e09fb6b4a2a7c803f6fbfb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-station-s1-einleitung.mp3",
+    "text": "Welcher Buchstabe fehlt? Sag auch, warum.",
+    "sha256": "807dba06869ea1b32266ec12bc0fe04caeef2b36abb43d69629fd4064ace8339",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-station-s2-titel.mp3",
+    "text": "Satz-Baukasten",
+    "sha256": "52693824b236196f9069db66cf1817855e877495174fe6287a8935d68664006d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-station-s2-einleitung.mp3",
+    "text": "Baue aus den Blöcken einen Satz, der anders anfängt.",
+    "sha256": "f05233b4953049f9c2694c2884ae1ae090193d5db4ab2a014218497373682230",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-station-s3-titel.mp3",
+    "text": "Würfel-Baumeister",
+    "sha256": "a8fe78dbd002e2c38eadc715b5088b26149921ccfb4bc8985912d7b5707a599e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-station-s3-einleitung.mp3",
+    "text": "Welcher Bauplan gehört zu dem Gebäude?",
+    "sha256": "d70b9b9f80f29f87816a3f838855e3ee60b4a054d6fb53aadd0fd8a6fd91ff03",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-planen-frage.mp3",
+    "text": "Wie viele von 5 schaffst du?",
+    "sha256": "bfe85cb415498e8d1dc50f22230c86471fa7f8e2ff91b3eb9e6779d7087ffdbf",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-planen-sicherheit.mp3",
+    "text": "Wie sicher bist du?",
+    "sha256": "dd86569be83beac193fbd2d9e1ab8cd47ba9a133f0b547986be9f26bded10d12",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-smiley-1.mp3",
+    "text": "Gar nicht sicher",
+    "sha256": "dcc3161e5277d2320297cc5e8ce46d84b2a5ef75ee05fc46ad509318f18f6b29",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-smiley-2.mp3",
+    "text": "Eher unsicher",
+    "sha256": "0a05fb6ead291629b627c317b6f7bea4022055de7dca678fe54b07c607c8bcba",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-smiley-3.mp3",
+    "text": "Ziemlich sicher",
+    "sha256": "a329966d77b58bcc1c5978a0498eddc52feb872bfac9eb87402c3e2dd84071aa",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-smiley-4.mp3",
+    "text": "Ganz sicher",
+    "sha256": "c14b16bbd7f3a721b95521b744451194ae9d64467185760862c4157f12ecba59",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-pruefen-titel.mp3",
+    "text": "Prüfen",
+    "sha256": "a1ca1357598782f7d4efef595130d3892d2261d4c44ef02cdb9c1ff0881e0753",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-pruefen-ziel-erreicht.mp3",
+    "text": "Du hast dein Ziel erreicht.",
+    "sha256": "caee31b5e8303efae779f89867796074d15211eafa8fd7270c210de7b5e69381",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-pruefen-geholfen.mp3",
+    "text": "Was hat dir geholfen?",
+    "sha256": "57618d1fa981077f115c761ff7ec93823b599363db1c7a349577523d1fafa084",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-pruefen-nichts.mp3",
+    "text": "Nichts davon",
+    "sha256": "99894d6b114ae3276a21be40c449e49d7e81b799b433480c4fc0154a3cf50242",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-s1-luecke.mp3",
+    "text": "Welcher Buchstabe fehlt?",
+    "sha256": "22c7e63391da9faf0d15680fb2fbf9d5e65635af02d2b451e1fe75f07b5b141d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-s1-warum.mp3",
+    "text": "Warum schreibt man das so?",
+    "sha256": "7aebcaa69d79a3af467e7b987216b3f74b9880cf9d601f8ae6c387f3c4c03f70",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-s2-aufgabe.mp3",
+    "text": "Baue einen Satz, der mit einem anderen Block anfängt.",
+    "sha256": "b2910e589f204c9db5c8fc043b09ea9cd167c47df14d7948fbaa6568dd0e3fd6",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-s2-bloecke.mp3",
+    "text": "Tippe die Blöcke in deiner Reihenfolge an.",
+    "sha256": "7757baec23ecd3e21c03475ff041d5a869ae41f96bdea35f9e93733b64a4d137",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-s3-aufgabe.mp3",
+    "text": "Welcher Bauplan passt zum Gebäude?",
+    "sha256": "e3d68384c0f8d803aa67baa07034ab2cf23ebe1ace540521251f4c6077bb9f9f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-richtig.mp3",
+    "text": "Das hat geklappt.",
+    "sha256": "6d0a297ce48713e4f0177432b1b7a9bf2da511e87aef981ba4cef6883b9031e2",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-parcours-warten.mp3",
+    "text": "Warte kurz auf die Lehrkraft.",
+    "sha256": "c72c9a2d71117f3814e862738f224010ac4e379c084c37417ca4c8471c144181",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-strategie-gedaechtnis-training.mp3",
+    "text": "Gedächtnis-Training",
+    "sha256": "05aa2c5e0807500872acdbf879f58cd7cf7bd8c87dc006480c6e216a7a552eca",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-strategie-haeppchen-lernen.mp3",
+    "text": "Häppchen-Lernen",
+    "sha256": "54c82d9db7352dcfe3eef902f810a98e73272ca1e60ee09d88a923b21c4b499f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-strategie-doppelt-merken.mp3",
+    "text": "Doppelt merken",
+    "sha256": "b054e932717b703864a3b7c912949e96c66e31da312deeadb9753c3b03899943",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-strategie-mischen.mp3",
+    "text": "Mischen",
+    "sha256": "9e53a7db6db7ee8c119ca62993db1972d191ae09c628a936177fde5e1eea4faf",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-strategie-warum-fragen.mp3",
+    "text": "Warum-Fragen",
+    "sha256": "ab303c42ac973ca07843ff839827917c1b892a7897aac71c8f0d312097a799e8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-strategie-beispiele.mp3",
+    "text": "Beispiele",
+    "sha256": "147790983143d584d88c22ad1a14f128c3d55e3dea3d92ec400e930a04031fb9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-titel.mp3",
+    "text": "Mein Lernprofil",
+    "sha256": "b6383790e2055649df20da78062b3ab50e3c8384c56b1d867fed9a6b4056e235",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-staerken.mp3",
+    "text": "Das hast du gemacht",
+    "sha256": "dc84691192311d9bb705cf889d125b5a9763806c19d59d94b0f609410ff18889",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-superkraft.mp3",
+    "text": "Deine Lern-Superkraft",
+    "sha256": "7875341b8e51e1a8fa141fe4b41a5fd0308e7bffdbb2fbda2a8e01c957c7c98e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-tipp.mp3",
+    "text": "Tipp für zu Hause",
+    "sha256": "f25c0ca29fee4e5d46cb4bc1dc6497763882731268a8815774741414c8a5e18f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-passt.mp3",
+    "text": "Passt das zu dir?",
+    "sha256": "1f9eb12c8f70b285d726ddb7b08c4a79841c239fd2d246d3ac3a5b3fd563cf0f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-smiley-1.mp3",
+    "text": "Passt gar nicht",
+    "sha256": "45ea17ee41826dce65a8e1f5648f5414a02e408f3ffb55922305f24d09e0e8c6",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-smiley-2.mp3",
+    "text": "Passt ein bisschen",
+    "sha256": "8d4952c23478ec27683e04190cac1578eb16b079d6b4d59860ef76e6edc636e9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-smiley-3.mp3",
+    "text": "Passt ziemlich gut",
+    "sha256": "6ecfb03a0097befd35aeb0e034aabf46f3e5b73861e8f35ba4b23f0bcede49d3",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "ui-profil-smiley-4.mp3",
+    "text": "Passt sehr gut",
+    "sha256": "052fd5453d6e30dd30507cf43d4eb3390c2a210d19e6976972e045b923ac1749",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-muster.mp3",
+    "text": "Verlängere das Wort: die Kinder. Bei Kinder hörst du ein d. Also schreibt man Kind mit d.",
+    "sha256": "7c07e715c6fc96cf11f4bafc3430ef0398de120d80ad43f9b9c311b86c8cbdc0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a1-hinweis1.mp3",
+    "text": "Verlängere das Wort: Sag es in der Mehrzahl oder mach es länger. Dann hörst du den Laut deutlich. Wie heißt es bei mehreren?",
+    "sha256": "de95883ab8acbb80ea58099170a0e373cb399c67986cc65f8e3afa0f60d8192d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a1-hinweis2.mp3",
+    "text": "Mehrzahl: die Hunde. Hörst du in der Mitte ein d oder ein t?",
+    "sha256": "b2dd7101c097b7fd63fb7681c670fcc2740c28c314ba217a89ecbf7bb78c0873",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a1-fehler.mp3",
+    "text": "Verlängere das Wort: die Hunde. Bei Hunde hörst du ein d. Also schreibt man Hund mit d.",
+    "sha256": "9ff11c8d737c33f2f228294c365c9f2f0a22a0956103a803fc48eded328c5231",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a2-hinweis1.mp3",
+    "text": "Leite das Wort ab: Suche ein verwandtes Wort mit a. Dann weißt du, ob es ä oder e heißt. Wie heißt ein Rad von einem Fahrrad?",
+    "sha256": "03ea5822b6721cbeacd0ea75ca362988a1e6ab8bc2e31331bf07b0a1ecbe5beb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a2-hinweis2.mp3",
+    "text": "Das verwandte Wort ist Rad. Es hat ein a. Welcher Buchstabe passt dann zu a?",
+    "sha256": "f7b7069415912779dad6e3ed2c9357b1a18d38f4c861f41fe9db625c537dbbd3",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a2-fehler.mp3",
+    "text": "Leite das Wort ab: Räder kommt von Rad. Weil in Rad ein a steckt, schreibt man Räder mit ä.",
+    "sha256": "d15ce68096a5149548d5ff9e71ba286ae5a165127a0ae31312a45a0ebb4fcd8b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a3-hinweis1.mp3",
+    "text": "Verlängere das Wort: Sag es in der Mehrzahl oder mach es länger. Dann hörst du den Laut deutlich. Wie heißt es bei mehreren?",
+    "sha256": "de95883ab8acbb80ea58099170a0e373cb399c67986cc65f8e3afa0f60d8192d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a3-hinweis2.mp3",
+    "text": "Mehrzahl: die Berge. Hörst du am Ende ein g oder ein k?",
+    "sha256": "5d4d0ef663979d8b3b39371b452fd935b8ca998105bc74906d46c1ccad4ada3c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a3-fehler.mp3",
+    "text": "Verlängere das Wort: die Berge. Bei Berge hörst du ein g. Also schreibt man Berg mit g.",
+    "sha256": "ebbbaa8160ff083961e1de7b44cd877a64877e95e5367159ca13f868297c4cba",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a4-hinweis1.mp3",
+    "text": "Leite das Wort ab: Suche ein verwandtes Wort mit a. Dann weißt du, ob es ä oder e heißt. Wie heißt das Gegenteil von warm?",
+    "sha256": "8fb2154aafe70831335175bf3f45d9502871eb292fd669ab0c5ed1933edc72b0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a4-hinweis2.mp3",
+    "text": "Das verwandte Wort ist kalt. Es hat ein a. Welcher Buchstabe passt dann zu a?",
+    "sha256": "2bb5fa59d9f9cc195e5d6546160586b80d92ef10f67113e8d7139c3114be3c21",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a4-fehler.mp3",
+    "text": "Leite das Wort ab: Kälte kommt von kalt. Weil in kalt ein a steckt, schreibt man Kälte mit ä.",
+    "sha256": "6c0c78e7eedde1fbb121c21edccb6c9549461abafd8d9e7b5803862449558dba",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a5-hinweis1.mp3",
+    "text": "Verlängere das Wort: Sag es in der Mehrzahl oder mach es länger. Dann hörst du den Laut deutlich. Wie heißt es bei mehreren?",
+    "sha256": "de95883ab8acbb80ea58099170a0e373cb399c67986cc65f8e3afa0f60d8192d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a5-hinweis2.mp3",
+    "text": "Mehrzahl: die Körbe. Hörst du in der Mitte ein b oder ein p?",
+    "sha256": "c64cce5ed0ba4530bf14df37775f30bd123459d44ede366569dfc4a707890195",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s1-a5-fehler.mp3",
+    "text": "Verlängere das Wort: die Körbe. Bei Körbe hörst du ein b. Also schreibt man Korb mit b.",
+    "sha256": "8a343510bccc540a9735b662af72d943d5afe71cee62aac4f4fba1abfc152e92",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-muster.mp3",
+    "text": "Der Vogel singt im Baum. Stell um: Im Baum singt der Vogel. Das Verb bleibt an zweiter Stelle, der Satz fängt anders an.",
+    "sha256": "409384d7d7a95b62678087fd518f5a40c3ec9c20267a00dd38cf4cd5976f8711",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a1-hinweis1.mp3",
+    "text": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+    "sha256": "aea794caa96ad044a34adbe4094e8cfe4ff4110f1c36b9682e82c4b422d40d50",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a1-hinweis2.mp3",
+    "text": "Fang mit „im Garten“ an. Dann kommt das Verb.",
+    "sha256": "4cf806257201268b20fbecf7bb61167e3f0c14ac53a22627a0c79eacf6b5fc2e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a1-fehler.mp3",
+    "text": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal.",
+    "sha256": "76bef5baa21d07bcd1bfdad07f8bc32543ec896bc8e7ed200856aba7311f1be8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a2-hinweis1.mp3",
+    "text": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle. Du kannst auch mit „ihrer Oma“ oder „eine Blume“ anfangen.",
+    "sha256": "6599a75a5735934493d2864333c15bd588869248f03301ea59d39f4c42b1e13e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a2-hinweis2.mp3",
+    "text": "Fang mit „ihrer Oma“ an. Dann kommt das Verb, dann der Rest.",
+    "sha256": "c3db99cd81228953db1cd3e81040af4aeb2e4c2ff67763b0b91bf5166eb26057",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a2-fehler.mp3",
+    "text": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal.",
+    "sha256": "76bef5baa21d07bcd1bfdad07f8bc32543ec896bc8e7ed200856aba7311f1be8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a3-hinweis1.mp3",
+    "text": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+    "sha256": "aea794caa96ad044a34adbe4094e8cfe4ff4110f1c36b9682e82c4b422d40d50",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a3-hinweis2.mp3",
+    "text": "Fang mit „auf dem Sofa“ an. Dann kommt das Verb.",
+    "sha256": "2980e75bb8ebb6f0dfcdf0b006aadcacd7b3ec3cf3381309f55eb974374a7e7c",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a3-fehler.mp3",
+    "text": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal.",
+    "sha256": "76bef5baa21d07bcd1bfdad07f8bc32543ec896bc8e7ed200856aba7311f1be8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a4-hinweis1.mp3",
+    "text": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+    "sha256": "aea794caa96ad044a34adbe4094e8cfe4ff4110f1c36b9682e82c4b422d40d50",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a4-hinweis2.mp3",
+    "text": "Fang mit „mit dem Fahrrad“ an. Dann kommt das Verb.",
+    "sha256": "b129911257dc53606d87ef14b753686dad5f43be899be82b432c8f8c5afe9b89",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a4-fehler.mp3",
+    "text": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal.",
+    "sha256": "76bef5baa21d07bcd1bfdad07f8bc32543ec896bc8e7ed200856aba7311f1be8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a5-hinweis1.mp3",
+    "text": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+    "sha256": "aea794caa96ad044a34adbe4094e8cfe4ff4110f1c36b9682e82c4b422d40d50",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a5-hinweis2.mp3",
+    "text": "Fang mit „frische Brötchen“ an. Dann kommt das Verb.",
+    "sha256": "009ec35d6414d1d66960fa204cfb873d39dbd493313e7a808d6343c2ce228fbf",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s2-a5-fehler.mp3",
+    "text": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal.",
+    "sha256": "76bef5baa21d07bcd1bfdad07f8bc32543ec896bc8e7ed200856aba7311f1be8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-muster.mp3",
+    "text": "Hinten links liegt ein Würfel, hinten rechts liegen zwei. Vorne links fehlt der Stapel, vorne rechts liegt ein Würfel. So sieht der Bauplan aus.",
+    "sha256": "45012c6146425c80e7bc224f2e05e17d86c10382819646cbcecc9053e0e90d12",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a1-hinweis1.mp3",
+    "text": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+    "sha256": "6cdb1f6f6e2977bcf1fc01ba48d6fffa18631a7f01f50e90e8d3dcd2cc4afba5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a1-hinweis2.mp3",
+    "text": "Hinten links ist der höchste Stapel. Hinten rechts steht gar kein Würfel.",
+    "sha256": "b6e2cdec15a54b55e0fe9ed857dee1445d7288cf33fa5e416bce3e7115df410e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a1-fehler.mp3",
+    "text": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist.",
+    "sha256": "b3398f205850525ecca7de7159cb3c79024276e439401d6d5b2552683ad3a6a8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a2-hinweis1.mp3",
+    "text": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+    "sha256": "6cdb1f6f6e2977bcf1fc01ba48d6fffa18631a7f01f50e90e8d3dcd2cc4afba5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a2-hinweis2.mp3",
+    "text": "Der höchste Stapel mit drei Würfeln steht vorne links. Nach rechts und nach hinten wird es niedriger.",
+    "sha256": "8c4b95b866f25d565f7a7c3f9e78a07f06a8fc9542c27a65f57b6b1926292b43",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a2-fehler.mp3",
+    "text": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist.",
+    "sha256": "b3398f205850525ecca7de7159cb3c79024276e439401d6d5b2552683ad3a6a8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a3-hinweis1.mp3",
+    "text": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+    "sha256": "6cdb1f6f6e2977bcf1fc01ba48d6fffa18631a7f01f50e90e8d3dcd2cc4afba5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a3-hinweis2.mp3",
+    "text": "In der Mitte steht der höchste Stapel mit drei Würfeln. Drum herum liegt je ein Würfel.",
+    "sha256": "7f9ce8f7615ee0fb1faade681ec4062c44c2de0c41c671b63c88de2d29d1b896",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a3-fehler.mp3",
+    "text": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist.",
+    "sha256": "b3398f205850525ecca7de7159cb3c79024276e439401d6d5b2552683ad3a6a8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a4-hinweis1.mp3",
+    "text": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+    "sha256": "6cdb1f6f6e2977bcf1fc01ba48d6fffa18631a7f01f50e90e8d3dcd2cc4afba5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a4-hinweis2.mp3",
+    "text": "Der höchste Stapel mit drei Würfeln steht vorne rechts. Vorne links fehlt der Stapel.",
+    "sha256": "2b80ae319b7f84e1bfd40b0bfded6286102ed4720b2836beac1ec9749f4239cc",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a4-fehler.mp3",
+    "text": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist.",
+    "sha256": "b3398f205850525ecca7de7159cb3c79024276e439401d6d5b2552683ad3a6a8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a5-hinweis1.mp3",
+    "text": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+    "sha256": "6cdb1f6f6e2977bcf1fc01ba48d6fffa18631a7f01f50e90e8d3dcd2cc4afba5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a5-hinweis2.mp3",
+    "text": "Hinten rechts steht kein Würfel. Der höchste Stapel mit drei Würfeln steht genau in der Mitte.",
+    "sha256": "81eb3c3ae7d97080b20b43d7c5bfb42dbd05d83b2f5b40c56dde117d5fa1c4c9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-s3-a5-fehler.mp3",
+    "text": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist.",
+    "sha256": "b3398f205850525ecca7de7159cb3c79024276e439401d6d5b2552683ad3a6a8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-zweiter-versuch-s1.mp3",
+    "text": "In der Wort-Werkstatt hast du nach einem Fehler noch einmal probiert.",
+    "sha256": "40a2194711a94ee3e65f6811ff0977d3c98125da833b8e2dd6cffc7c5cad77ff",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-zweiter-versuch-s2.mp3",
+    "text": "Beim Satz-Baukasten hast du nach einem Fehler noch einmal probiert.",
+    "sha256": "ef9519533d38dafb5b27d72c9a5cd7b588a807495ecbe8b0937acfed29f9346e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-zweiter-versuch-s3.mp3",
+    "text": "Beim Würfel-Baumeister hast du nach einem Fehler noch einmal probiert.",
+    "sha256": "17e3f5c7eed93ca8f083c25282c4eb52ed42ac57a8895b2289e3147565fd8698",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-beispiel-s1.mp3",
+    "text": "In der Wort-Werkstatt hast du dir das Musterbeispiel angeschaut. So konntest du sehen, wie es geht.",
+    "sha256": "d3edcbfaab1c5c2f8efd88f79a814415458554be8c34d9692d27f72aff1fb91d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-beispiel-s2.mp3",
+    "text": "Beim Satz-Baukasten hast du dir das Musterbeispiel angeschaut. So konntest du sehen, wie es geht.",
+    "sha256": "52da60d3046ef7e40ac2f7915103b61c8bcd51f9b06576b1f98a0431a2663872",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-beispiel-s3.mp3",
+    "text": "Beim Würfel-Baumeister hast du dir das Musterbeispiel angeschaut. So konntest du sehen, wie es geht.",
+    "sha256": "c332e632d3707cc44672260c8572a16577da42909e414fd7192db82fe613b63b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-begruendung-s1.mp3",
+    "text": "In der Wort-Werkstatt hast du erklärt, warum du ein Wort so schreibst: mit Verlängern oder mit Ableiten.",
+    "sha256": "6d4d8202e3cb46d5f9c64956f4804aae269ad620f9d2a2b6364f55592927cbc8",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-hinweis-s1.mp3",
+    "text": "In der Wort-Werkstatt hast du dir einen Tipp geholt, als du ihn gebraucht hast.",
+    "sha256": "1344d0ed782456b7f75da96f2644faede912e8e945196cdac22b993a4fc03516",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-hinweis-s2.mp3",
+    "text": "Beim Satz-Baukasten hast du dir einen Tipp geholt, als du ihn gebraucht hast.",
+    "sha256": "ed227fafeb03a7d3803b9fe0a032a09b7d39eb0ee23c32874a68dbbd625893bf",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-hinweis-s3.mp3",
+    "text": "Beim Würfel-Baumeister hast du dir einen Tipp geholt, als du ihn gebraucht hast.",
+    "sha256": "3b39f329816f3cc8613e9abca9b6c42ef5547e5a66e4a8031f19456680a7a4fe",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-ziel-s1.mp3",
+    "text": "In der Wort-Werkstatt hast du dir vorher ein Ziel gesetzt.",
+    "sha256": "196518547d648089b4027a7d819d1a2a38d764d280b6f873fe4af95820730206",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-ziel-s2.mp3",
+    "text": "Beim Satz-Baukasten hast du dir vorher ein Ziel gesetzt.",
+    "sha256": "db4c6d59a4b0fe3b2c5752591960a5d736626c1bb22714fddaddf3ff377cbeb0",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-ziel-s3.mp3",
+    "text": "Beim Würfel-Baumeister hast du dir vorher ein Ziel gesetzt.",
+    "sha256": "819c7b036cd145abea1ba79a8e421f78bf52d796e5f09fd954dfd4b2e158a4dc",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-geholfen-s1.mp3",
+    "text": "In der Wort-Werkstatt hast du überlegt, was dir geholfen hat.",
+    "sha256": "aede7651767fce3748365c74ea1b46d8fa1d1a66f914d05b2c582be9c304ae38",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-geholfen-s2.mp3",
+    "text": "Beim Satz-Baukasten hast du überlegt, was dir geholfen hat.",
+    "sha256": "c50d7cfada2f21fe585d38979f19f69924762b046b70ba3562468502d4cb5e3b",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-geholfen-s3.mp3",
+    "text": "Beim Würfel-Baumeister hast du überlegt, was dir geholfen hat.",
+    "sha256": "d695c62f591cc294a07f0fe50530e595d728fb154d89cac7975cae080e2c239f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-karte-teilnahme-lerndetektive.mp3",
+    "text": "Bei den Lerndetektiven hast du von Anfang bis zum Ende mitgemacht.",
+    "sha256": "e37bc41ac55cc6cecbd27a099e9f92cc7d91effc7fead6f9fad29a2f8daf1167",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-fallback.mp3",
+    "text": "Heute hast du Neues ausprobiert. Das ist ein guter Anfang, und beim nächsten Mal zeigen wir dir mehr.",
+    "sha256": "5cfcc12a7038dd9d0bbf4a00b9ba8f9f343ef125eb0bb9e62d3cfb679652e2b7",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-superkraft-gedaechtnis-training.mp3",
+    "text": "Probier diese Woche das Gedächtnis-Training: Deck die Wörter ab und erinnere dich selbst, bevor du nachschaust.",
+    "sha256": "a3400e3f647825cd999432561c4d8c2c59a55cc9d363bd48700c5c74f52e10a2",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-sk-frage-gedaechtnis-training.mp3",
+    "text": "Hast du diese Woche deine Lern-Superkraft ausprobiert: Gedächtnis-Training?",
+    "sha256": "b0226bd8896878b793fcc7d761b879b02cd309738123c89edec4ddf83d1cedeb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-superkraft-haeppchen-lernen.mp3",
+    "text": "Probier diese Woche das Häppchen-Lernen: Übe lieber an mehreren Tagen ein bisschen als einmal ganz lange.",
+    "sha256": "b4a80c6fd40b3bb0750d5f93bc29a39736042ddc795e4be694f780cb0eec5648",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-sk-frage-haeppchen-lernen.mp3",
+    "text": "Hast du diese Woche deine Lern-Superkraft ausprobiert: Häppchen-Lernen?",
+    "sha256": "918e7741f8f305125c99824e2d7d4ae0b200cdedb9f66a66339a7180e8ceeb97",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-superkraft-doppelt-merken.mp3",
+    "text": "Probier diese Woche das Doppelt-Merken: Stell dir zu einem Wort ein Bild vor und sprich das Wort dazu.",
+    "sha256": "fd7c06a715f9046432c5d33162143437b0832f8b41837ad67f6bf70abbd4d9a9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-sk-frage-doppelt-merken.mp3",
+    "text": "Hast du diese Woche deine Lern-Superkraft ausprobiert: Doppelt merken?",
+    "sha256": "547222ef6a1bc8c30b32d647978b4cb8a62067088ce3daf5691183ef009d597d",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-superkraft-mischen.mp3",
+    "text": "Probier diese Woche das Mischen: Übe nicht alles der Reihe nach, sondern wechsle zwischen verschiedenen Aufgaben.",
+    "sha256": "63abe84484cac9155ae77fde30d9316950f054a65ae3eced39d57e5e67c704b9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-sk-frage-mischen.mp3",
+    "text": "Hast du diese Woche deine Lern-Superkraft ausprobiert: Mischen?",
+    "sha256": "d0f3d40a2f6897e9e001d1ad41fa5e6aa0f7be946d5188861d649ff2b1a5fc23",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-superkraft-warum-fragen.mp3",
+    "text": "Probier diese Woche die Warum-Fragen: Frag dich bei einem Wort, warum man es so schreibt.",
+    "sha256": "33c2eb6c738caf8d1b7b1735b351d25e6dd13a86270fd6cf7ae7fc5fa7eb419f",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-sk-frage-warum-fragen.mp3",
+    "text": "Hast du diese Woche deine Lern-Superkraft ausprobiert: Warum-Fragen?",
+    "sha256": "8fdd31e1dd527528bc54ddf64964cf08ae5d1a0c4ae9b4cf99fd76af91a974b5",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-superkraft-beispiele.mp3",
+    "text": "Probier diese Woche die Beispiele: Schau dir erst ein gelöstes Beispiel an und mach dann die Aufgabe.",
+    "sha256": "b0809cbb74df35a6b3702c6a4ceae4c2f4518a4eb78690c688b9389a938b6b58",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-sk-frage-beispiele.mp3",
+    "text": "Hast du diese Woche deine Lern-Superkraft ausprobiert: Beispiele?",
+    "sha256": "13a76c6b7adf8f0ebf212ef862b7161d059f5d93afdfb49daa1913215baaf9b9",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-tipp-gedaechtnis-training.mp3",
+    "text": "Schreib zu Hause ein paar Wörter aus dem Kopf auf und vergleiche sie dann mit dem Heft.",
+    "sha256": "9f748a3115bb2c5a94f33989c8ba42ef663723e58cae7de0934e5a0680332770",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-tipp-haeppchen-lernen.mp3",
+    "text": "Übe zu Hause an jedem Tag ein paar Minuten, statt einmal ganz lange.",
+    "sha256": "d90cb35a3b2e513f1c7e498bffb6da20566d1677bd1a75f0bfc0ad9cfc35dbd3",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-tipp-doppelt-merken.mp3",
+    "text": "Male zu Hause zu einem neuen Wort ein kleines Bild und sag das Wort laut dazu.",
+    "sha256": "a5bb404cc4bc53dc43689576e749130ce83de5f8b1474540832d4cd1f10983cb",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-tipp-mischen.mp3",
+    "text": "Wechsle zu Hause beim Üben ab: mal Rechnen, mal Lesen, mal Schreiben.",
+    "sha256": "74dee64a8b7992ce33060652ab6c172255dfa95d0cace8e9173450837032903e",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-tipp-warum-fragen.mp3",
+    "text": "Frag zu Hause bei einem Wort: Warum schreibt man das so? Erkläre es jemandem.",
+    "sha256": "4b277b75846c4d0432dab8930c2a48945e8111554264e2f5b08400cde42bdf69",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
+  },
+  {
+    "datei": "pc-tipp-beispiele.mp3",
+    "text": "Such dir zu Hause erst ein fertiges Beispiel im Heft und mach dann eine ähnliche Aufgabe.",
+    "sha256": "eb39f1eedbe53a2889f1959a77e49ed7792e85c5c9773c46f2059c1f53896683",
+    "stimme": "de_DE-thorsten-high (Piper)",
+    "lizenz": "Datensatz CC0 (Thorsten-Voice); Basismodell en_US-lessac – Lizenz zu verifizieren (R0)"
   }
 ]

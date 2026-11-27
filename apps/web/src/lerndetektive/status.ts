@@ -1,4 +1,4 @@
-import type { EventEnvelope, LerndetektiveDaten, Schritt } from '@lerntyp/shared';
+import type { EventEnvelope, LerndetektiveDaten, StundeSchritt } from '@lerntyp/shared';
 import type { SitzungsStand, Teilnehmer } from '../api/client';
 import { berechneSchritt } from './schritt';
 
@@ -6,7 +6,7 @@ import { berechneSchritt } from './schritt';
 export interface KindStatus {
   alias: string;
   simuliert: boolean;
-  art: Schritt['art'] | 'start' | 'nicht_da';
+  art: StundeSchritt['art'] | 'start' | 'nicht_da';
   pausiert: boolean;
   hilfe: boolean;
 }

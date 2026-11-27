@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { Bedingung, EventEnvelope, LernEintrag } from '@lerntyp/shared';
+import { berechneProfil, type Bedingung, type EventEnvelope, type LernEintrag, type ParcoursTyp } from '@lerntyp/shared';
 import type { ApiClient, SitzungsStand, Teilnehmer } from '../api/client';
 import { KindLeiste } from '../components/KindLeiste';
 import { demo } from '../demoData';
@@ -7,11 +7,15 @@ import { daten } from '../lerndetektive/daten';
 import { berechneSchritt } from '../lerndetektive/schritt';
 import { EreignisSender, naechsteSeq } from '../lerndetektive/sender';
 import { istSchnell, zeiten } from '../lerndetektive/zeiten';
+import { kartenDaten } from '../parcours/daten';
+import { anzeigeFuer, gespeichertesProfil } from '../parcours/profil';
 import { Fertig } from './Fertig';
 import { AudioStart } from './kind/AudioStart';
 import { Lernen } from './kind/Lernen';
 import { Mitteilung } from './kind/Mitteilung';
 import { PauseAufgabe } from './kind/PauseAufgabe';
+import { Profil } from './kind/Profil';
+import { StationAnsicht } from './kind/station/Station';
 import { Superkraft } from './kind/Superkraft';
 import { Test } from './kind/Test';
 import { Ueberzeugung } from './kind/Ueberzeugung';
@@ -62,11 +66,11 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
 
   /** Erzeugt ein Ereignis, hängt es sofort lokal an und schickt es an den Adapter. */
   const senden = useCallback(
-    (typ: string, payload: Record<string, unknown>, sitzung: string) => {
+    (typ: string, payload: Record<string, unknown>, sitzung: string, modul?: EventEnvelope['modul']) => {
       if (senderRef.current?.sitzung !== sitzung) {
         senderRef.current = new EreignisSender({ sitzung, alias, startSeq: naechsteSeq(ereignisseRef.current, sitzung, alias) });
       }
-      const ev = senderRef.current.erzeuge(typ, payload);
+      const ev = senderRef.current.erzeuge(typ, payload, modul);
       ereignisseRef.current = [...ereignisseRef.current, ev];
       setEreignisse(ereignisseRef.current);
       void client.sendEvents([ev]).catch(() => undefined);
@@ -98,6 +102,22 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
     if (hatTyp(ereignisseRef.current, 'phase_abgeschlossen', (p) => p['phase'] === abschluss.phase)) return;
     senden('phase_abgeschlossen', { phase: abschluss.phase, abgebrochen: abschluss.abgebrochen }, sitzung);
   }, [abschluss, lernEintrag, senden, sitzung]);
+
+  // Parcours: Das Zeigen einer Aufgabe wird einmal je Aufgabe gemeldet, das Profil einmal berechnet und gespeichert (nur aus Verhaltensspuren).
+  const parcoursSchritt = schritt?.art === 'parcours' ? schritt : null;
+  const zuZeigen = parcoursSchritt?.schritt.art === 'aufgabe' && parcoursSchritt.schritt.zeigen ? parcoursSchritt.schritt.aufgabe_id : null;
+  const zeigeStation = parcoursSchritt?.station;
+  const profilFaellig = schritt?.art === 'profil_zeigen';
+  useEffect(() => {
+    if (!zuZeigen || !zeigeStation) return;
+    const schonGezeigt = ereignisseRef.current.some((e) => e.modul === 'parcours' && e.typ === 'aufgabe_gezeigt' && e.payload['aufgabe_id'] === zuZeigen);
+    if (!schonGezeigt) senden('aufgabe_gezeigt', { station: zeigeStation, aufgabe_id: zuZeigen }, sitzung, 'parcours');
+  }, [zuZeigen, zeigeStation, senden, sitzung]);
+  useEffect(() => {
+    if (!profilFaellig || ereignisseRef.current.some((e) => e.typ === 'profil_angezeigt')) return;
+    const p = berechneProfil(ereignisseRef.current, kartenDaten);
+    senden('profil_angezeigt', { karten_ids: p.karten_ids, superkraft: p.superkraft }, sitzung, 'profil');
+  }, [profilFaellig, senden, sitzung]);
 
   if (fehler) return <Rahmen><Mitteilung id="fehler" titel="kind.fehler.titel" text="kind.fehler.text" /></Rahmen>;
   if (!stand || !teilnehmer || !ereignisse) return <Rahmen><Mitteilung id="laedt" titel="kind.laedt.titel" text="kind.laedt.text" /></Rahmen>;
@@ -205,7 +225,19 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
     case 'vergleich':
       return rahmen(<Mitteilung id="vergleich" titel="kind.nach_vorne.titel" text="kind.vergleich.text" />);
     case 'superkraft':
-      return rahmen(<Superkraft onAntwort={(antwort) => senden('superkraft_ausprobiert', { antwort }, sitzung)} />);
+      return rahmen(<Superkraft superkraft={gespeichertesProfil(ereignisse)?.superkraft ?? null} onAntwort={(antwort) => senden('superkraft_ausprobiert', { antwort }, sitzung)} />);
+    case 'parcours':
+      return rahmen(
+        <StationAnsicht
+          key={schritt.station}
+          station={schritt.station}
+          schritt={schritt.schritt}
+          senden={(typ: ParcoursTyp, payload) => senden(typ, { station: schritt.station, ...payload }, sitzung, 'parcours')}
+        />,
+      );
+    case 'profil_zeigen':
+    case 'profil_passt':
+      return rahmen(<Profil anzeige={anzeigeFuer(ereignisse)} onPasst={(smiley) => senden('profil_passt', { smiley }, sitzung, 'profil')} />);
     case 'fertig':
       return rahmen(<Fertig onZumStart={onZumStart} />, false);
     case 'abschliessen':

@@ -60,6 +60,7 @@ const FILES = [
   { rel: 'demo/simulation.json', schema: SimulationSchema },
   { rel: 'audio/manifest.json', schema: AudioManifestSchema },
   { rel: 'audio/vorlesen.json', schema: VorlesenSchema },
+  { rel: 'audio/vorlesen-daten.json', schema: VorlesenSchema },
   { rel: 'lerndetektive/bilder.json', schema: BilderSchema },
   { rel: 'parcours/s1-wort-werkstatt.json', schema: S1DatenSchema },
   { rel: 'parcours/s2-satz-baukasten.json', schema: S2DatenSchema },
@@ -76,6 +77,39 @@ function lies(dataDir: string, rel: string): unknown {
   } catch {
     return undefined;
   }
+}
+
+/**
+ * Kindtexte aus den Parcours- und Profil-Daten, die einen Vorlese-Knopf haben: Schlüssel -> Text.
+ * Schlüssel wie in scripts/audio/erzeugen.py (`daten_texte`) und apps/web/src/parcours/audio.ts.
+ */
+export function datenTexte(dataDir: string): Map<string, string> {
+  const m = new Map<string, string>();
+  const stationen = [
+    ['s1', 'parcours/s1-wort-werkstatt.json', S1DatenSchema],
+    ['s2', 'parcours/s2-satz-baukasten.json', S2DatenSchema],
+    ['s3', 'parcours/s3-wuerfel-baumeister.json', S3DatenSchema],
+  ] as const;
+  for (const [station, rel, schema] of stationen) {
+    const d = schema.safeParse(lies(dataDir, rel));
+    if (!d.success) continue;
+    m.set(`${station}.muster`, d.data.musterbeispiel.erklaerung);
+    for (const a of d.data.aufgaben) for (const feld of ['hinweis1', 'hinweis2', 'fehler'] as const) m.set(`${a.id}.${feld}`, a[feld]);
+  }
+  const karten = KartenDatenSchema.safeParse(lies(dataDir, 'profil/karten.json'));
+  const texte = TexteSchema.safeParse(lies(dataDir, 'texte/de.json'));
+  if (karten.success) {
+    for (const k of karten.data.karten) m.set(`karte.${k.id}`, k.text);
+    m.set('fallback', karten.data.fallback.text);
+    for (const [s, text] of Object.entries(karten.data.superkraft)) {
+      m.set(`superkraft.${s}`, text);
+      const frage = texte.success ? texte.data['kind.superkraft.frage_profil'] : undefined;
+      const name = texte.success ? texte.data[`strategie.${s}`] : undefined;
+      if (frage && name) m.set(`sk_frage.${s}`, frage.replace('{name}', name));
+    }
+    for (const [s, text] of Object.entries(karten.data.tipps)) m.set(`tipp.${s}`, text);
+  }
+  return m;
 }
 
 const AUDIO_HINWEIS = 'bitte `npm run audio:erzeugen` ausführen (scripts/audio/erzeugen.py)';
@@ -108,8 +142,19 @@ function medienpruefung(dataDir: string, publicDir: string): string[] {
       }
     }
   }
+  const vorlesenDaten = VorlesenSchema.safeParse(lies(dataDir, 'audio/vorlesen-daten.json'));
+  if (vorlesenDaten.success) {
+    const texteDaten = datenTexte(dataDir);
+    for (const v of vorlesenDaten.data) {
+      const text = texteDaten.get(v.key);
+      if (text === undefined) fehler.push(`audio/vorlesen-daten.json: Schlüssel „${v.key}“ gibt es in den Parcours-/Profil-Daten nicht`);
+      else soll.set(v.datei, { text, quelle: `Parcours-/Profil-Daten ${v.key}` });
+    }
+    const vorhanden = new Set(vorlesenDaten.data.map((v) => v.key));
+    for (const key of texteDaten.keys()) if (!vorhanden.has(key)) fehler.push(`audio/vorlesen-daten.json: Eintrag für „${key}“ fehlt; ${AUDIO_HINWEIS}`);
+  }
   const imManifest = new Map(manifest.success ? manifest.data.map((m) => [m.datei, m] as const) : []);
-  if (exp.success || vorlesen.success) {
+  if (exp.success || vorlesen.success || vorlesenDaten.success) {
     for (const [datei, { text, quelle }] of soll) {
       if (!istDatei(join(audioDir, datei))) fehler.push(`Audiodatei fehlt: apps/web/public/audio/${datei} (${quelle}); ${AUDIO_HINWEIS}`);
       if (!manifest.success) continue;
