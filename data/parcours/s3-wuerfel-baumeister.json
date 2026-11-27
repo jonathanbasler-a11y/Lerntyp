@@ -1,0 +1,443 @@
+{
+  "station": "s3",
+  "hinweis": "Station S3 (01 §7.3): Höhenraster, Zeile 0 = hinten, Spalte 0 = links, Draufsicht. Der Bauplan zeigt je Feld die Stapelhöhe (Mathe-Inhalt, kein Punktestand).",
+  "musterbeispiel": {
+    "gebaeude": [
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "plaene": [
+      {
+        "id": "a",
+        "raster": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "id": "b",
+        "raster": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": "c",
+        "raster": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "richtig": "a",
+    "erklaerung": "Hinten links liegt ein Würfel, hinten rechts liegen zwei. Vorne links fehlt der Stapel, vorne rechts liegt ein Würfel. So sieht der Bauplan aus."
+  },
+  "aufgaben": [
+    {
+      "id": "s3_a1",
+      "gebaeude": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "plaene": [
+        {
+          "id": "a",
+          "raster": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "b",
+          "raster": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "c",
+          "raster": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "richtig": "b",
+      "hinweis1": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+      "hinweis2": "Hinten links ist der höchste Stapel. Hinten rechts steht gar kein Würfel.",
+      "fehler": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist."
+    },
+    {
+      "id": "s3_a2",
+      "gebaeude": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ]
+      ],
+      "plaene": [
+        {
+          "id": "a",
+          "raster": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "b",
+          "raster": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": "c",
+          "raster": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "richtig": "a",
+      "hinweis1": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+      "hinweis2": "Der höchste Stapel mit drei Würfeln steht vorne links. Nach rechts und nach hinten wird es niedriger.",
+      "fehler": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist."
+    },
+    {
+      "id": "s3_a3",
+      "gebaeude": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "plaene": [
+        {
+          "id": "a",
+          "raster": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": "b",
+          "raster": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "c",
+          "raster": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "richtig": "c",
+      "hinweis1": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+      "hinweis2": "In der Mitte steht der höchste Stapel mit drei Würfeln. Drum herum liegt je ein Würfel.",
+      "fehler": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist."
+    },
+    {
+      "id": "s3_a4",
+      "gebaeude": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "plaene": [
+        {
+          "id": "a",
+          "raster": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "b",
+          "raster": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": "c",
+          "raster": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "richtig": "b",
+      "hinweis1": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+      "hinweis2": "Der höchste Stapel mit drei Würfeln steht vorne rechts. Vorne links fehlt der Stapel.",
+      "fehler": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist."
+    },
+    {
+      "id": "s3_a5",
+      "gebaeude": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "plaene": [
+        {
+          "id": "a",
+          "raster": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": "b",
+          "raster": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "c",
+          "raster": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "richtig": "c",
+      "hinweis1": "Schau auf jeden Stapel einzeln. Die Zahl im Bauplan sagt, wie viele Würfel übereinander liegen.",
+      "hinweis2": "Hinten rechts steht kein Würfel. Der höchste Stapel mit drei Würfeln steht genau in der Mitte.",
+      "fehler": "Vergleiche Stapel für Stapel: Zähle die Würfel im Gebäude und such die Zahl im Bauplan. Achte auch darauf, was links und was rechts ist."
+    }
+  ]
+}

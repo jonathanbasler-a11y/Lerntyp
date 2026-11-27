@@ -1,4 +1,4 @@
-import { PHASEN_FOLGE, PHASEN_HAUPT } from '@lerntyp/shared';
+import { PHASEN_FOLGE, PHASEN_STUNDE } from '@lerntyp/shared';
 import type { ApiClient } from '../../api/client';
 import { phaseLabel } from '../../components/DemoSteuerung';
 import type { Klasse } from '../../lerndetektive/hooks';
@@ -11,7 +11,7 @@ const LEITFADEN_SCHRITTE = [1, 2, 3, 4, 5] as const;
 
 export function Steuerung({ client, klasse }: { client: ApiClient; klasse: Klasse }) {
   const { stand } = klasse;
-  const phasen: readonly string[] = stand.stunde === 'haupt' ? PHASEN_HAUPT : PHASEN_FOLGE;
+  const phasen: readonly string[] = stand.stunde === 'haupt' ? PHASEN_STUNDE : PHASEN_FOLGE;
   const index = phasen.indexOf(stand.freigabe);
   const naechste = phasen[index + 1];
   const status = klasse.teilnehmer

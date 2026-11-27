@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { BASE, HINWEIS, SCHNELL, SIMULIERT, alsKind, freigeben, gesammelt, textSammler, testen, toncheck, ueberzeugungen, vorlieben } from './helfer';
+import { BASE, HINWEIS, SCHNELL, SIMULIERT, alsKind, freigeben, gesammelt, textSammler, testen, toncheck, ueberzeugungen, vorlieben, zurWoche } from './helfer';
 
 test('Kind-Durchlauf: Hauptstunde, Klassenergebnis, Woche später, Folgestunde bis „Fertig für heute“', async ({ page }) => {
   test.setTimeout(180_000);
@@ -48,7 +48,7 @@ test('Kind-Durchlauf: Hauptstunde, Klassenergebnis, Woche später, Folgestunde b
   await page.getByTestId('cockpit-zum-kind').click();
 
   // Woche später: verzögerter Test, Überzeugungen nachher, Vergleich, Superkraft, Fertig
-  await page.getByTestId('demo-woche').click();
+  await zurWoche(page);
   await toncheck(page);
   await testen(page);
   await freigeben(page);

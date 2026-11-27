@@ -1,0 +1,111 @@
+{
+  "station": "s1",
+  "hinweis": "Station S1 (01 §7.3): Lückenwörter mit d/t, g/k, b/p, e/ä; Begründung per Verlängern oder Ableiten. Grundwortschatz Klasse 3/4.",
+  "musterbeispiel": {
+    "luecke": "Kin_",
+    "wort": "Kind",
+    "luecke_typ": "d_t",
+    "optionen": [
+      "d",
+      "t"
+    ],
+    "richtig": "d",
+    "grund": {
+      "art": "verlaengern",
+      "verwandt": "Kinder"
+    },
+    "erklaerung": "Verlängere das Wort: die Kinder. Bei Kinder hörst du ein d. Also schreibt man Kind mit d."
+  },
+  "aufgaben": [
+    {
+      "id": "s1_a1",
+      "luecke": "Hun_",
+      "wort": "Hund",
+      "luecke_typ": "d_t",
+      "optionen": [
+        "d",
+        "t"
+      ],
+      "richtig": "d",
+      "grund": {
+        "art": "verlaengern",
+        "verwandt": "Hunde"
+      },
+      "hinweis1": "Verlängere das Wort: Sag es in der Mehrzahl oder mach es länger. Dann hörst du den Laut deutlich. Wie heißt es bei mehreren?",
+      "hinweis2": "Mehrzahl: die Hunde. Hörst du in der Mitte ein d oder ein t?",
+      "fehler": "Verlängere das Wort: die Hunde. Bei Hunde hörst du ein d. Also schreibt man Hund mit d."
+    },
+    {
+      "id": "s1_a2",
+      "luecke": "R_der",
+      "wort": "Räder",
+      "luecke_typ": "e_ae",
+      "optionen": [
+        "e",
+        "ä"
+      ],
+      "richtig": "ä",
+      "grund": {
+        "art": "ableiten",
+        "verwandt": "Rad"
+      },
+      "hinweis1": "Leite das Wort ab: Suche ein verwandtes Wort mit a. Dann weißt du, ob es ä oder e heißt. Wie heißt ein Rad von einem Fahrrad?",
+      "hinweis2": "Das verwandte Wort ist Rad. Es hat ein a. Welcher Buchstabe passt dann zu a?",
+      "fehler": "Leite das Wort ab: Räder kommt von Rad. Weil in Rad ein a steckt, schreibt man Räder mit ä."
+    },
+    {
+      "id": "s1_a3",
+      "luecke": "Ber_",
+      "wort": "Berg",
+      "luecke_typ": "g_k",
+      "optionen": [
+        "g",
+        "k"
+      ],
+      "richtig": "g",
+      "grund": {
+        "art": "verlaengern",
+        "verwandt": "Berge"
+      },
+      "hinweis1": "Verlängere das Wort: Sag es in der Mehrzahl oder mach es länger. Dann hörst du den Laut deutlich. Wie heißt es bei mehreren?",
+      "hinweis2": "Mehrzahl: die Berge. Hörst du am Ende ein g oder ein k?",
+      "fehler": "Verlängere das Wort: die Berge. Bei Berge hörst du ein g. Also schreibt man Berg mit g."
+    },
+    {
+      "id": "s1_a4",
+      "luecke": "K_lte",
+      "wort": "Kälte",
+      "luecke_typ": "e_ae",
+      "optionen": [
+        "e",
+        "ä"
+      ],
+      "richtig": "ä",
+      "grund": {
+        "art": "ableiten",
+        "verwandt": "kalt"
+      },
+      "hinweis1": "Leite das Wort ab: Suche ein verwandtes Wort mit a. Dann weißt du, ob es ä oder e heißt. Wie heißt das Gegenteil von warm?",
+      "hinweis2": "Das verwandte Wort ist kalt. Es hat ein a. Welcher Buchstabe passt dann zu a?",
+      "fehler": "Leite das Wort ab: Kälte kommt von kalt. Weil in kalt ein a steckt, schreibt man Kälte mit ä."
+    },
+    {
+      "id": "s1_a5",
+      "luecke": "Kor_",
+      "wort": "Korb",
+      "luecke_typ": "b_p",
+      "optionen": [
+        "b",
+        "p"
+      ],
+      "richtig": "b",
+      "grund": {
+        "art": "verlaengern",
+        "verwandt": "Körbe"
+      },
+      "hinweis1": "Verlängere das Wort: Sag es in der Mehrzahl oder mach es länger. Dann hörst du den Laut deutlich. Wie heißt es bei mehreren?",
+      "hinweis2": "Mehrzahl: die Körbe. Hörst du in der Mitte ein b oder ein p?",
+      "fehler": "Verlängere das Wort: die Körbe. Bei Körbe hörst du ein b. Also schreibt man Korb mit b."
+    }
+  ]
+}

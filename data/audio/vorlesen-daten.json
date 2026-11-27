@@ -1,0 +1,338 @@
+[
+  {
+    "key": "s1.muster",
+    "datei": "pc-s1-muster.mp3"
+  },
+  {
+    "key": "s1_a1.hinweis1",
+    "datei": "pc-s1-a1-hinweis1.mp3"
+  },
+  {
+    "key": "s1_a1.hinweis2",
+    "datei": "pc-s1-a1-hinweis2.mp3"
+  },
+  {
+    "key": "s1_a1.fehler",
+    "datei": "pc-s1-a1-fehler.mp3"
+  },
+  {
+    "key": "s1_a2.hinweis1",
+    "datei": "pc-s1-a2-hinweis1.mp3"
+  },
+  {
+    "key": "s1_a2.hinweis2",
+    "datei": "pc-s1-a2-hinweis2.mp3"
+  },
+  {
+    "key": "s1_a2.fehler",
+    "datei": "pc-s1-a2-fehler.mp3"
+  },
+  {
+    "key": "s1_a3.hinweis1",
+    "datei": "pc-s1-a3-hinweis1.mp3"
+  },
+  {
+    "key": "s1_a3.hinweis2",
+    "datei": "pc-s1-a3-hinweis2.mp3"
+  },
+  {
+    "key": "s1_a3.fehler",
+    "datei": "pc-s1-a3-fehler.mp3"
+  },
+  {
+    "key": "s1_a4.hinweis1",
+    "datei": "pc-s1-a4-hinweis1.mp3"
+  },
+  {
+    "key": "s1_a4.hinweis2",
+    "datei": "pc-s1-a4-hinweis2.mp3"
+  },
+  {
+    "key": "s1_a4.fehler",
+    "datei": "pc-s1-a4-fehler.mp3"
+  },
+  {
+    "key": "s1_a5.hinweis1",
+    "datei": "pc-s1-a5-hinweis1.mp3"
+  },
+  {
+    "key": "s1_a5.hinweis2",
+    "datei": "pc-s1-a5-hinweis2.mp3"
+  },
+  {
+    "key": "s1_a5.fehler",
+    "datei": "pc-s1-a5-fehler.mp3"
+  },
+  {
+    "key": "s2.muster",
+    "datei": "pc-s2-muster.mp3"
+  },
+  {
+    "key": "s2_a1.hinweis1",
+    "datei": "pc-s2-a1-hinweis1.mp3"
+  },
+  {
+    "key": "s2_a1.hinweis2",
+    "datei": "pc-s2-a1-hinweis2.mp3"
+  },
+  {
+    "key": "s2_a1.fehler",
+    "datei": "pc-s2-a1-fehler.mp3"
+  },
+  {
+    "key": "s2_a2.hinweis1",
+    "datei": "pc-s2-a2-hinweis1.mp3"
+  },
+  {
+    "key": "s2_a2.hinweis2",
+    "datei": "pc-s2-a2-hinweis2.mp3"
+  },
+  {
+    "key": "s2_a2.fehler",
+    "datei": "pc-s2-a2-fehler.mp3"
+  },
+  {
+    "key": "s2_a3.hinweis1",
+    "datei": "pc-s2-a3-hinweis1.mp3"
+  },
+  {
+    "key": "s2_a3.hinweis2",
+    "datei": "pc-s2-a3-hinweis2.mp3"
+  },
+  {
+    "key": "s2_a3.fehler",
+    "datei": "pc-s2-a3-fehler.mp3"
+  },
+  {
+    "key": "s2_a4.hinweis1",
+    "datei": "pc-s2-a4-hinweis1.mp3"
+  },
+  {
+    "key": "s2_a4.hinweis2",
+    "datei": "pc-s2-a4-hinweis2.mp3"
+  },
+  {
+    "key": "s2_a4.fehler",
+    "datei": "pc-s2-a4-fehler.mp3"
+  },
+  {
+    "key": "s2_a5.hinweis1",
+    "datei": "pc-s2-a5-hinweis1.mp3"
+  },
+  {
+    "key": "s2_a5.hinweis2",
+    "datei": "pc-s2-a5-hinweis2.mp3"
+  },
+  {
+    "key": "s2_a5.fehler",
+    "datei": "pc-s2-a5-fehler.mp3"
+  },
+  {
+    "key": "s3.muster",
+    "datei": "pc-s3-muster.mp3"
+  },
+  {
+    "key": "s3_a1.hinweis1",
+    "datei": "pc-s3-a1-hinweis1.mp3"
+  },
+  {
+    "key": "s3_a1.hinweis2",
+    "datei": "pc-s3-a1-hinweis2.mp3"
+  },
+  {
+    "key": "s3_a1.fehler",
+    "datei": "pc-s3-a1-fehler.mp3"
+  },
+  {
+    "key": "s3_a2.hinweis1",
+    "datei": "pc-s3-a2-hinweis1.mp3"
+  },
+  {
+    "key": "s3_a2.hinweis2",
+    "datei": "pc-s3-a2-hinweis2.mp3"
+  },
+  {
+    "key": "s3_a2.fehler",
+    "datei": "pc-s3-a2-fehler.mp3"
+  },
+  {
+    "key": "s3_a3.hinweis1",
+    "datei": "pc-s3-a3-hinweis1.mp3"
+  },
+  {
+    "key": "s3_a3.hinweis2",
+    "datei": "pc-s3-a3-hinweis2.mp3"
+  },
+  {
+    "key": "s3_a3.fehler",
+    "datei": "pc-s3-a3-fehler.mp3"
+  },
+  {
+    "key": "s3_a4.hinweis1",
+    "datei": "pc-s3-a4-hinweis1.mp3"
+  },
+  {
+    "key": "s3_a4.hinweis2",
+    "datei": "pc-s3-a4-hinweis2.mp3"
+  },
+  {
+    "key": "s3_a4.fehler",
+    "datei": "pc-s3-a4-fehler.mp3"
+  },
+  {
+    "key": "s3_a5.hinweis1",
+    "datei": "pc-s3-a5-hinweis1.mp3"
+  },
+  {
+    "key": "s3_a5.hinweis2",
+    "datei": "pc-s3-a5-hinweis2.mp3"
+  },
+  {
+    "key": "s3_a5.fehler",
+    "datei": "pc-s3-a5-fehler.mp3"
+  },
+  {
+    "key": "karte.zweiter_versuch.s1",
+    "datei": "pc-karte-zweiter-versuch-s1.mp3"
+  },
+  {
+    "key": "karte.zweiter_versuch.s2",
+    "datei": "pc-karte-zweiter-versuch-s2.mp3"
+  },
+  {
+    "key": "karte.zweiter_versuch.s3",
+    "datei": "pc-karte-zweiter-versuch-s3.mp3"
+  },
+  {
+    "key": "karte.beispiel.s1",
+    "datei": "pc-karte-beispiel-s1.mp3"
+  },
+  {
+    "key": "karte.beispiel.s2",
+    "datei": "pc-karte-beispiel-s2.mp3"
+  },
+  {
+    "key": "karte.beispiel.s3",
+    "datei": "pc-karte-beispiel-s3.mp3"
+  },
+  {
+    "key": "karte.begruendung.s1",
+    "datei": "pc-karte-begruendung-s1.mp3"
+  },
+  {
+    "key": "karte.hinweis.s1",
+    "datei": "pc-karte-hinweis-s1.mp3"
+  },
+  {
+    "key": "karte.hinweis.s2",
+    "datei": "pc-karte-hinweis-s2.mp3"
+  },
+  {
+    "key": "karte.hinweis.s3",
+    "datei": "pc-karte-hinweis-s3.mp3"
+  },
+  {
+    "key": "karte.ziel.s1",
+    "datei": "pc-karte-ziel-s1.mp3"
+  },
+  {
+    "key": "karte.ziel.s2",
+    "datei": "pc-karte-ziel-s2.mp3"
+  },
+  {
+    "key": "karte.ziel.s3",
+    "datei": "pc-karte-ziel-s3.mp3"
+  },
+  {
+    "key": "karte.geholfen.s1",
+    "datei": "pc-karte-geholfen-s1.mp3"
+  },
+  {
+    "key": "karte.geholfen.s2",
+    "datei": "pc-karte-geholfen-s2.mp3"
+  },
+  {
+    "key": "karte.geholfen.s3",
+    "datei": "pc-karte-geholfen-s3.mp3"
+  },
+  {
+    "key": "karte.teilnahme.lerndetektive",
+    "datei": "pc-karte-teilnahme-lerndetektive.mp3"
+  },
+  {
+    "key": "fallback",
+    "datei": "pc-fallback.mp3"
+  },
+  {
+    "key": "superkraft.gedaechtnis_training",
+    "datei": "pc-superkraft-gedaechtnis-training.mp3"
+  },
+  {
+    "key": "sk_frage.gedaechtnis_training",
+    "datei": "pc-sk-frage-gedaechtnis-training.mp3"
+  },
+  {
+    "key": "superkraft.haeppchen_lernen",
+    "datei": "pc-superkraft-haeppchen-lernen.mp3"
+  },
+  {
+    "key": "sk_frage.haeppchen_lernen",
+    "datei": "pc-sk-frage-haeppchen-lernen.mp3"
+  },
+  {
+    "key": "superkraft.doppelt_merken",
+    "datei": "pc-superkraft-doppelt-merken.mp3"
+  },
+  {
+    "key": "sk_frage.doppelt_merken",
+    "datei": "pc-sk-frage-doppelt-merken.mp3"
+  },
+  {
+    "key": "superkraft.mischen",
+    "datei": "pc-superkraft-mischen.mp3"
+  },
+  {
+    "key": "sk_frage.mischen",
+    "datei": "pc-sk-frage-mischen.mp3"
+  },
+  {
+    "key": "superkraft.warum_fragen",
+    "datei": "pc-superkraft-warum-fragen.mp3"
+  },
+  {
+    "key": "sk_frage.warum_fragen",
+    "datei": "pc-sk-frage-warum-fragen.mp3"
+  },
+  {
+    "key": "superkraft.beispiele",
+    "datei": "pc-superkraft-beispiele.mp3"
+  },
+  {
+    "key": "sk_frage.beispiele",
+    "datei": "pc-sk-frage-beispiele.mp3"
+  },
+  {
+    "key": "tipp.gedaechtnis_training",
+    "datei": "pc-tipp-gedaechtnis-training.mp3"
+  },
+  {
+    "key": "tipp.haeppchen_lernen",
+    "datei": "pc-tipp-haeppchen-lernen.mp3"
+  },
+  {
+    "key": "tipp.doppelt_merken",
+    "datei": "pc-tipp-doppelt-merken.mp3"
+  },
+  {
+    "key": "tipp.mischen",
+    "datei": "pc-tipp-mischen.mp3"
+  },
+  {
+    "key": "tipp.warum_fragen",
+    "datei": "pc-tipp-warum-fragen.mp3"
+  },
+  {
+    "key": "tipp.beispiele",
+    "datei": "pc-tipp-beispiele.mp3"
+  }
+]

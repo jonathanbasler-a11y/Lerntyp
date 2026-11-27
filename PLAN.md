@@ -137,6 +137,8 @@ Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Ja
 - [ ] Frontend und API von P4 laufen auf EU-Host ohne Requests an US-Dienste (Netzwerk-Test gegen Live-Build); AVV liegt vor.
 - [ ] Echtgerätetest auf Shared iPad durchgeführt und dokumentiert (Voraussetzung für Tor 2).
 
+**Hinweis zur Reihenfolge:** Die P4-Inhalte (Strategie-Parcours, Lernprofil, Cockpit-Ansicht, Ausdruck) werden **vor P3** gebaut, als Demo-MVP auf einem Gerät mit Mock-Daten (kein Server). Das EU-Hosting (Stufe 2) + AVV bleibt **vor R2 verpflichtend** und wandert zu P3/P5; die Abnahmekriterien zu EU-Host und Echtgerätetest sind erst dort erfüllbar.
+
 **Abhängigkeiten:** P3. **Zeitlich: fertig bis Anfang März 2027 für R2; EU-Hosting (Stufe 2) + AVV live vor R2 (früh/mitte März 2027).** Änderungen aus R1 (Items, Konzept) fließen vorher ein.
 
 ---

@@ -1,8 +1,11 @@
-import { parseEvent, type EventEnvelope } from '@lerntyp/shared';
+import { PayloadSchemas, parseEvent, type EventEnvelope } from '@lerntyp/shared';
 
-/** `superkraft_ausprobiert` gehört zum Modul „profil“, alles andere zu „lerndetektive“ (02 §9). */
+/**
+ * Modul eines Ereignistyps, wenn es nicht angegeben wird: Profil-Ereignisse gehören zu „profil“, alles andere zu „lerndetektive“ (02 §9).
+ * Parcours-Ereignisse müssen das Modul „parcours“ ausdrücklich angeben (`antwort_abgegeben` gibt es in beiden Modulen).
+ */
 export function modulFuer(typ: string): 'lerndetektive' | 'profil' {
-  return typ === 'superkraft_ausprobiert' ? 'profil' : 'lerndetektive';
+  return Object.hasOwn(PayloadSchemas.profil, typ) ? 'profil' : 'lerndetektive';
 }
 
 /** Nächste `client_seq` für Alias und Sitzung: streng aufsteigend, auch nach Neustart der Ansicht. */
@@ -36,12 +39,12 @@ export class EreignisSender {
     return this.opt.sitzung;
   }
 
-  erzeuge(typ: string, payload: Record<string, unknown>): EventEnvelope {
+  erzeuge(typ: string, payload: Record<string, unknown>, modul: EventEnvelope['modul'] = modulFuer(typ)): EventEnvelope {
     return parseEvent({
       id: this.neueId(),
       sitzung: this.opt.sitzung,
       teilnehmer_alias: this.opt.alias,
-      modul: modulFuer(typ),
+      modul,
       typ,
       zeitstempel: this.jetzt().toISOString(),
       client_seq: this.seq++,

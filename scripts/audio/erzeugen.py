@@ -2,7 +2,7 @@
 """Erzeugt alle Audiodateien der Lerndetektive (vorproduziert, synthetische Stimme, keine Sprachausgabe zur Laufzeit).
 
 Pipeline je Text: Piper -> WAV -> ffmpeg (Stille vorn/hinten weg, loudnorm -16 LUFS, mono, 22050 Hz, MP3 64 kbit/s)
--> apps/web/public/audio/<datei>.mp3. Schreibt data/audio/manifest.json und data/audio/vorlesen.json.
+-> apps/web/public/audio/<datei>.mp3. Schreibt data/audio/manifest.json, data/audio/vorlesen.json (Textschlüssel aus de.json) und data/audio/vorlesen-daten.json (Texte aus Parcours- und Profil-Daten).
 Unveränderte Texte (gleicher SHA-256) werden übersprungen; `--alle` erzwingt die Neuerzeugung.
 
 Aufruf (nur Standardbibliothek, `-I` schützt vor fremden Modulen im Arbeitsverzeichnis):
@@ -67,7 +67,77 @@ UI_SCHLUESSEL = [
     "kind.superkraft.frage",
     "kind.weiter_geht.titel",
     "kind.weiter_geht.text",
+    # Strategie-Parcours und Lernprofil (Phase 4)
+    "parcours.station.s1.titel",
+    "parcours.station.s1.einleitung",
+    "parcours.station.s2.titel",
+    "parcours.station.s2.einleitung",
+    "parcours.station.s3.titel",
+    "parcours.station.s3.einleitung",
+    "parcours.planen.frage",
+    "parcours.planen.sicherheit",
+    "parcours.smiley.1",
+    "parcours.smiley.2",
+    "parcours.smiley.3",
+    "parcours.smiley.4",
+    "parcours.pruefen.titel",
+    "parcours.pruefen.ziel_erreicht",
+    "parcours.pruefen.geholfen",
+    "parcours.pruefen.nichts",
+    "parcours.s1.luecke",
+    "parcours.s1.warum",
+    "parcours.s2.aufgabe",
+    "parcours.s2.bloecke",
+    "parcours.s3.aufgabe",
+    "parcours.richtig",
+    "parcours.warten",
+    "strategie.gedaechtnis_training",
+    "strategie.haeppchen_lernen",
+    "strategie.doppelt_merken",
+    "strategie.mischen",
+    "strategie.warum_fragen",
+    "strategie.beispiele",
+    "profil.titel",
+    "profil.staerken",
+    "profil.superkraft",
+    "profil.tipp",
+    "profil.passt",
+    "profil.smiley.1",
+    "profil.smiley.2",
+    "profil.smiley.3",
+    "profil.smiley.4",
 ]
+
+
+def daten_texte() -> list[dict]:
+    """Kindtexte aus den Datendateien (Parcours, Profil): [{key, datei, text}].
+
+    Schlüssel (auch in apps/web und scripts/validate-data.ts):
+    `<aufgabe>.hinweis1|hinweis2|fehler`, `<station>.muster`, `karte.<id>`, `fallback`,
+    `superkraft.<strategie>`, `tipp.<strategie>`, `sk_frage.<strategie>`.
+    """
+    de = lies_json(DATEN / "texte" / "de.json")
+    karten = lies_json(DATEN / "profil" / "karten.json")
+    out: list[dict] = []
+
+    def add(key: str, text: str) -> None:
+        out.append({"key": key, "datei": "pc-" + key.replace(".", "-").replace("_", "-") + ".mp3", "text": text})
+
+    for datei, station in (("s1-wort-werkstatt.json", "s1"), ("s2-satz-baukasten.json", "s2"), ("s3-wuerfel-baumeister.json", "s3")):
+        d = lies_json(DATEN / "parcours" / datei)
+        add(f"{station}.muster", d["musterbeispiel"]["erklaerung"])
+        for a in d["aufgaben"]:
+            for feld in ("hinweis1", "hinweis2", "fehler"):
+                add(f"{a['id']}.{feld}", a[feld])
+    for k in karten["karten"]:
+        add("karte." + k["id"], k["text"])
+    add("fallback", karten["fallback"]["text"])
+    for s, text in karten["superkraft"].items():
+        add(f"superkraft.{s}", text)
+        add(f"sk_frage.{s}", de["kind.superkraft.frage_profil"].replace("{name}", de[f"strategie.{s}"]))
+    for s, text in karten["tipps"].items():
+        add(f"tipp.{s}", text)
+    return out
 
 
 def sha256(text: str) -> str:
@@ -96,6 +166,8 @@ def sammle_texte() -> list[dict]:
     eintraege.append({"datei": "check.mp3", "text": de["audio.check_satz"], "sprich": de["audio.check_satz"]})
     for k in UI_SCHLUESSEL:
         eintraege.append({"datei": ui_datei(k), "text": de[k], "sprich": de[k]})
+    for e in daten_texte():
+        eintraege.append({"datei": e["datei"], "text": e["text"], "sprich": e["text"]})
     dateien = [e["datei"] for e in eintraege]
     doppelt = {d for d in dateien if dateien.count(d) > 1}
     if doppelt:
@@ -151,6 +223,8 @@ def main() -> int:
     manifest_pfad.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     vorlesen = [{"key": k, "datei": ui_datei(k)} for k in UI_SCHLUESSEL]
     (DATEN / "audio" / "vorlesen.json").write_text(json.dumps(vorlesen, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    vorlesen_daten = [{"key": e["key"], "datei": e["datei"]} for e in daten_texte()]
+    (DATEN / "audio" / "vorlesen-daten.json").write_text(json.dumps(vorlesen_daten, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     # Verwaiste Dateien (Text entfernt) bleiben liegen; Hinweis statt stilles Löschen.
     soll = {e["datei"] for e in texte}

@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { BASE, alsKind, freigeben, testen, toncheck, ueberzeugungen, vorlieben } from './helfer';
+import { BASE, alsKind, bisParcours, freigeben, stationSpielen, testen, toncheck, ueberzeugungen, vorlieben } from './helfer';
 
 // Nur auf Anfrage: SCREENSHOT_DIR=/pfad npm run e2e -- screenshots
 const ZIEL = process.env['SCREENSHOT_DIR'];
@@ -46,4 +46,35 @@ test('Screenshots: Test und Beamer', async ({ page }) => {
   await page.getByTestId('tab-beamer').click();
   await expect(page.getByTestId('diagramm-alle')).toBeVisible();
   await page.screenshot({ path: `${ZIEL}/p2-beamer.png`, fullPage: true });
+});
+
+test('Screenshots: Parcours S1–S3, Profil, Druck', async ({ page }) => {
+  test.setTimeout(300_000);
+  await alsKind(page);
+  await bisParcours(page);
+  for (const st of ['s1', 's2', 's3'] as const) {
+    await stationSpielen(page, st, {
+      beispiel: false,
+      bei1: async () => {
+        if (st === 's2') {
+          await page.getByTestId('s2-block-2').click();
+          await page.getByTestId('s2-block-1').click();
+        }
+        await page.getByTestId('hinweis-knopf-1').click();
+        await page.screenshot({ path: `${ZIEL}/${st}.png`, fullPage: true });
+        if (st === 's2') await page.getByTestId('s2-neu').click();
+      },
+    });
+  }
+  await freigeben(page);
+  await expect(page.getByTestId('schritt-profil')).toBeVisible();
+  await page.screenshot({ path: `${ZIEL}/profil.png`, fullPage: true });
+  await page.getByTestId('passt-3').click();
+  await page.getByTestId('demo-lehrkraft').click();
+  await page.getByTestId('tab-profile').click();
+  await page.getByTestId('profil-alias-Fuchs-27').click();
+  await page.getByTestId('profil-drucken').click();
+  await expect(page.getByTestId('druck-blatt')).toBeVisible();
+  await page.emulateMedia({ media: 'print' });
+  await page.screenshot({ path: `${ZIEL}/druck.png`, fullPage: true });
 });

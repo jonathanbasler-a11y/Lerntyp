@@ -1,0 +1,236 @@
+{
+  "station": "s2",
+  "hinweis": "Station S2 (01 §7.3): Umstellprobe. Reihenfolgen sind Indizes in `bloecke`; das Verb steht immer an Position 1. Blocktexte stehen in Satzmitte-Schreibung (erster Buchstabe klein, außer `immer_gross`); beim Anzeigen wird der erste Buchstabe des Satzes groß geschrieben und `anzeige.satzende` angehängt.",
+  "anzeige": {
+    "satzanfang": "erster_buchstabe_gross",
+    "satzende": "."
+  },
+  "musterbeispiel": {
+    "bloecke": [
+      {
+        "text": "der Vogel",
+        "art": "subjekt",
+        "immer_gross": false
+      },
+      {
+        "text": "singt",
+        "art": "praedikat",
+        "immer_gross": false
+      },
+      {
+        "text": "im Baum",
+        "art": "ort",
+        "immer_gross": false
+      }
+    ],
+    "erlaubte_reihenfolgen": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        0
+      ]
+    ],
+    "erklaerung": "Der Vogel singt im Baum. Stell um: Im Baum singt der Vogel. Das Verb bleibt an zweiter Stelle, der Satz fängt anders an."
+  },
+  "aufgaben": [
+    {
+      "id": "s2_a1",
+      "bloecke": [
+        {
+          "text": "der Hund",
+          "art": "subjekt",
+          "immer_gross": false
+        },
+        {
+          "text": "bellt",
+          "art": "praedikat",
+          "immer_gross": false
+        },
+        {
+          "text": "im Garten",
+          "art": "ort",
+          "immer_gross": false
+        }
+      ],
+      "erlaubte_reihenfolgen": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "hinweis1": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+      "hinweis2": "Fang mit „im Garten“ an. Dann kommt das Verb.",
+      "fehler": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal."
+    },
+    {
+      "id": "s2_a2",
+      "bloecke": [
+        {
+          "text": "Lena",
+          "art": "subjekt",
+          "immer_gross": true
+        },
+        {
+          "text": "schenkt",
+          "art": "praedikat",
+          "immer_gross": false
+        },
+        {
+          "text": "ihrer Oma",
+          "art": "dativobjekt",
+          "immer_gross": false
+        },
+        {
+          "text": "eine Blume",
+          "art": "akkusativobjekt",
+          "immer_gross": false
+        }
+      ],
+      "erlaubte_reihenfolgen": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          2
+        ]
+      ],
+      "hinweis1": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle. Du kannst auch mit „ihrer Oma“ oder „eine Blume“ anfangen.",
+      "hinweis2": "Fang mit „ihrer Oma“ an. Dann kommt das Verb, dann der Rest.",
+      "fehler": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal."
+    },
+    {
+      "id": "s2_a3",
+      "bloecke": [
+        {
+          "text": "die Katze",
+          "art": "subjekt",
+          "immer_gross": false
+        },
+        {
+          "text": "schläft",
+          "art": "praedikat",
+          "immer_gross": false
+        },
+        {
+          "text": "auf dem Sofa",
+          "art": "ort",
+          "immer_gross": false
+        }
+      ],
+      "erlaubte_reihenfolgen": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "hinweis1": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+      "hinweis2": "Fang mit „auf dem Sofa“ an. Dann kommt das Verb.",
+      "fehler": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal."
+    },
+    {
+      "id": "s2_a4",
+      "bloecke": [
+        {
+          "text": "Max",
+          "art": "subjekt",
+          "immer_gross": true
+        },
+        {
+          "text": "fährt",
+          "art": "praedikat",
+          "immer_gross": false
+        },
+        {
+          "text": "mit dem Fahrrad",
+          "art": "art_und_weise",
+          "immer_gross": false
+        }
+      ],
+      "erlaubte_reihenfolgen": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "hinweis1": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+      "hinweis2": "Fang mit „mit dem Fahrrad“ an. Dann kommt das Verb.",
+      "fehler": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal."
+    },
+    {
+      "id": "s2_a5",
+      "bloecke": [
+        {
+          "text": "der Bäcker",
+          "art": "subjekt",
+          "immer_gross": false
+        },
+        {
+          "text": "backt",
+          "art": "praedikat",
+          "immer_gross": false
+        },
+        {
+          "text": "frische Brötchen",
+          "art": "akkusativobjekt",
+          "immer_gross": false
+        }
+      ],
+      "erlaubte_reihenfolgen": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "hinweis1": "Umstellprobe: Schiebe die Blöcke hin und her. Das Verb bleibt immer an zweiter Stelle.",
+      "hinweis2": "Fang mit „frische Brötchen“ an. Dann kommt das Verb.",
+      "fehler": "Das Verb muss an zweiter Stelle stehen, und der Satz muss mit einem anderen Block anfangen als vorher. Probier es noch einmal."
+    }
+  ]
+}

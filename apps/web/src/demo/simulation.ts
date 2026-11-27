@@ -1,5 +1,7 @@
 import {
+  STRATEGIEN,
   ableitenSeed,
+  berechneProfil,
   erzeugeZufall,
   rotationFuerBeitritt,
   type Bedingung,
@@ -11,6 +13,7 @@ import {
 import simulationRoh from '@data/demo/simulation.json';
 import type { SitzungsStand } from '../api/client';
 import { berechneSchritt } from '../lerndetektive/schritt';
+import { kartenDaten, parcoursDaten } from '../parcours/daten';
 import { EreignisSender, naechsteSeq } from '../lerndetektive/sender';
 
 /**
@@ -40,6 +43,23 @@ export interface SimKind {
   faehigkeit: number;
   /** Kind fehlt in der Folgestunde. */
   fehlt: boolean;
+  /** Synthetisches Verhalten im Strategie-Parcours (Wahrscheinlichkeiten; kein Forschungsergebnis). */
+  parcours: ParcoursNeigung;
+}
+
+export interface ParcoursNeigung {
+  /** Öffnet das Musterbeispiel bei der ersten Aufgabe einer Station. */
+  beispiel: number;
+  /** Holt sich bei einer Aufgabe Hinweis 1. */
+  hinweis: number;
+  /** Erster Versuch richtig. */
+  richtig: number;
+  /** Zweiter Versuch (nach einem Fehler) richtig. */
+  zweiteRichtig: number;
+  /** Tippt „Was hat geholfen?“ mit Strategien an. */
+  begruendet: number;
+  /** Bevorzugte Strategien bei „Was hat geholfen?“. */
+  vorlieben: readonly (typeof STRATEGIEN)[number][];
 }
 
 export interface SimZeitbasis {
@@ -66,6 +86,16 @@ export function erzeugeSimKinder(p: SimParameter): SimKind[] {
     const j = Math.floor(z() * (i + 1));
     [vermutungen[i], vermutungen[j]] = [vermutungen[j]!, vermutungen[i]!];
   }
+  // Eigener Zufallsstrom: die Werte oben bleiben dadurch unverändert.
+  const zp = erzeugeZufall(ableitenSeed(p.seed, 'parcours'));
+  const neigung = (): ParcoursNeigung => ({
+    beispiel: 0.15 + zp() * 0.75,
+    hinweis: 0.15 + zp() * 0.7,
+    richtig: 0.45 + zp() * 0.45,
+    zweiteRichtig: 0.5 + zp() * 0.45,
+    begruendet: 0.5 + zp() * 0.5,
+    vorlieben: STRATEGIEN.filter(() => zp() < 0.3),
+  });
   return p.kinder.map((alias, index) => ({
     alias,
     index,
@@ -74,6 +104,7 @@ export function erzeugeSimKinder(p: SimParameter): SimKind[] {
     vermutung: vermutungen[index]!,
     faehigkeit: (z() * 2 - 1) * p.streuung,
     fehlt: index >= p.kinder.length - p.fehlt_in_folgestunde,
+    parcours: neigung(),
   }));
 }
 
@@ -113,9 +144,9 @@ export function simuliereKind(
     jetzt: () => new Date(zeit),
     neueId: () => `sim-${kind.alias}-${stand.sitzung}-${alle.length}`,
   });
-  const senden = (typ: string, payload: Record<string, unknown>, dt: number) => {
+  const senden = (typ: string, payload: Record<string, unknown>, dt: number, modul?: EventEnvelope['modul']) => {
     zeit += dt;
-    const ev = sender.erzeuge(typ, payload);
+    const ev = sender.erzeuge(typ, payload, modul);
     alle.push(ev);
     neu.push(ev);
   };
@@ -177,6 +208,46 @@ export function simuliereKind(
         break;
       case 'superkraft':
         senden('superkraft_ausprobiert', { antwort: gewichtet(z, [['ja', 5], ['ein_bisschen', 3], ['nein', 1]] as const) }, 3000);
+        break;
+      case 'parcours': {
+        const { station, schritt: st } = s;
+        const n = kind.parcours;
+        const pc = (typ: string, payload: Record<string, unknown>, dt: number) => senden(typ, { station, ...payload }, dt, 'parcours');
+        switch (st.art) {
+          case 'planen_ziel':
+            pc('ziel_gesetzt', { ziel: 2 + Math.floor(z() * 4) }, 3000);
+            break;
+          case 'planen_sicherheit':
+            pc('sicherheit_vorher', { smiley: 1 + Math.floor(z() * 4) }, 2500);
+            break;
+          case 'aufgabe': {
+            const ref = { aufgabe_id: st.aufgabe_id };
+            if (st.zeigen) pc('aufgabe_gezeigt', ref, 400);
+            else if (st.nummer === 1 && !st.beispiel_geoeffnet && st.versuch === 1 && z() < n.beispiel) pc('beispiel_geoeffnet', ref, 4000);
+            else if (st.hinweis_stufe === 0 && st.versuch === 1 && z() < n.hinweis / 3) pc('hinweis_genutzt', { ...ref, stufe: 1 }, 3000);
+            else {
+              const korrekt = z() < (st.versuch === 1 ? n.richtig : n.zweiteRichtig);
+              const aufgabe = parcoursDaten[station].aufgaben.find((a) => a.id === st.aufgabe_id);
+              const grund = aufgabe && 'grund' in aufgabe ? { begruendung: korrekt ? aufgabe.grund.art : z() < 0.5 ? 'verlaengern' : 'ableiten' } : {};
+              pc('antwort_abgegeben', { ...ref, korrekt, versuch: st.versuch, rt_ms: Math.round(2500 + z() * 9000), ...grund }, 6000);
+            }
+            break;
+          }
+          case 'pruefen': {
+            const gewaehlt = z() < n.begruendet ? (n.vorlieben.length > 0 ? n.vorlieben : [STRATEGIEN[Math.floor(z() * STRATEGIEN.length)]!]) : [];
+            pc('hilfreich_gewaehlt', { strategien: gewaehlt }, 4000);
+            break;
+          }
+        }
+        break;
+      }
+      case 'profil_zeigen': {
+        const profil = berechneProfil(alle, kartenDaten);
+        senden('profil_angezeigt', { karten_ids: profil.karten_ids, superkraft: profil.superkraft }, 1500, 'profil');
+        break;
+      }
+      case 'profil_passt':
+        senden('profil_passt', { smiley: gewichtet(z, [[1, 1], [2, 2], [3, 4], [4, 4]] as const) }, 3000, 'profil');
         break;
       default:
         return neu;

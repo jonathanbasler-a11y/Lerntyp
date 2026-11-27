@@ -67,6 +67,15 @@ describe('validate-data: Audio und Bilder', () => {
     writeFileSync(pfad, JSON.stringify(m));
     expect(validateDataDir(k.data).join('\n')).toMatch(/Audio veraltet|Hash von/);
   });
+  it('Audio zu Parcours- und Profil-Texten: fehlende Datei und geänderter Kartentext sind Fehler', () => {
+    const k = kopie();
+    rmSync(join(k.audio, 'pc-fallback.mp3'));
+    const pfad = join(k.data, 'profil/karten.json');
+    writeFileSync(pfad, readFileSync(pfad, 'utf8').replace('Schreib zu Hause ein paar Wörter', 'Schreib zu Hause einige Wörter'));
+    const fehler = validateDataDir(k.data).join('\n');
+    expect(fehler).toMatch(/Audiodatei fehlt: apps\/web\/public\/audio\/pc-fallback\.mp3/);
+    expect(fehler).toMatch(/Audio veraltet: pc-tipp-gedaechtnis-training\.mp3/);
+  });
   it('bilder.json: gelistetes Bild ohne Datei ist ein Fehler, mit Datei nicht', () => {
     const k = kopie();
     writeFileSync(join(k.data, 'lerndetektive/bilder.json'), JSON.stringify({ vorhanden: ['kette', 'gibtesnicht'] }));

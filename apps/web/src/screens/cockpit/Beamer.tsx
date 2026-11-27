@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PHASEN_FOLGE, klassenErgebnis, vergleichSofortVerzoegert } from '@lerntyp/shared';
+import { PHASEN_FOLGE, PHASEN_STUNDE, klassenErgebnis, vergleichSofortVerzoegert } from '@lerntyp/shared';
 import { BalkenDiagramm } from '../../components/BalkenDiagramm';
 import { alleGruppen, nachVermutungGruppen, vergleichGruppen } from '../../lerndetektive/diagramm';
 import type { Klasse } from '../../lerndetektive/hooks';
@@ -17,7 +17,7 @@ export function Beamer({ klasse }: { klasse: Klasse }) {
   const simuliert = klasse.teilnehmer.some((k) => k.simuliert);
 
   const sichtbar =
-    stand.stunde === 'haupt' ? stand.freigabe === 'ergebnis' : PHASEN_FOLGE.indexOf(stand.freigabe) >= PHASEN_FOLGE.indexOf('vergleich');
+    stand.stunde === 'haupt' ? PHASEN_STUNDE.indexOf(stand.freigabe) >= PHASEN_STUNDE.indexOf('ergebnis') : PHASEN_FOLGE.indexOf(stand.freigabe) >= PHASEN_FOLGE.indexOf('vergleich');
 
   const ergebnis = klassenErgebnis(
     kinder.map((k) => ({ vermutung: k.vermutung, korrigiert: k.sofort! })),

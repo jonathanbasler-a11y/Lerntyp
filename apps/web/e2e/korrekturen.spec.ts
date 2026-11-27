@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { BASE, SCHNELL, alsKind, bisSofortTest, freigeben, testen, toncheck, ueberzeugungen, vorlieben, zumBeamer } from './helfer';
+import { BASE, SCHNELL, alsKind, bisSofortTest, freigeben, testen, toncheck, ueberzeugungen, vorlieben, zumBeamer, zurWoche } from './helfer';
 
 test('Lernbühne in der Bedingung „bild“ zeigt keinen sichtbaren Text', async ({ page }) => {
   test.setTimeout(90_000);
@@ -72,7 +72,7 @@ test('Verzögerter Test fragt nach „letzte Woche“, Sofort-Test nach „vorhi
   await expect(page.getByText('War dieses Ding vorhin dabei?')).toBeVisible();
   await testen(page);
   await freigeben(page);
-  await page.getByTestId('demo-woche').click();
+  await zurWoche(page);
   await toncheck(page);
   await expect(page.getByText('War dieses Ding letzte Woche dabei?')).toBeVisible();
 });
