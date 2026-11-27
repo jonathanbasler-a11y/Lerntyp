@@ -37,6 +37,9 @@ test('Screenshots: Test und Beamer', async ({ page }) => {
   await freigeben(page);
   await expect(page.getByTestId('test-wort')).toBeVisible();
   await page.screenshot({ path: `${ZIEL}/p2-test.png` });
+  await page.setViewportSize({ width: 390, height: 667 });
+  await page.screenshot({ path: `${ZIEL}/test-390.png` });
+  await page.setViewportSize({ width: 810, height: 1080 });
   await testen(page);
   await freigeben(page);
   await page.getByTestId('demo-lehrkraft').click();

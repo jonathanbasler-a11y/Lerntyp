@@ -32,6 +32,7 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
   const [lernEintrag, setLernEintrag] = useState<LernEintrag | null>(null);
   const [anleitungGesehen, setAnleitungGesehen] = useState(false);
   const [vermutungGesehen, setVermutungGesehen] = useState(false);
+  const [nachLernPause, setNachLernPause] = useState(false);
   const ereignisseRef = useRef<EventEnvelope[]>([]);
   const senderRef = useRef<EreignisSender | null>(null);
   const ablauf = useMemo(() => zeiten(daten.ablauf, istSchnell(window.location.search, __DEMO__)), []);
@@ -82,7 +83,11 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
 
   // Lernphase: Das aktuelle Ding bleibt bis zum Ende seines Takts stehen, auch wenn `item_gezeigt` schon den nächsten Schritt freigibt.
   if (schritt?.art === 'lernen' && lernEintrag === null) setLernEintrag(schritt.eintrag);
-  if (schritt?.art === 'pausiert' && lernEintrag !== null) setLernEintrag(null);
+  if (schritt?.art === 'pausiert' && lernEintrag !== null) {
+    setLernEintrag(null);
+    setNachLernPause(true); // Das unterbrochene Ding kommt nicht wieder (02 §8); danach ein ruhiger „Weiter geht's“-Bildschirm.
+  }
+  if (nachLernPause && schritt && schritt.art !== 'pausiert' && schritt.art !== 'lernen') setNachLernPause(false);
 
   // `abschliessen`: Die Oberfläche sendet `phase_abgeschlossen` und fragt dann neu (02 §8).
   const abschluss = schritt?.art === 'abschliessen' ? schritt : null;
@@ -99,9 +104,14 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
 
   const audioChecks = ereignisse.filter((e) => e.typ === 'audio_check' && e.sitzung === sitzung);
   const audioOk = audioChecks[audioChecks.length - 1]?.payload['ok'] === true;
+  const schrittId = startNoetig
+    ? 'start'
+    : schritt
+      ? `${schritt.art}:${'item_id' in schritt ? schritt.item_id : 'eintrag' in schritt ? schritt.eintrag.position : ''}:${lernEintrag?.position ?? ''}`
+      : '';
   const rahmen = (inhalt: React.ReactNode, mitLeiste = true) => (
     <div className="kind" data-testid="kind-bildschirm">
-      {mitLeiste && <KindLeiste onPause={() => senden('pause', { aktiv: true }, sitzung)} onHilfe={() => senden('hilfe_angefordert', {}, sitzung)} />}
+      {mitLeiste && <KindLeiste schrittId={schrittId} onPause={() => senden('pause', { aktiv: true }, sitzung)} onHilfe={() => senden('hilfe_angefordert', {}, sitzung)} />}
       {inhalt}
     </div>
   );
@@ -126,6 +136,9 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
 
   if (schritt.art === 'lernen' && !hatGelernt && !anleitungGesehen) {
     return rahmen(<Mitteilung id="anleitung" titel="kind.lernen.titel" text="kind.lernen.text" weiter={{ label: 'kind.lernen.los', onWeiter: () => setAnleitungGesehen(true), testId: 'lernen-los' }} />);
+  }
+  if (nachLernPause && schritt.art === 'lernen') {
+    return rahmen(<Mitteilung id="weiter_geht" titel="kind.weiter_geht.titel" text="kind.weiter_geht.text" weiter={{ label: 'kind.weiter', onWeiter: () => setNachLernPause(false), testId: 'weiter-geht' }} />);
   }
   if (lernEintrag && (schritt.art === 'lernen' || schritt.art === 'abschliessen')) {
     return rahmen(
@@ -177,6 +190,7 @@ export function Kind({ client, alias, onZumStart }: { client: ApiClient; alias: 
       return rahmen(
         <Test
           key={`${schritt.test}-${schritt.eintrag.position}`}
+          test={schritt.test}
           eintrag={schritt.eintrag}
           audioOk={audioOk}
           onAntwort={(antwort, rt_ms) =>

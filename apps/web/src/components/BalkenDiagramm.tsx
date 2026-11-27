@@ -4,10 +4,10 @@ import { bedingungLabel, formatProzent, type Balken, type BalkenGruppe } from '.
 import { t } from '../text';
 
 /** Farbe, Muster und Symbol je Bedingung: Das Diagramm ist nie nur durch Farbe lesbar (02 §7.1). */
-const STIL: Record<Bedingung, { farbe: string; symbol: string }> = {
-  wort: { farbe: '#2b6cb0', symbol: 'M0 -9L9 7H-9Z' }, // Dreieck
-  bild: { farbe: '#c05621', symbol: 'M0 -8A8 8 0 1 1 -0.01 -8Z' }, // Kreis
-  bild_wort: { farbe: '#6b46a8', symbol: 'M0 -10L9 0L0 10L-9 0Z' }, // Raute
+const STIL: Record<Bedingung, { farbe: string; dunkel: string; symbol: string }> = {
+  wort: { farbe: '#2b6cb0', dunkel: '#173f6b', symbol: 'M0 -9L9 7H-9Z' }, // Dreieck
+  bild: { farbe: '#c05621', dunkel: '#6e2f0e', symbol: 'M0 -8A8 8 0 1 1 -0.01 -8Z' }, // Kreis
+  bild_wort: { farbe: '#6b46a8', dunkel: '#3a2262', symbol: 'M0 -10L9 0L0 10L-9 0Z' }, // Raute
 };
 const REIHENFOLGE: Bedingung[] = ['wort', 'bild', 'bild_wort'];
 
@@ -15,15 +15,34 @@ const B = 800;
 const H = 460;
 const LINKS = 70;
 const RECHTS = 16;
-const OBEN = 64;
+const OBEN_BASIS = 64;
+const LEGENDE_ZEILE2 = 34;
 const UNTEN = 120;
-const PLOT_H = H - OBEN - UNTEN;
 const PLOT_B = B - LINKS - RECHTS;
 const TICKS = [0, 0.25, 0.5, 0.75, 1];
 
-function Muster({ id }: { id: string }) {
+function Muster({ id, mitWoche }: { id: string; mitWoche: boolean }) {
   return (
     <defs>
+      {mitWoche &&
+        REIHENFOLGE.map((b) => {
+          const { farbe, dunkel } = STIL[b];
+          // „nach 1 Woche“: gleiche Farbe wie „sofort“, dazu ein dunkles Gitter (ohne Neigung, anders als jedes Sofort-Muster).
+          return (
+            <pattern key={`${b}-woche`} id={`${id}-${b}-woche`} width="10" height="10" patternUnits="userSpaceOnUse">
+              <rect width="10" height="10" fill={farbe} fillOpacity={b === 'bild_wort' ? 1 : 0.3} />
+              <rect y="4" width="10" height="2" fill={dunkel} fillOpacity="0.85" />
+              <rect x="4" width="2" height="10" fill={dunkel} fillOpacity="0.85" />
+            </pattern>
+          );
+        })}
+      {mitWoche && (
+        <pattern id={`${id}-woche-neutral`} width="10" height="10" patternUnits="userSpaceOnUse">
+          <rect width="10" height="10" fill="#e6e1d6" />
+          <rect y="4" width="10" height="2" fill="#26323a" fillOpacity="0.8" />
+          <rect x="4" width="2" height="10" fill="#26323a" fillOpacity="0.8" />
+        </pattern>
+      )}
       {REIHENFOLGE.map((b) => {
         const { farbe } = STIL[b];
         return (
@@ -40,9 +59,7 @@ function Muster({ id }: { id: string }) {
 }
 
 function zeilenLabel(gruppe: string, bk: Balken): string {
-  const teile = [gruppe, bedingungLabel(bk.bedingung)];
-  if (bk.verzoegert) teile.push(bk.label);
-  return teile.join(' – ');
+  return bk.srLabel ?? `${gruppe} – ${bedingungLabel(bk.bedingung)}`;
 }
 
 /** Gruppiertes Balkendiagramm (reines SVG, keine Diagramm-Bibliothek). */
@@ -50,6 +67,9 @@ export function BalkenDiagramm({ gruppen, titel, testId }: { gruppen: BalkenGrup
   const id = useId().replace(/[^a-zA-Z0-9]/g, '');
   const anzahlBalken = gruppen.reduce((s, g) => s + g.balken.length, 0);
   const beschriften = anzahlBalken <= 6;
+  const mitWoche = gruppen.some((g) => g.balken.some((bk) => bk.verzoegert));
+  const OBEN = OBEN_BASIS + (mitWoche ? LEGENDE_ZEILE2 : 0);
+  const PLOT_H = H - OBEN - UNTEN;
   const gruppenBreite = PLOT_B / gruppen.length;
   const y = (wert: number) => OBEN + PLOT_H * (1 - Math.min(1, Math.max(0, wert)));
 
@@ -57,7 +77,7 @@ export function BalkenDiagramm({ gruppen, titel, testId }: { gruppen: BalkenGrup
     <figure className="diagramm" data-testid={testId}>
       <svg viewBox={`0 0 ${B} ${H}`} role="img" aria-label={titel}>
         <title>{titel}</title>
-        <Muster id={id} />
+        <Muster id={id} mitWoche={mitWoche} />
         {/* Legende: Farbe, Muster und Symbol */}
         {REIHENFOLGE.map((b, i) => (
           <g key={b} transform={`translate(${LINKS + i * 220} 12)`}>
@@ -68,6 +88,14 @@ export function BalkenDiagramm({ gruppen, titel, testId }: { gruppen: BalkenGrup
             </text>
           </g>
         ))}
+        {mitWoche && (
+          <g transform={`translate(${LINKS} 46)`}>
+            <rect width="34" height="26" rx="4" fill={`url(#${id}-woche-neutral)`} stroke="#26323a" strokeWidth="3" />
+            <text x="48" y="19" fontSize="17" fill="#26323a">
+              {t('beamer.woche_legende')}
+            </text>
+          </g>
+        )}
         {/* Achse */}
         {TICKS.map((tk) => (
           <g key={tk}>
@@ -92,16 +120,15 @@ export function BalkenDiagramm({ gruppen, titel, testId }: { gruppen: BalkenGrup
                 const top = wert === null ? y(0) : y(wert);
                 const stil = STIL[bk.bedingung];
                 return (
-                  <g key={`${bk.bedingung}-${bi}`} opacity={bk.verzoegert ? 0.6 : 1} data-testid={`balken-${g.id}-${bk.bedingung}${bk.verzoegert ? '-woche' : ''}`}>
+                  <g key={`${bk.bedingung}-${bi}`} data-testid={`balken-${g.id}-${bk.bedingung}${bk.verzoegert ? '-woche' : ''}`}>
                     <rect
                       x={x + 4}
                       y={top}
                       width={breite - 8}
                       height={y(0) - top}
-                      fill={`url(#${id}-${bk.bedingung})`}
-                      stroke={stil.farbe}
-                      strokeWidth="3"
-                      strokeDasharray={bk.verzoegert ? '7 4' : undefined}
+                      fill={`url(#${id}-${bk.bedingung}${bk.verzoegert ? '-woche' : ''})`}
+                      stroke={bk.verzoegert ? stil.dunkel : stil.farbe}
+                      strokeWidth={bk.verzoegert ? 4 : 3}
                     />
                     <text x={x + breite / 2} y={top - 8} textAnchor="middle" fontSize="17" fontWeight="700" fill="#26323a">
                       {formatProzent(wert)}

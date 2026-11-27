@@ -171,5 +171,5 @@ test('Manifest hat Scope und Kurzname', async ({ page, request }) => {
   expect(res.ok()).toBe(true);
   const m = await res.json();
   expect(m.scope).toBe(BASE);
-  expect(m.short_name).toBe('Lerntyp');
+  expect(m.short_name).toBe('Lerndetektive');
 });

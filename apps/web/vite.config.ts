@@ -16,6 +16,7 @@ export default defineConfig({
   build: { outDir: process.env.OUT_DIR ?? 'dist', emptyOutDir: true },
   plugins: [
     react(),
+    { name: 'app-titel', transformIndexHtml: (html: string) => html.replace('%APP_TITEL%', texte['app.titel'] ?? '') },
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icons/*.svg', 'icons/*.png'],

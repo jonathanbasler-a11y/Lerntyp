@@ -1,4 +1,4 @@
-import { PHASEN_FOLGE, PHASEN_HAUPT, klassenErgebnis, parseEvent, vergleichSofortVerzoegert, type EventEnvelope } from '@lerntyp/shared';
+import { PHASEN_FOLGE, PHASEN_HAUPT, klassenErgebnis, parseEvent, testSequenz, vergleichSofortVerzoegert, type EventEnvelope } from '@lerntyp/shared';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { createMockClient, demoEreignisse, setzeDemoZurueck } from '../src/api/mock';
 import { alleGruppen, formatProzent, nachVermutungGruppen, vergleichGruppen } from '../src/lerndetektive/diagramm';
@@ -114,5 +114,36 @@ describe('Diagramm-Hilfen', () => {
   it('formatiert Prozent ohne Nachkommastellen', () => {
     expect(formatProzent(0.5849)).toBe('58 %');
     expect(formatProzent(null)).toBe('–');
+  });
+});
+
+describe('Vergleichsdiagramm nutzt nur Kinder mit beiden Tests', () => {
+  it('Kinder ohne verzögerten Test fließen weder in n noch in die Mittelwerte ein', async () => {
+    const c = createMockClient();
+    const stamm = (await c.listTeilnehmer()).filter((k) => k.simuliert).slice(0, 7);
+    // Perfekte Antworten (alt = dabei) auf beiden Tests; die letzten zwei Kinder haben nur den Sofort-Test und antworten dort ausnahmslos „nicht dabei“.
+    const ev: EventEnvelope[] = [];
+    stamm.forEach((k, i) => {
+      const fehlt = i >= 5;
+      for (const test of ['sofort', 'verzoegert'] as const) {
+        if (fehlt && test === 'verzoegert') continue;
+        for (const e of testSequenz(daten, k.rotation, k.seed, test)) {
+          const antwort = fehlt ? 'nicht_dabei' : e.alt ? 'dabei' : 'nicht_dabei';
+          ev.push({ modul: 'lerndetektive', teilnehmer_alias: k.alias, typ: 'antwort_abgegeben', payload: { item_id: e.item_id, test, alt: e.alt, antwort, rt_ms: 900, position: e.position } } as unknown as EventEnvelope);
+        }
+      }
+    });
+    const kinder = wertePro(stamm, ev, daten).filter((k) => k.sofort !== null);
+    expect(kinder).toHaveLength(7);
+    const v = vergleichSofortVerzoegert(kinder.map((k) => ({ sofort: k.sofort!, verzoegert: k.verzoegert })), daten.ablauf.mindestgruppe);
+    expect(v).not.toBeNull();
+    expect(v!.n).toBe(5);
+    // Wären die zwei Kinder ohne Folgetest mitgezählt, läge „sofort“ unter 1.
+    for (const b of ['wort', 'bild', 'bild_wort'] as const) {
+      expect(v!.sofort[b]).toBeCloseTo(1, 5);
+      expect(v!.verzoegert[b]).toBeCloseTo(1, 5);
+    }
+    const gruppen = vergleichGruppen(v!);
+    expect(gruppen[0]!.balken.map((b) => b.srLabel)).toEqual(['Wort – sofort', 'Wort – nach 1 Woche']);
   });
 });
