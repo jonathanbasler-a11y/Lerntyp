@@ -120,6 +120,8 @@ Drei Stationen à ca. 5 Minuten, angelehnt an den Bildungsplan BW V2 (Dossier §
 | Selbsteinschätzung | Zuversicht vorher ↔ Ergebnis (Kalibrierung) | Selbsterwartungen |
 | Strategie-Bewusstsein | Antwort auf „Was hat geholfen?“; Begründung in S1 | Metakognition |
 
+„Abstand Ziel ↔ Ergebnis“ und die Zuversicht-Kalibrierung hängen von der Richtigkeit der Antworten ab; sie sind **ausschließlich Forschungsdaten** und fließen nie in die Karten des Lernprofils (§7.4) ein.
+
 Der Schwierigkeitsgrad liegt bewusst im grundlegenden bis mittleren Bereich. Im Parcours geht es um Lernverhalten, nicht um Leistungsdiagnostik. Es werden **keine Niveaustufen (G/M/E) angezeigt**.
 
 ### 7.4 Mein Lernprofil
@@ -138,6 +140,8 @@ Der Schwierigkeitsgrad liegt bewusst im grundlegenden bis mittleren Bereich. Im 
 | „Du hast …“, „Heute hat dir … geholfen“ | „Du bist ein …-Typ“, „Du lernst am besten mit …“ |
 | Konkrete Station und konkretes Verhalten | Prozentwerte, Punkte, Noten, Niveaus |
 | Wachstum: „Das kannst du trainieren“ | Vergleiche mit der Klasse oder mit anderen Kindern |
+
+Karten und Lern-Superkraft werden ausschließlich aus Verhaltensindikatoren abgeleitet (Ziel gesetzt, Beispiel geöffnet, Hinweis genutzt, zweiter Versuch nach Fehler, Begründung gewählt, „Was hat geholfen?“ beantwortet, Teilnahme an den Lerndetektiven); Abstand Ziel ↔ Ergebnis und Zuversicht-Kalibrierung (§7.3) sind reine Forschungsdaten und gehen nie in die Karten ein, damit das Profil unabhängig von der Richtigkeit bleibt.
 
 Gibt es zu wenige Daten (z. B. abgebrochene Sitzung), zeigt die App eine allgemeine, ermutigende Karte statt eines Profils.
 

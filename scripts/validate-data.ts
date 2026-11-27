@@ -5,6 +5,9 @@ import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
 import { DemoSchema, TexteSchema } from '../packages/shared/src/data';
 import { LerndetektiveDatenSchema } from '../packages/shared/src/lerndetektive/daten';
+import { S1DatenSchema, S2DatenSchema, S3DatenSchema } from '../packages/shared/src/parcours/daten';
+import { KartenDatenSchema } from '../packages/shared/src/profil/daten';
+import { STRATEGIEN } from '../packages/shared/src/events';
 
 const Anteil = z.number().min(0).max(1);
 const JeBedingung = z.object({ wort: Anteil, bild: Anteil, bild_wort: Anteil }).strict();
@@ -58,6 +61,10 @@ const FILES = [
   { rel: 'audio/manifest.json', schema: AudioManifestSchema },
   { rel: 'audio/vorlesen.json', schema: VorlesenSchema },
   { rel: 'lerndetektive/bilder.json', schema: BilderSchema },
+  { rel: 'parcours/s1-wort-werkstatt.json', schema: S1DatenSchema },
+  { rel: 'parcours/s2-satz-baukasten.json', schema: S2DatenSchema },
+  { rel: 'parcours/s3-wuerfel-baumeister.json', schema: S3DatenSchema },
+  { rel: 'profil/karten.json', schema: KartenDatenSchema },
 ] as const;
 
 const sha256 = (text: string): string => createHash('sha256').update(text, 'utf8').digest('hex');
@@ -143,6 +150,11 @@ function kreuzpruefung(dataDir: string): string[] {
   if (sim.success && demo.success) {
     const echte = new Set(demo.data.aliasse.map((a) => a.alias));
     for (const a of sim.data.kinder) if (echte.has(a)) fehler.push(`demo/simulation.json: Alias „${a}“ kommt auch in demo/aliasse.json vor`);
+  }
+  const texte = TexteSchema.safeParse(lies(dataDir, 'texte/de.json'));
+  if (texte.success) {
+    for (const st of STRATEGIEN) if (!texte.data[`strategie.${st}`]) fehler.push(`texte/de.json: Schlüssel strategie.${st} fehlt`);
+    for (const k of ['s1', 's2', 's3']) if (!texte.data[`parcours.station.${k}.titel`]) fehler.push(`texte/de.json: Schlüssel parcours.station.${k}.titel fehlt`);
   }
   return fehler;
 }

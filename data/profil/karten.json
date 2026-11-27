@@ -1,0 +1,136 @@
+{
+  "hinweis": "Textbausteine für „Mein Lernprofil“ (01 §7.4). Karten: beobachtetes Verhalten, Vergangenheitsform, konkrete Station, keine Zahlen, keine Typ-Aussagen. Auswahl nur nach Verhalten, nie nach Richtigkeit (siehe packages/shared/src/profil/regeln.ts).",
+  "karten": [
+    {
+      "id": "zweiter_versuch.s1",
+      "verhalten": "zweiter_versuch",
+      "station": "s1",
+      "text": "In der Wort-Werkstatt hast du nach einem Fehler noch einmal probiert."
+    },
+    {
+      "id": "zweiter_versuch.s2",
+      "verhalten": "zweiter_versuch",
+      "station": "s2",
+      "text": "Beim Satz-Baukasten hast du nach einem Fehler noch einmal probiert."
+    },
+    {
+      "id": "zweiter_versuch.s3",
+      "verhalten": "zweiter_versuch",
+      "station": "s3",
+      "text": "Beim Würfel-Baumeister hast du nach einem Fehler noch einmal probiert."
+    },
+    {
+      "id": "beispiel.s1",
+      "verhalten": "beispiel",
+      "station": "s1",
+      "text": "In der Wort-Werkstatt hast du dir das Musterbeispiel angeschaut. So konntest du sehen, wie es geht."
+    },
+    {
+      "id": "beispiel.s2",
+      "verhalten": "beispiel",
+      "station": "s2",
+      "text": "Beim Satz-Baukasten hast du dir das Musterbeispiel angeschaut. So konntest du sehen, wie es geht."
+    },
+    {
+      "id": "beispiel.s3",
+      "verhalten": "beispiel",
+      "station": "s3",
+      "text": "Beim Würfel-Baumeister hast du dir das Musterbeispiel angeschaut. So konntest du sehen, wie es geht."
+    },
+    {
+      "id": "begruendung.s1",
+      "verhalten": "begruendung",
+      "station": "s1",
+      "text": "In der Wort-Werkstatt hast du erklärt, warum du ein Wort so schreibst: mit Verlängern oder mit Ableiten."
+    },
+    {
+      "id": "hinweis.s1",
+      "verhalten": "hinweis",
+      "station": "s1",
+      "text": "In der Wort-Werkstatt hast du dir einen Tipp geholt, als du ihn gebraucht hast."
+    },
+    {
+      "id": "hinweis.s2",
+      "verhalten": "hinweis",
+      "station": "s2",
+      "text": "Beim Satz-Baukasten hast du dir einen Tipp geholt, als du ihn gebraucht hast."
+    },
+    {
+      "id": "hinweis.s3",
+      "verhalten": "hinweis",
+      "station": "s3",
+      "text": "Beim Würfel-Baumeister hast du dir einen Tipp geholt, als du ihn gebraucht hast."
+    },
+    {
+      "id": "ziel.s1",
+      "verhalten": "ziel",
+      "station": "s1",
+      "text": "In der Wort-Werkstatt hast du dir vorher ein Ziel gesetzt."
+    },
+    {
+      "id": "ziel.s2",
+      "verhalten": "ziel",
+      "station": "s2",
+      "text": "Beim Satz-Baukasten hast du dir vorher ein Ziel gesetzt."
+    },
+    {
+      "id": "ziel.s3",
+      "verhalten": "ziel",
+      "station": "s3",
+      "text": "Beim Würfel-Baumeister hast du dir vorher ein Ziel gesetzt."
+    },
+    {
+      "id": "geholfen.s1",
+      "verhalten": "geholfen",
+      "station": "s1",
+      "text": "In der Wort-Werkstatt hast du überlegt, was dir geholfen hat."
+    },
+    {
+      "id": "geholfen.s2",
+      "verhalten": "geholfen",
+      "station": "s2",
+      "text": "Beim Satz-Baukasten hast du überlegt, was dir geholfen hat."
+    },
+    {
+      "id": "geholfen.s3",
+      "verhalten": "geholfen",
+      "station": "s3",
+      "text": "Beim Würfel-Baumeister hast du überlegt, was dir geholfen hat."
+    },
+    {
+      "id": "teilnahme.lerndetektive",
+      "verhalten": "teilnahme",
+      "station": "lerndetektive",
+      "text": "Bei den Lerndetektiven hast du von Anfang bis zum Ende mitgemacht."
+    }
+  ],
+  "fallback": {
+    "id": "fallback",
+    "text": "Heute hast du Neues ausprobiert. Das ist ein guter Anfang, und beim nächsten Mal zeigen wir dir mehr."
+  },
+  "superkraft": {
+    "gedaechtnis_training": "Probier diese Woche das Gedächtnis-Training: Deck die Wörter ab und erinnere dich selbst, bevor du nachschaust.",
+    "haeppchen_lernen": "Probier diese Woche das Häppchen-Lernen: Übe lieber an mehreren Tagen ein bisschen als einmal ganz lange.",
+    "doppelt_merken": "Probier diese Woche das Doppelt-Merken: Stell dir zu einem Wort ein Bild vor und sprich das Wort dazu.",
+    "mischen": "Probier diese Woche das Mischen: Übe nicht alles der Reihe nach, sondern wechsle zwischen verschiedenen Aufgaben.",
+    "warum_fragen": "Probier diese Woche die Warum-Fragen: Frag dich bei einem Wort, warum man es so schreibt.",
+    "beispiele": "Probier diese Woche die Beispiele: Schau dir erst ein gelöstes Beispiel an und mach dann die Aufgabe."
+  },
+  "tipps": {
+    "gedaechtnis_training": "Schreib zu Hause ein paar Wörter aus dem Kopf auf und vergleiche sie dann mit dem Heft.",
+    "haeppchen_lernen": "Übe zu Hause an jedem Tag ein paar Minuten, statt einmal ganz lange.",
+    "doppelt_merken": "Male zu Hause zu einem neuen Wort ein kleines Bild und sag das Wort laut dazu.",
+    "mischen": "Wechsle zu Hause beim Üben ab: mal Rechnen, mal Lesen, mal Schreiben.",
+    "warum_fragen": "Frag zu Hause bei einem Wort: Warum schreibt man das so? Erkläre es jemandem.",
+    "beispiele": "Such dir zu Hause erst ein fertiges Beispiel im Heft und mach dann eine ähnliche Aufgabe."
+  },
+  "indikatoren": {
+    "zweiter_versuch": "hat nach einem Fehler noch einmal probiert",
+    "beispiel": "hat das Musterbeispiel geöffnet",
+    "begruendung": "hat in der Wort-Werkstatt eine Begründung gewählt",
+    "hinweis": "hat einen Hinweis genutzt",
+    "ziel": "hat sich vor der Station ein Ziel gesetzt",
+    "geholfen": "hat benannt, was geholfen hat",
+    "teilnahme": "hat bei den Lerndetektiven mitgemacht"
+  }
+}

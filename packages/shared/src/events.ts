@@ -37,6 +37,16 @@ export type ItemSet = z.infer<typeof SetSchema>;
 export const TestSchema = z.enum(['sofort', 'verzoegert']);
 export type TestZeitpunkt = z.infer<typeof TestSchema>;
 
+/** Die sechs Lernstrategien (01 §5); Reihenfolge = feste Reihenfolge der Konzept-Tabelle. */
+export const STRATEGIEN = ['gedaechtnis_training', 'haeppchen_lernen', 'doppelt_merken', 'mischen', 'warum_fragen', 'beispiele'] as const;
+export const StrategieSchema = z.enum(STRATEGIEN);
+export type Strategie = z.infer<typeof StrategieSchema>;
+
+/** Stationen des Strategie-Parcours (01 §7.3). */
+export const STATIONEN = ['s1', 's2', 's3'] as const;
+export const StationSchema = z.enum(STATIONEN);
+export type Station = z.infer<typeof StationSchema>;
+
 const rtMs = z.number().int().nonnegative();
 const seed = z.number().int().nonnegative().max(0xffffffff);
 
@@ -98,15 +108,42 @@ const LERNDETEKTIVE = {
     .strict(),
 } as const;
 
+/**
+ * Strategie-Parcours (03 §4.4). `antwort_abgegeben` trägt zusätzlich optional die Eingabe
+ * (`antwort`, Forschungsdaten) und in S1 die gewählte Begründung (`begruendung`, Verhaltensspur).
+ */
+const aufgabeRef = { station: StationSchema, aufgabe_id: z.string().min(1) } as const;
+const PARCOURS = {
+  ziel_gesetzt: z.object({ station: StationSchema, ziel: z.number().int().min(1).max(5) }).strict(),
+  sicherheit_vorher: z.object({ station: StationSchema, smiley: z.number().int().min(1).max(4) }).strict(),
+  aufgabe_gezeigt: z.object(aufgabeRef).strict(),
+  beispiel_geoeffnet: z.object(aufgabeRef).strict(),
+  hinweis_genutzt: z.object({ ...aufgabeRef, stufe: z.union([z.literal(1), z.literal(2)]) }).strict(),
+  antwort_abgegeben: z
+    .object({
+      ...aufgabeRef,
+      korrekt: z.boolean(),
+      versuch: z.union([z.literal(1), z.literal(2)]),
+      rt_ms: rtMs,
+      antwort: z.string().optional(),
+      begruendung: z.enum(['verlaengern', 'ableiten']).optional(),
+    })
+    .strict(),
+  aufgabe_uebersprungen: z.object(aufgabeRef).strict(),
+  hilfreich_gewaehlt: z.object({ station: StationSchema, strategien: z.array(StrategieSchema) }).strict(),
+} as const;
+
 /** Profil (03 §4.4); `superkraft_ausprobiert` wird in der Folgestunde erhoben. */
 const PROFIL = {
+  profil_angezeigt: z.object({ karten_ids: z.array(z.string().min(1)), superkraft: StrategieSchema }).strict(),
+  profil_passt: z.object({ smiley: z.number().int().min(1).max(4) }).strict(),
   superkraft_ausprobiert: z.object({ antwort: z.enum(['ja', 'ein_bisschen', 'nein']) }).strict(),
 } as const;
 
 export const PayloadSchemas = {
   start: { beitritt: z.object({}).strict() },
   lerndetektive: LERNDETEKTIVE,
-  parcours: {},
+  parcours: PARCOURS,
   profil: PROFIL,
 } as const satisfies Record<Modul, Record<string, z.ZodType>>;
 
@@ -121,6 +158,18 @@ export type LerndetektiveEvent = {
     payload: LerndetektivePayload<T>;
   };
 }[LerndetektiveTyp];
+
+export type ParcoursTyp = keyof typeof PARCOURS;
+export type ParcoursPayload<T extends ParcoursTyp> = z.infer<(typeof PARCOURS)[T]>;
+
+/** Ein Parcours-Ereignis mit typisiertem Payload. */
+export type ParcoursEvent = {
+  [T in ParcoursTyp]: Omit<EventEnvelope, 'modul' | 'typ' | 'payload'> & {
+    modul: 'parcours';
+    typ: T;
+    payload: ParcoursPayload<T>;
+  };
+}[ParcoursTyp];
 
 /** Liefert das Payload-Schema für Modul + Typ oder `undefined`, wenn der Typ (noch) unbekannt ist. */
 export function payloadSchemaFor(modul: Modul, typ: string): z.ZodType | undefined {
@@ -143,4 +192,13 @@ export function parseLerndetektiveEvent(input: unknown): LerndetektiveEvent {
   const schema = (LERNDETEKTIVE as Record<string, z.ZodType>)[ev.typ];
   if (!schema) throw new Error(`Unbekannter Lerndetektive-Typ „${ev.typ}“`);
   return { ...ev, payload: schema.parse(ev.payload) } as LerndetektiveEvent;
+}
+
+/** Wie `parseEvent`, verlangt aber ein Parcours-Ereignis mit bekanntem Typ. */
+export function parseParcoursEvent(input: unknown): ParcoursEvent {
+  const ev = EventEnvelopeSchema.parse(input);
+  if (ev.modul !== 'parcours') throw new Error(`Modul „${ev.modul}“ ist kein Parcours-Ereignis`);
+  const schema = (PARCOURS as Record<string, z.ZodType>)[ev.typ];
+  if (!schema) throw new Error(`Unbekannter Parcours-Typ „${ev.typ}“`);
+  return { ...ev, payload: schema.parse(ev.payload) } as ParcoursEvent;
 }
