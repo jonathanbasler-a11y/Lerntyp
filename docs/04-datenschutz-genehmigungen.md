@@ -21,9 +21,9 @@ Verwandte Dokumente: [01-konzept.md](01-konzept.md) · [02-lerndetektive-experim
 | **Freiwilligkeit der Forschung** | Kinder ohne Einwilligung nehmen ganz normal teil; ihre Daten gelangen nie in den Forschungsexport. |
 
 **Produktregeln, die daraus folgen** (gelten auch für [03-architektur.md](03-architektur.md)):
-- Das Lernprofil ist in der Lehrkraft-Ansicht mit dem Hinweis versehen: „Nicht für Übergangsentscheidungen oder Leistungsbewertung bestimmt.“
+- Das Lernprofil ist in der Lehrkraft-Ansicht mit dem Hinweis versehen: „Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.“
 - Kein Export von Einzelprofilen in Formaten, die für Zeugnis- oder Beratungsunterlagen gedacht sind (Gestaltungsentscheidung; zu prüfen, ob eine organisatorische Zusage der Schule zusätzlich nötig ist – zu verifizieren (R0)).
-- Die Feldphasen liegen außerhalb der Übergangsphase Dez. 2026 – Feb. 2027 (siehe [05-forschungsplan.md](05-forschungsplan.md)).
+- Die Feldphasen liegen außerhalb der Übergangsphase Dez. 2026 – Feb. 2027 (Termine stammen aus kommerziellen Portalen: zu verifizieren (R0, L1); siehe [05-forschungsplan.md](05-forschungsplan.md)).
 
 ---
 
@@ -31,16 +31,17 @@ Verwandte Dokumente: [01-konzept.md](01-konzept.md) · [02-lerndetektive-experim
 
 ### (A) Schulischer Einsatz
 
-- **Verantwortliche:** die **Schule** (vertreten durch die Schulleitung). Dass bei öffentlichen Schulen in BW die Schule selbst Verantwortliche i. S. d. Art. 4 Nr. 7 DSGVO ist, entspricht gängiger Praxis – genaue Zuordnung (Schule vs. Land/Schulträger) zu verifizieren (R0).
+- **Verantwortliche:** die **Schule** (vertreten durch die Schulleitung). Dass bei öffentlichen Schulen in BW die Schule selbst Verantwortliche i. S. d. Art. 4 Nr. 7 DSGVO ist, entspricht gängiger Praxis (zu verifizieren (R0)) – genaue Zuordnung (Schule vs. Land/Schulträger) zu verifizieren (R0).
 - **Rechtsgrundlage:** Art. 6 Abs. 1 lit. e, Abs. 3 DSGVO i. V. m. dem Schulgesetz BW und dem LDSG BW (Erfüllung des öffentlichen Bildungsauftrags). **Konkrete Paragrafen** (Datenverarbeitungsbefugnis im SchG BW, einschlägige Norm im LDSG BW) und die Frage, ob der Einsatz einer digitalen Lernanwendung davon gedeckt ist oder zusätzlich eine Einwilligung verlangt wird: zu verifizieren (R0). Laut Suchergebnissen wurde das SchG BW u. a. zum 05.12.2023 geändert; ob dies die Datenverarbeitungsnormen betrifft und welche Fassung gilt, zu verifizieren (R0).
 - **Betreiber (Projektteam bzw. Hosting-Partner):** **Auftragsverarbeiter** nach Art. 28 DSGVO mit **AVV** (Checkliste: Abschnitt 6.5). Weisungsgebunden, keine eigenen Zwecke.
+- **Kinder ohne Forschungseinwilligung:** Ihre Daten werden unter Spur A für die Stunde verarbeitet, einschließlich Klassengrafik und eigenem Profil; sie gelangen nie in den Forschungsexport.
 - **Art. 8 DSGVO** (Einwilligung ab 16 in DE, Dossier §5.1) greift in Spur A nicht als Rechtsgrundlage, weil keine Einwilligung zugrunde liegt – Bewertung zu verifizieren (R0).
 
 ### (B) Forschungsnutzung
 
 - **Rechtsgrundlage:** **schriftliche Einwilligung der Sorgeberechtigten** (Art. 6 Abs. 1 lit. a, Art. 7 DSGVO) **plus altersgerechte Zustimmung (Assent) des Kindes**. Ob beide Sorgeberechtigte unterschreiben müssen: zu verifizieren (R0).
 - **Freiwilligkeit:** Keine Nachteile bei Nicht-Teilnahme; Kinder ohne Einwilligung machen alles mit, werden nur nicht exportiert. Kein Hinweis in der Kinder-UI, wer teilnimmt.
-- **Widerruf** jederzeit ohne Begründung (Art. 7 Abs. 3 DSGVO) → Löschung der Forschungsdaten (Abschnitt 7). Nach Anonymisierung ist eine Löschung nicht mehr möglich – das steht in der Einwilligungserklärung.
+- **Widerruf** jederzeit ohne Begründung (Art. 7 Abs. 3 DSGVO) → Löschung der Forschungsdaten (Abschnitt 7). Widerruf ist bis zur Vernichtung der Papierlisten am Schuljahresende möglich; danach sind die Forschungsdaten anonym und eine Löschung nicht mehr möglich – das steht in der Einwilligungserklärung.
 - **Verantwortliche für die Forschungsdaten:** voraussichtlich die forschende Institution (Partner-PH) bzw. Projektleitung; ob getrennte oder gemeinsame Verantwortlichkeit (Art. 26 DSGVO) mit der Schule vorliegt: zu verifizieren (R0).
 - **Forschungsprivilegien** (Art. 89 DSGVO, Forschungsnorm im LDSG BW) werden **nicht** als Ersatz für Einwilligung genutzt; sie können für Aufbewahrung/Betroffenenrechte relevant sein – zu verifizieren (R0).
 - **Technik:** Die Lehrkraft setzt pro Alias `consent_research = true` erst nach Vorliegen von Einwilligung **und** Assent. Nur diese Aliasse erscheinen im pseudonymisierten Forschungsexport; der Alias wird dabei durch eine zweite, zufällige Forschungs-ID ersetzt (siehe [03-architektur.md](03-architektur.md)).
@@ -49,8 +50,8 @@ Verwandte Dokumente: [01-konzept.md](01-konzept.md) · [02-lerndetektive-experim
 
 | Daten | Spur A (Schule) | Spur B (Forschung) | Rechtsgrundlage | Aufbewahrung |
 |---|---|---|---|---|
-| Alias, Klassencode | ja | nur als Forschungs-ID | A: Art. 6 (1) e DSGVO + SchG/LDSG BW (zu verifizieren); B: Einwilligung | A: bis Schuljahresende; B: Zuordnung Alias↔Forschungs-ID bis Abschluss der Datenerhebung (R3) |
-| Antworten auf Aufgaben | ja | nur mit `consent_research` | wie oben | A: Schuljahresende; B: bis Anonymisierung |
+| Alias, Klassencode | ja (auch Kinder ohne Forschungseinwilligung) | nur als Forschungs-ID (Alias wird beim Export ersetzt) | A: Art. 6 (1) e DSGVO + SchG/LDSG BW (zu verifizieren); B: Einwilligung | A: bis Schuljahresende; B: Export enthält nur die zufällige Forschungs-ID; Alias↔Name-Papierlisten werden zum Schuljahresende vernichtet |
+| Antworten auf Aufgaben | ja (inkl. Klassengrafik und eigenes Profil, auch ohne Forschungseinwilligung) | nur mit `consent_research` | wie oben | A: Schuljahresende; B: bis Anonymisierung |
 | Prozessdaten (Zeiten, Hinweise, Sicherheit) | ja | nur mit `consent_research` | wie oben | wie oben |
 | Präferenzantworten „Lerndetektive“ | ja | nur mit `consent_research` | wie oben | wie oben |
 | Berechnetes Lernprofil | ja | nur mit `consent_research` (aggregierbar) | wie oben | wie oben |
@@ -66,20 +67,20 @@ Verwandte Dokumente: [01-konzept.md](01-konzept.md) · [02-lerndetektive-experim
 | Alias („Fuchs-27“) + QR | pseudonym | Anmeldung, Zuordnung von Ereignissen | Server-DB (EU); Karte auf Papier | Schuljahresende |
 | Alias↔Name-Liste | **ja** (direkt) | Rückgabe an Kind, Elternkontakt | **nur Papier bei der Lehrkraft**, nie im System | in Verantwortung der Schule, spätestens Schuljahresende vernichten |
 | Klassencode, Sitzungen | pseudonym (über Klasse) | Organisation der Unterrichtsstunde | Server-DB | Schuljahresende |
-| Lehrkraft-Zugang (Kennung, Passwort-Hash) | **ja** | Zugang zum Lehrkraft-Cockpit | Server-DB | bei Kontolöschung / Projektende |
+| Lehrkraft-Zugangscode (klassenspezifisch, zufällig) | nein – kein Lehrkraft-Konto, keine personenbezogenen Lehrkraftdaten gespeichert | Zugang zum Lehrkraft-Cockpit | Server-DB (Teil der Klasse) | Schuljahresende. Option für später: Lehrkraft-Login (dann Datenkatalog erweitern: Kennung, Passwort-Hash, ggf. 2FA) |
 | `consent_research`-Flag | pseudonym | Steuerung des Forschungsexports | Server-DB | Schuljahresende bzw. bei Widerruf auf `false` + Löschung Forschungsdaten |
 | Antworten (Auswahl, Zahlen) | pseudonym | Feedback, Lernprofil, ggf. Forschung | Tablet (IndexedDB-Warteschlange, bis Sync) → Server-DB | lokal: nach erfolgreichem Sync; Server: Schuljahresende |
 | Prozessdaten: Bearbeitungszeiten, genutzte Hinweise, Sicherheitsurteile | pseudonym | Lernprofil, Experiment, ggf. Forschung | wie Antworten | wie Antworten |
 | Präferenzantworten „Lerndetektive“ | pseudonym | Klassenexperiment, Forschung (RQ1, RQ3) | wie Antworten | wie Antworten |
-| Berechnetes Lernprofil (Stärken, Strategien) | pseudonym | Rückmeldung an Kind und Lehrkraft | Server-DB (berechnet) | Schuljahresende |
+| Berechnetes Lernprofil (Stärken, Strategien) | pseudonym | Rückmeldung an Kind und Lehrkraft (Lehrkraft sieht je Alias nur Profilkarten und Prozessindikatoren in Worten, keine Einzelergebnisse des Experiments) | Server-DB (berechnet) | Schuljahresende |
 | Freitext | **nicht vorgesehen** | – | – | – |
 | **IP-Adresse** des Tablets | **ja** (EuGH C-582/14 „Breyer“ zu dynamischen IP-Adressen) | technisch zwingend für Verbindung | Webserver-/Proxy-Logs | IP-Logging minimieren/kürzen; Frist mit DSB festlegen (Vorschlag: wenige Tage) – zu verifizieren (R0) |
-| Forschungsexport (CSV) | pseudonym (Forschungs-ID) | Auswertung | gesicherter Speicher der Partner-PH | Forschungs-ID-Zuordnung löschen nach R3 → anonym |
+| Forschungsexport (CSV) | nur einwilligende Kinder; zufällige Forschungs-ID statt Alias, Export vor der Serverlöschung | Auswertung (R4, Aug–Okt 2027, nur anonymer Export) | gesicherter Speicher der Partner-PH | mit Vernichtung der Papierlisten zum Schuljahresende anonym |
 | Demo-/Mock-Daten | keiner | Prototyp, Review | GitHub Pages / Vercel | beliebig |
 
 **Warum EU-Hosting im Pilot:** Jeder Seitenaufruf überträgt die IP-Adresse des Schul-Tablets an den Hoster. GitHub und Vercel sind US-Unternehmen; LfDI BW ist bei US-Clouddiensten an Schulen streng (Dossier §5.2, Beispiel Microsoft 365). Deshalb gilt:
 - **Demo/Prototyp:** GitHub Pages oder Vercel, **nur Mock-Daten**, keine echten Kinderdaten, kein Einsatz im Unterricht mit Klassen.
-- **Pilot (R2/R3):** Frontend **und** API/DB bei einem deutschen/EU-Hoster mit AVV oder auf einem Server des Schulträgers (siehe [03-architektur.md](03-architektur.md)). Ob das EU-US Data Privacy Framework für den Schulkontext in BW ausreichen würde, wird bewusst nicht geprüft; wir vermeiden die Frage durch EU-Hosting.
+- **Pilot (R2/R3):** Hosting-Stufe 2 muss bereits **vor R2** (Usability-Pilot mit echten Kindern, früh/mitte März 2027) live sein: Frontend **und** API/DB bei einem deutschen/EU-Hoster mit AVV oder auf einem Server des Schulträgers (siehe [03-architektur.md](03-architektur.md)). Ob das EU-US Data Privacy Framework für den Schulkontext in BW ausreichen würde, wird bewusst nicht geprüft; wir vermeiden die Frage durch EU-Hosting.
 
 ---
 
@@ -117,7 +118,7 @@ Status: ✔ = im Produktkonzept umgesetzt · ◐ = teilweise / organisatorisch o
 
 ## 5. Genehmigungen & Abstimmungen
 
-**Wissenschaftliche Erhebungen an Schulen in BW.** Laut öffentlich verfügbaren Hochschul-Leitfäden und Antragsformularen der Regierungspräsidien gilt die Verwaltungsvorschrift des Kultusministeriums **„Werbung, Wettbewerbe und Erhebungen in Schulen“** (Nr. 4: Erhebungen durch Personen/Institutionen außerhalb der Schulverwaltung sind genehmigungspflichtig). Die Zuständigkeit richtet sich danach nach dem Umfang: **eine Schule → Schulleitung; mehrere Schulen in einem Regierungsbezirk → Regierungspräsidium (obere Schulaufsicht); mehrere Regierungsbezirke → Kultusministerium.** Quellen (nur über Suchauszüge eingesehen, Volltext im Projekt-Netz nicht abrufbar):
+**Wissenschaftliche Erhebungen an Schulen in BW.** Laut öffentlich verfügbaren Hochschul-Leitfäden und Antragsformularen der Regierungspräsidien gilt die Verwaltungsvorschrift des Kultusministeriums **„Werbung, Wettbewerbe und Erhebungen in Schulen“** (Nr. 4: Erhebungen durch Personen/Institutionen außerhalb der Schulverwaltung sind genehmigungspflichtig) (zu verifizieren (R0)). Die Zuständigkeit richtet sich danach nach dem Umfang: **eine Schule → Schulleitung; mehrere Schulen in einem Regierungsbezirk → Regierungspräsidium (obere Schulaufsicht); mehrere Regierungsbezirke → Kultusministerium** (zu verifizieren (R0)). Quellen (nur über Suchauszüge eingesehen, Volltext im Projekt-Netz nicht abrufbar):
 - PH Weingarten, „Regelungen für wissenschaftliche Untersuchungen“: <https://ph-weingarten.de/media/3878/download/Regelungen%20f%C3%BCr%20wissenschaftliche%20Untersuchungen.pdf>
 - RP Tübingen, Antragsformular „Genehmigung einer wissenschaftlichen Erhebung“: <https://rpt.baden-wuerttemberg.de/fileadmin/RP-Internet/Tuebingen/Abteilung_7/_DocumentLibraries/Schulformulare/Genehmigung_einer_wissenschaftlichen_Erhebung_Antrag.pdf>
 - PH Heidelberg, Abdruck der VwV: <https://www.ph-heidelberg.de/fileadmin/de/forschung/formulare-richtlinien/ErhebungVO.pdf>
@@ -125,7 +126,7 @@ Status: ✔ = im Produktkonzept umgesetzt · ◐ = teilweise / organisatorisch o
 
 **Zu verifizieren (R0):** aktuelle Fassung und Datum der VwV (die Quellen nennen unterschiedliche Fassungen: 1985 bzw. 2002, jeweils zuletzt geändert 2005), ob sie noch gilt oder ersetzt wurde, das zuständige RP für die Pilotschulen, einzureichende Unterlagen, Bearbeitungsdauer, ob die Erhebung im Unterricht stattfinden darf. Laut RP-Tübingen-Formular muss in Informationsschreiben klargestellt werden, dass eine Genehmigung **keine wissenschaftliche Qualitätskontrolle** bedeutet – in Elternbrief aufnehmen, Wortlaut zu verifizieren (R0). Bei 5–8 Klassen an mehreren Schulen (R3) ist voraussichtlich das RP oder bei regionaler Streuung das KM zuständig → Schulauswahl regional bündeln.
 
-### Reihenfolge, Vorlauf, Zuordnung zu R0–R3
+### Reihenfolge, Vorlauf, Zuordnung zu R0–R4
 
 Vorlaufzeiten sind **eigene Planungsannahmen**, keine offiziellen Fristen – jeweils bei der Stelle erfragen (R0).
 
@@ -142,10 +143,11 @@ Vorlaufzeiten sind **eigene Planungsannahmen**, keine offiziellen Fristen – je
 | 9 | **Kinder** | Kindgerechte Info + Assent im Unterricht | 8 | Beginn R2/R3 | am Tag 1 |
 
 Hinweise zur Phasenzuordnung:
-- **R0 (Dez. 2026 – Jan. 2027):** Anträge, DSFA, AVV-Entwurf – **keine Datenerhebung mit Kindern** (Übergangsphase, Dossier §2.1).
-- **R1 (Jan. – Feb. 2027):** Lehrkraft-Interviews (erwachsene Teilnehmende; eigene Einwilligung, ggf. ebenfalls genehmigungspflichtig – zu verifizieren (R0)); Co-Design mit Papierprototypen mit Kindern **erst nach Genehmigung** und Einwilligung, nicht vor Ende der Übergangsphase.
-- **R2 (Mär. – Apr. 2027):** Usability-Pilot 1–2 Klassen, EU-Hosting aktiv. Think-aloud nur protokolliert, **keine Audioaufnahme** ohne gesonderte Einwilligung.
-- **R3 (Mai – Jul. 2027):** Feldstudie; Anonymisierung nach verzögertem Test.
+- **R0 (Dez. 2026 – Jan. 2027):** Anträge, DSFA, AVV-Entwurf – **keine Datenerhebung mit Kindern** (Übergangsphase, Dossier §2.1; Termine zu verifizieren (R0, L1)).
+- **R1 (Jan. – Mär. 2027):** Lehrkraft-Interviews Jan.–Feb. (erwachsene Teilnehmende; eigene Einwilligung, ggf. ebenfalls genehmigungspflichtig – zu verifizieren (R0)); Co-Design mit Papierprototypen mit Kindern **früh im März 2027** (nach Ende der Übergangsphase), **erst nach Genehmigung** und Einwilligung.
+- **R2 (Mär. – Apr. 2027):** Usability-Pilot 1–2 Klassen mit echten Kindern; EU-Hosting (Stufe 2) mit AVV muss **vor Beginn von R2** live sein (früh/mitte März 2027). Think-aloud nur protokolliert, **keine Audioaufnahme** ohne gesonderte Einwilligung.
+- **R3 (Mai – Jul. 2027):** Feldstudie; letzte verzögerte Tests vor dem Schuljahresende (Datum zu verifizieren (R0)); Export vor der Serverlöschung.
+- **R4 (Aug. – Okt. 2027):** Auswertung ausschließlich am anonymen Export; keine Datenerhebung mit Kindern.
 
 ---
 
@@ -156,16 +158,16 @@ Hinweise zur Phasenzuordnung:
 ### 6.1 Elternbrief (Gliederung)
 1. Worum geht es? Lerntyp im Unterricht der Klasse 4, Zeitraum, Umfang (z. B. 2–3 Unterrichtsstunden).
 2. **Warum keine „Lerntypen“?** (Kurzabsatz, Grundlage Dossier §1.1):
-   > *Viele kennen die Idee, jedes Kind sei ein „visueller“, „auditiver“ oder „haptischer“ Lerntyp und lerne am besten, wenn der Unterricht dazu passt. Die Forschung hat das gründlich geprüft: Kinder lernen nicht besser, wenn der Unterricht an einen solchen Typ angepasst wird. Was nachweislich hilft, ist für alle ähnlich – zum Beispiel Bild und Wort zu kombinieren, sich selbst abzufragen und Lernen zu verteilen. Ein Etikett wie „Ich bin halt visuell“ kann Kinder sogar entmutigen. Deshalb zeigt Lerntyp keinen Typ an, sondern was Ihr Kind schon gut kann und welche Lernstrategien ihm helfen. Im Experiment „Lerndetektive“ prüft die Klasse die Lerntyp-Idee selbst.*
-3. Datenschutz in Kürze: Alias-Karten, keine Namen im System, EU-Server, Löschung am Schuljahresende, keine Werbung, keine Käufe.
-4. **Kein Einfluss auf Noten, Grundschulempfehlung oder Kompass 4.**
+   > *Viele kennen die Idee, jedes Kind sei ein „visueller“, „auditiver“ oder „haptischer“ Lerntyp und lerne am besten, wenn der Unterricht dazu passt. Die Forschung hat das gründlich geprüft: Überzeugende Belege dafür gibt es nicht; wo kleine Passungseffekte gefunden wurden, waren sie zu selten und zu klein, um Kinder sinnvoll in Typen einzuteilen (Dossier §1.1). Was nachweislich hilft, ist für alle ähnlich – zum Beispiel Bild und Wort zu kombinieren, sich selbst abzufragen und Lernen zu verteilen. Ein Etikett wie „Ich bin halt visuell“ kann Kinder sogar entmutigen. Deshalb zeigt Lerntyp keinen Typ an, sondern was Ihr Kind schon gut kann und welche Lernstrategien ihm helfen. Im Experiment „Lerndetektive“ prüft die Klasse die Lerntyp-Idee selbst.*
+3. Datenschutz in Kürze: Alias-Karten, keine Namen im System, EU-Server, Löschung der Serverdaten am Schuljahresende, keine Werbung, keine Käufe. Auch Kinder ohne Forschungseinwilligung nehmen teil; ihre Daten gehen nie in die Forschung.
+4. **Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.** Kein Einfluss auf Noten.
 5. Begleitstudie: freiwillig, eigenes Formular, kein Nachteil bei Nein, Widerruf jederzeit.
 6. Hinweis zur Genehmigung (Wortlaut lt. Genehmigungsbescheid; ggf. „keine wissenschaftliche Qualitätskontrolle“ – zu verifizieren (R0)).
 7. Kontakt: Lehrkraft, Schulleitung, schulische/r DSB, Projektleitung PH. Einladung zum Elternabend.
 
 ### 6.2 Einwilligungserklärung Forschung (Gliederung)
 1. Titel der Studie, verantwortliche Stelle (Spur B), Projektleitung, Kontakt DSB.
-2. Zweck, Forschungsfragen in einfacher Sprache (RQ1–RQ5, [05-forschungsplan.md](05-forschungsplan.md)).
+2. Zweck, Forschungsfragen in einfacher Sprache (RQ1–RQ6, [05-forschungsplan.md](05-forschungsplan.md)).
 3. Welche Daten (Liste aus Abschnitt 3, nur Forschungsspalte); was ausdrücklich **nicht** erhoben wird.
 4. Pseudonymisierung (Alias → Forschungs-ID), wer Zugriff hat, Speicherort EU.
 5. Dauer, Anonymisierung nach Auswertung, Aufbewahrung anonymer Daten (Frist zu verifizieren (R0)), ggf. Veröffentlichung nur aggregiert, ggf. Datenteilen (Open Data) nur anonymisiert – gesondert ankreuzbar.
@@ -179,7 +181,7 @@ Hinweise zur Phasenzuordnung:
 
 > **Was passiert mit deinen Daten bei Lerntyp?**
 >
-> Bei Lerntyp hast du einen Tiernamen, zum Beispiel „Fuchs-27“. Deinen echten Namen schreibst du nie in die App. Nur deine Lehrerin oder dein Lehrer weiß, welcher Tiername zu dir gehört. Das steht auf einem Zettel in der Schule. Die App merkt sich deine Antworten und wie lange du für eine Aufgabe brauchst. Daraus zeigt sie dir, was du schon gut kannst und welche Lern-Tricks dir helfen. Lerntyp gibt keine Noten und hat nichts mit deinem Zeugnis oder der Empfehlung für die nächste Schule zu tun. Es gibt keine Werbung, und du kannst nichts kaufen. Am Ende des Schuljahres wird alles gelöscht. Manche Kinder helfen außerdem Forscherinnen und Forschern – das geht nur, wenn deine Eltern und du Ja sagen. Du darfst immer Nein sagen oder aufhören, und niemand ist dir deshalb böse. Wenn du Fragen hast, frag deine Lehrerin oder deinen Lehrer.
+> Bei Lerntyp hast du einen Tiernamen, zum Beispiel „Fuchs-27“. Deinen echten Namen schreibst du nie in die App. Nur deine Lehrerin oder dein Lehrer weiß, welcher Tiername zu dir gehört. Das steht auf einem Zettel in der Schule. Die App merkt sich deine Antworten und wie lange du für eine Aufgabe brauchst. Daraus zeigt sie dir, was du schon gut kannst und welche Lern-Tricks dir helfen. Lerntyp gibt keine Noten und hat nichts mit deinem Zeugnis oder der Empfehlung für die nächste Schule zu tun. Es gibt keine Werbung, und du kannst nichts kaufen. Am Ende des Schuljahres werden deine Daten mit deinem Tiernamen gelöscht. Manche Kinder helfen außerdem Forscherinnen und Forschern – das geht nur, wenn deine Eltern und du Ja sagen. Dann behalten die Forscher nur Daten ohne Tiernamen – niemand kann dann wissen, dass sie von dir sind. Du darfst immer Nein sagen oder aufhören, und niemand ist dir deshalb böse. Wenn du Fragen hast, frag deine Lehrerin oder deinen Lehrer.
 
 (Prüfen in R1 mit Kindern: Verständlichkeit, ggf. Vorlesefunktion und DaZ-Version, siehe [05-forschungsplan.md](05-forschungsplan.md).)
 
@@ -198,6 +200,7 @@ Hinweise zur Phasenzuordnung:
 - [ ] Unterauftragsverarbeiter (Hoster) benannt, mit Sitz/Serverstandort EU; Genehmigungs-/Widerspruchsverfahren bei Wechsel
 - [ ] Unterstützung bei Betroffenenrechten, DSFA, Meldung von Datenpannen (Art. 33/34) mit Frist
 - [ ] Löschung/Rückgabe nach Vertragsende; Löschung zum Schuljahresende
+- [ ] AVV unterzeichnet und Hoster (Stufe 2) live vor Beginn R2 (früh/mitte März 2027)
 - [ ] Nachweis- und Kontrollrechte der Schule
 - [ ] Keine Drittlandübermittlung
 - [ ] Ob ein vom Land/LfDI BW bereitgestelltes Muster zu verwenden ist: zu verifizieren (R0)
@@ -207,7 +210,7 @@ Hinweise zur Phasenzuordnung:
 |---|---|
 | Pseudonymisierung | Alias statt Name; zweite Forschungs-ID im Export; Alias↔Name nur auf Papier |
 | Verschlüsselung | TLS für alle Verbindungen; Verschlüsselung der DB/Backups at rest |
-| Zugriff | Lehrkraft sieht nur eigene Klassen; Forschungsexport nur durch berechtigte Projektrolle; starke Passwörter, ggf. 2FA |
+| Zugriff | Lehrkraft sieht nur eigene Klassen; Forschungsexport nur durch berechtigte Projektrolle; Lehrkraft-Zugangscode je Klasse (kein Lehrkraft-Konto im Pilot); starke Passwörter/ggf. 2FA für Betriebs- und Admin-Zugänge |
 | Shared iPad | Lokale IndexedDB-Warteschlange nach Sync und beim Abmelden löschen; keine Daten im iCloud-Backup (Dossier §5.2) |
 | Keine Dritten | Keine Analytics, keine Tracking-SDKs, keine externen Schriften/CDNs; CSP blockiert externe Requests |
 | Protokollierung | Minimale Server-Logs, IP gekürzt oder kurze Frist; Zugriffsprotokoll für Exporte |
@@ -222,10 +225,10 @@ Hinweise zur Phasenzuordnung:
 | Ereignis | Was passiert | Wer |
 |---|---|---|
 | Erfolgreicher Sync / Abmelden am Tablet | Lokale Ereignis-Warteschlange (IndexedDB) wird geleert | App automatisch |
-| **Schuljahresende** | Alle Klassen-, Alias-, Antwort-, Ereignis- und Profildaten der Spur A werden auf dem Server gelöscht; Lehrkraft vernichtet Alias↔Name-Liste | Server-Job; Lehrkraft |
-| **Widerruf der Einwilligung** | `consent_research → false`; bereits exportierte Forschungsdaten zur Forschungs-ID werden gelöscht (Lehrkraft meldet Alias, System ermittelt Forschungs-ID). Schulische Nutzung (Spur A) läuft weiter. | Lehrkraft → Projektleitung; Frist festlegen (zu verifizieren (R0)) |
-| Ende Datenerhebung (nach verzögertem Test, R3) | Zuordnungstabelle Alias↔Forschungs-ID wird gelöscht → Forschungsdaten anonym; Prüfung, ob kleine Klassen + Prozessdaten Re-Identifikation erlauben (ggf. Vergröberung) | Projektleitung |
-| Nach Auswertung | Nur anonymisierte Daten bleiben (Aufbewahrung nach Regeln guter wiss. Praxis; Frist zu verifizieren (R0)) | Partner-PH |
+| **Forschungsexport** (vor der Serverlöschung, nach den letzten verzögerten Tests aus R3) | Der Export enthält nur Kinder mit `consent_research = true` und ersetzt den Alias zum Exportzeitpunkt durch eine zufällige Forschungs-ID. | Projektleitung |
+| **Schuljahresende** (Datum zu verifizieren (R0)) | Alle Serverdaten (alle Klassen, Sitzungen, Ereignisse, Profile, Backups) werden gelöscht; die letzten verzögerten Tests aus R3 müssen vorher abgeschlossen sein. Lehrkräfte vernichten die Papierlisten Alias↔Name; ab dann sind die Forschungsdaten anonym. | Server-Job; Lehrkraft |
+| **Widerruf der Einwilligung** | Möglich bis zur Vernichtung der Papierlisten am Schuljahresende: `consent_research → false`; Serverdaten des Alias werden gelöscht, ein bereits erfolgter Export zur Forschungs-ID wird gelöscht (Zuordnung getrennt vom Export bis Schuljahresende; zu verifizieren (R0)). Schulische Nutzung (Spur A) läuft weiter. | Lehrkraft → Projektleitung; Frist festlegen (zu verifizieren (R0)) |
+| **Auswertung R4** (Aug. – Okt. 2027) | Arbeitet ausschließlich mit dem anonymen Export; Prüfung, ob kleine Klassen + Prozessdaten Re-Identifikation erlauben (ggf. Vergröberung). Aufbewahrung nach Regeln guter wiss. Praxis (Frist zu verifizieren (R0)). | Partner-PH |
 
 **Betroffenenrechte (Art. 15–21 DSGVO).**
 - **Auskunft, Berichtigung, Löschung** laufen **über die Schule**, weil nur dort Alias und Name zusammengeführt werden können. Der Betreiber unterstützt als Auftragsverarbeiter (Export aller Daten zu einem Alias, Löschung eines Alias).

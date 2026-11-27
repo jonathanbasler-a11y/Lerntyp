@@ -16,11 +16,12 @@ Diese Roadmap setzt die Spezifikation in `docs/` in Phasen um. Rangfolge der Que
 | Forschungsphase | Zeitraum | Benötigter Build-Stand |
 |---|---|---|
 | R0 Grundlagen | Dez 2026 – Jan 2027 | Phase 0 (Docs); P1 als Demo für Gespräche/Anträge |
-| R1 Co-Design | Jan – Feb 2027 | P1 (Demo-Modus) und P2 als Klick-Prototyp (Tor 1) |
-| R2 Usability-Pilot | Mär – Apr 2027 | **P4 fertig bis Anfang März 2027** (05 §4: „App-Version P4“) |
-| R3 Feldstudie | Mai – Jul 2027 | **P5 fertig vor Mai 2027** |
+| R1 Co-Design | Jan – Mär 2027 (Lehrkraft-Interviews Jan–Feb; Kinder-Co-Design früh März) | P1 (Demo-Modus) und P2 als Klick-Prototyp (Tor 1) |
+| R2 Usability-Pilot | Mär – Apr 2027 | **P4 fertig bis Anfang März 2027**, inkl. EU-Hosting (Stufe 2) mit AVV live vor R2 (05 §4: „App-Version P4“) |
+| R3 Feldstudie | Mai – Jul 2027 | **P5 fertig vor Mai 2027** (Löschjobs, Forschungsexport, Härtung) |
+| R4 Auswertung | Aug – Okt 2027 | kein Build; Analyse nur am anonymen Export |
 
-Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Jan 2027, P4 bis Mitte Feb 2027 (Puffer für Co-Design-Änderungen), P5 vor R3. Hinweis: 04 §5 nennt „EU-Hosting aktiv“ bereits für R2; siehe Abschnitt „Offene Punkte“.
+Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Jan 2027, P4 bis Mitte Feb 2027 (Puffer für Co-Design-Änderungen), P5 vor R3. Hosting-Stufe 2 (EU-Host mit AVV) ist Teil von P4, weil R2 bereits mit echten Kindern läuft (03 §7, 04 §5).
 
 ---
 
@@ -76,7 +77,7 @@ Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Ja
 **Abnahmekriterien**
 - [ ] Ein vollständiger Durchlauf im Demo-Modus erzeugt alle Ereignisse nach 02 §9 (schema-valide).
 - [ ] Zuordnung Items×Bedingungen×Reihenfolge entspricht dem Lateinischen Quadrat (Unit-Test, alle Zellen ausbalanciert).
-- [ ] Beamer-Grafik zeigt nur Klassenebene (Behaltensleistung je Bedingung nach Vorliebe-Gruppe), keine Einzelergebnisse.
+- [ ] Beamer-Grafik zeigt nur Klassenebene, standardmäßig „Alle“; optionale Aufteilung nur nach *Vermutung* („Vermutet: Hören+Lesen / Bilder / Beides“), jede Untergruppe ≥ 5 Kinder, sonst „Andere“; keine Einzelergebnisse, nie nach Vorliebetyp.
 - [ ] Kein Text, kein Datenfeld und keine Ausgabe ordnet ein Kind einem Typ zu (Grep- und Schema-Test).
 - [ ] Jeder Bildschirm hat max. 2 kurze Sätze und einen Vorlese-Knopf; Touch-Ziele ≥ 48 pt.
 - [ ] Sonderfälle aus 02 §8 haben je einen Testfall.
@@ -91,11 +92,11 @@ Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Ja
 **Ziel:** Echte Mehrgeräte-Sitzung: Lehrkraft steuert, Tablets synchronisieren, offline-fähig.
 
 **Umfang**
-- `apps/api`: Fastify, Repository-Schicht, SQLite (Postgres optional), Datenmodell Klasse, Sitzung, Teilnehmer, Ereignis, Antwort (03 §4.1–4.5); zod-Validierung beim Ingest.
+- `apps/api`: Fastify, Repository-Schicht, SQLite (Postgres optional), Datenmodell Klasse, Sitzung (`art`, `bezug_sitzung_id`), Teilnehmer (`rotation`, `seed`), Ereignis (Envelope mit `modul`), Antwort (03 §4.1–4.5); zod-Validierung beim Ingest.
 - Sitzungsablauf und Echtzeit (03 §5): Live-Kanal; **Entscheidung SSE vs. WebSocket per Prototyp** (03 §11).
 - Offline-first: IndexedDB-Queue, idempotenter Upload (03 §6.1–6.2), Resume auf beliebigem Tablet per Lernausweis-QR (03 §6.3).
-- Lehrkraft-Cockpit (01 §7.5): Sitzung steuern, Live-Fortschritt, Klassenergebnis, Vorbereitung (Lernausweise drucken, Einwilligungsstatus je Alias); Hinweis „Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.“ in jeder Ansicht mit Kinderdaten.
-- Sicherheit (03 §8): Lehrkraft-Zugang über Klassencode, Rate-Limits, CSP, keine externen Requests.
+- Lehrkraft-Cockpit (01 §7.5): Sitzung steuern, Live-Fortschritt (nur Lehrkraftgerät, nicht am Beamer), Klassenergebnis, Vorbereitung (Lernausweise drucken, Einwilligungsstatus je Alias); Hinweis „Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.“ in jeder Ansicht mit Kinderdaten.
+- Sicherheit (03 §8): Lehrkraft-Zugang über klassenspezifischen Zugangscode (kein Lehrkraft-Konto; 03 §8), Rate-Limits, CSP, keine externen Requests.
 - `deploy/docker-compose.yml` (Entwurf) mit `web`, `api`, Volume `data`.
 - Plattformannahmen aus 03 §6.4 als Testplan (Echtgerätetest Shared iPad bleibt R0/R2-Aufgabe).
 
@@ -103,9 +104,9 @@ Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Ja
 - [ ] Integrationstest: Events werden genau einmal gespeichert, auch bei Wiederholung des Uploads (Idempotenz).
 - [ ] Playwright (iPad-Viewport, WebKit): Netz trennen, Durchlauf fortsetzen, Netz zurück → alle Events synchron, keine Verluste.
 - [ ] Resume per Alias-QR auf einem zweiten Tablet funktioniert.
-- [ ] Cockpit zeigt Live-Fortschritt von mindestens 3 simulierten Tablets; Phasenstart/-pause wirkt synchron.
+- [ ] Cockpit zeigt Live-Fortschritt (nicht am Beamer) von mindestens 3 simulierten Tablets; Phasenstart/-pause wirkt synchron.
 - [ ] Datenmodell enthält kein Namensfeld; Aliasse nur als Pseudonym (Schema-Test).
-- [ ] Cockpit-Ansichten enthalten keine Punktzahlen, Ranglisten oder Vergleichswerte; Hinweis „nicht für Grundschulempfehlung/Kompass 4“ in jeder Ansicht mit Kinderdaten (E2E-Test).
+- [ ] Cockpit-Ansichten enthalten keine Punktzahlen, Ranglisten oder Vergleichswerte; Hinweis „Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.“ in jeder Ansicht mit Kinderdaten (E2E-Test).
 - [ ] `docker compose up` startet den Stack lokal; Demo-Modus funktioniert weiterhin.
 
 **Abhängigkeiten:** P1, P2. Zeitlich: Ende Jan 2027.
@@ -122,6 +123,7 @@ Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Ja
 - Profil-Berechnung (03 §4.6) und „Mein Lernprofil“ (01 §7.4): drei Stärken-Karten (beobachtetes Verhalten, Vergangenheitsform, Stationsbezug), eine **Lern-Superkraft**, ein Tipp für zu Hause; Textbausteine in `/data`; Fallback-Karte bei zu wenig Daten.
 - Abschlussbildschirm „Fertig für heute“; Einzelprofile im Lehrkraft-Cockpit (01 §7.5); Ausdruck „Profil zum Mitnehmen“ (01 §7.6).
 - Gesamtablauf Hauptstunde 45 Min. und Folgestunde 15 Min. (01 §6.1–6.2); Elternbrief-Entwurf verlinkt (04 §6.1).
+- **EU-Hosting (Stufe 2) + AVV (03 §7):** Frontend statisch via Caddy/nginx **und** API/DB in Docker Compose auf deutschem/EU-Host mit **AVV** (z. B. Hetzner, IONOS, Schulträger-Server); `.env`-Konfiguration, TLS, CSP; Wechsel von Stufe 1 nur per Konfiguration (03 §7.2). **Frist: live in früh/mitte März 2027, vor Beginn R2.**
 - Instrumente für R2: Zeitmessung, Smileyometer/„Passt das zu dir?“ (05 §5.3, RQ4/RQ6).
 
 **Abnahmekriterien**
@@ -131,40 +133,40 @@ Rückwärtsplanung: P1 bis Mitte Dez 2026, P2 bis Mitte Jan 2027, P3 bis Ende Ja
 - [ ] Kein Dark Pattern: keine Streaks, Countdowns, Ranglisten, Belohnungs-Zufall, Autoplay, Links nach außen; Abschluss ohne „Weiter“-Knopf (E2E).
 - [ ] Vollständiger Durchlauf (Hauptstunde) im Test-Skript ≤ 45 Min. Soll-Zeit; Folgestunde ≤ 15 Min.
 - [ ] Alle Items und Texte in `/data`; Grep zeigt keine Texte in `/src`.
-- [ ] Cockpit-Einzelprofil zeigt Karten und Superkraft, keine Vergleichswerte.
+- [ ] Cockpit zeigt je Alias nur Stärken-Karten, Lern-Superkraft und Prozessindikatoren in Worten – keine einzelnen Lerndetektive-Ergebnisse (Vorliebe, Erkennungswerte), keine Vergleichswerte.
+- [ ] Frontend und API von P4 laufen auf EU-Host ohne Requests an US-Dienste (Netzwerk-Test gegen Live-Build); AVV liegt vor.
 - [ ] Echtgerätetest auf Shared iPad durchgeführt und dokumentiert (Voraussetzung für Tor 2).
 
-**Abhängigkeiten:** P3. **Zeitlich: fertig bis Anfang März 2027 für R2.** Änderungen aus R1 (Items, Konzept) fließen vorher ein.
+**Abhängigkeiten:** P3. **Zeitlich: fertig bis Anfang März 2027 für R2; EU-Hosting (Stufe 2) + AVV live vor R2 (früh/mitte März 2027).** Änderungen aus R1 (Items, Konzept) fließen vorher ein.
 
 ---
 
-## Phase 5: Pilot-Härtung (EU-Hosting, Löschjobs, Export)
+## Phase 5: Pilot-Härtung (Löschjobs, Forschungsexport)
 
-**Ziel:** Betrieb mit echten Klassen auf EU-Host; **vor R3 (Mai 2027)** abgeschlossen.
+**Ziel:** Gehärteter Betrieb mit echten Klassen auf dem bereits in P4 aufgebauten EU-Host; **vor R3 (Mai 2027)** abgeschlossen.
 
 **Umfang**
-- Hosting-Stufe 2 (03 §7): Frontend statisch via Caddy/nginx **und** API/DB in Docker Compose auf deutschem/EU-Host mit **AVV** (z. B. Hetzner, IONOS, Schulträger-Server); `.env`-Konfiguration, TLS, CSP; Wechsel von Stufe 1 nur per Konfiguration (03 §7.2).
-- Datenlebenszyklus (03 §10): täglicher Löschjob nach `loeschdatum` (inkl. Backups), vorzeitige Löschung je Klasse/Kind, Anonymisierung nach Analyse.
-- Forschungsexport: pseudonymisierte CSV nur bei `consent_research = true`, Export-Pseudonym, Export-Protokoll (03 §10).
+- Härtung des in P4 aufgebauten EU-Hostings (Backups, Monitoring, Rate-Limits; 03 §8).
+- Datenlebenszyklus (03 §10): Forschungsexport vor der Serverlöschung; Löschjob für alle Serverdaten zum Schuljahresende (inkl. Backups; Datum zu verifizieren (R0)); vorzeitige Löschung je Klasse/Kind; Papierlisten werden von den Lehrkräften zum Schuljahresende vernichtet; Analyse R4 nur am anonymen Export.
+- Forschungsexport: nur Kinder mit `consent_research = true`, Alias durch zufällige Forschungs-ID ersetzt, Export-Protokoll (03 §10). Nicht einwilligende Kinder bleiben unter Spur A voll nutzbar (Klassengrafik, eigenes Profil), nie im Export.
 - Datenschutz-Umsetzung nach 04: TOM-Übersicht (04 §6.6), Löschkonzept und Betroffenenrechte (04 §7), AVV-Checkliste (04 §6.5); Datenkatalog (04 §3) wird mit dem Datenmodell abgeglichen.
 - Backups, Monitoring ohne Drittanbieter, Rate-Limits; Lasttest für Klassengröße.
 - Rechtsfragen bleiben „zu verifizieren (R0)“, bis bestätigt.
 
 **Abnahmekriterien**
-- [ ] Frontend und API laufen auf EU-Host ohne Requests an US-Dienste (Netzwerk-Test gegen Live-Build).
+- [ ] EU-Hosting aus P4 ist gehärtet; erneuter Netzwerk-Test gegen Live-Build ohne Requests an US-Dienste.
 - [ ] Live-Build ist ohne Mock-Adapter; Modus `live` per Konfiguration.
 - [ ] Löschjob-Test: Klasse mit `loeschdatum` in der Vergangenheit wird vollständig entfernt (Sitzungen, Teilnehmer, Ereignisse, Antworten, Profile); Backup-Frist dokumentiert.
-- [ ] Export enthält nur Kinder mit `consent_research = true`, ohne Alias und Direktidentifikatoren; Export-Protokoll wird geschrieben (Test).
+- [ ] Export enthält nur Kinder mit `consent_research = true`, Alias durch zufällige Forschungs-ID ersetzt, ohne Direktidentifikatoren; Export-Protokoll wird geschrieben; Export läuft vor dem Löschjob (Test).
 - [ ] Widerruf/vorzeitige Löschung eines Kindes entfernt dessen Daten (Test).
 - [ ] Wiederherstellungstest aus Backup.
 - [ ] Doc-Konformität zu 04 (TOM, Löschkonzept) bestätigt; offene Rechtsfragen sind weiterhin als „zu verifizieren (R0)“ geführt.
 
-**Abhängigkeiten:** P4; Ergebnisse aus R0 (Hoster, AVV, Rechtsbewertung) und die Genehmigungen (04 §5). **Zeitlich: vor R3 (Mai 2027).**
+**Abhängigkeiten:** P4 (inkl. EU-Hosting); Ergebnisse aus R0 (Rechtsbewertung, Löschtermin) und die Genehmigungen (04 §5). **Zeitlich: vor R3 (Mai 2027).**
 
 ---
 
 ## Offene Punkte für die Roadmap
 
-- **EU-Hosting vor R2?** 04 §5 nennt „EU-Hosting aktiv“ für den Usability-Pilot (Mär–Apr 2027). Diese Roadmap verlegt den vollständigen Betrieb nach P5; falls R2 mit echten Kinderdaten läuft, muss mindestens die Hosting-Stufe 2 (Compose-Stack auf EU-Host) schon zu R2 stehen. Klärung in R0.
 - Live-Kanal SSE vs. WebSocket (03 §11) – Entscheidung in P3.
-- Sollen Lehrkräfte Einzelprofile sehen (01 §13, Punkt 3)? Entscheidung nach R1-Interviews, beeinflusst P3/P4-Cockpit.
+- Lehrkräfte sehen je Alias nur Profilkarten und Prozessindikatoren in Worten, nie einzelne Lerndetektive-Ergebnisse (entschieden, 03 §5); Feinheiten der Darstellung nach R1-Interviews.

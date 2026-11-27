@@ -29,10 +29,10 @@ Lerntyp ist eine PWA für Klassen der 4. Jahrgangsstufe (9–10 Jahre) in Baden-
 | # | Komponente | Rolle | Läuft auf |
 |---|---|---|---|
 | a | **Kinder-App** | PWA: Beitritt per Alias-QR, Lerndetektive, Strategiekurs, "Mein Lernprofil". Offline-fähig. | Schul-iPad (Safari/Web-Clip) |
-| b | **Lehrkraft-Cockpit** | Gleiche PWA, Rolle "Lehrkraft": Sitzung starten, QR am Beamer, Live-Fortschritt, Klassenaggregate, Einzelprofil. Hinweis in jeder Ansicht: "Nicht für die Grundschulempfehlung / Kompass 4". | Lehrkraftgerät |
+| b | **Lehrkraft-Cockpit** | Gleiche PWA, Rolle "Lehrkraft": Sitzung starten, QR am Beamer, Live-Fortschritt (nur auf dem Lehrkraftgerät, nicht am Beamer), Klassenaggregate, Profilkarten je Alias. Hinweis in jeder Ansicht mit Kinderdaten: „Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.“ | Lehrkraftgerät |
 | c | **API-Server** | Auth (Klassenzugang), Sitzungsverwaltung, Event-Ingest, Aggregation, Live-Kanal (WebSocket/SSE), Löschjobs, Export. | Server (EU) |
 | d | **Datenbank** | Persistenz von Klassen, Sitzungen, Teilnehmern, Ereignissen, Antworten, Profilen. | Server (SQLite-Datei, optional Postgres) |
-| e | **Forschungsexport** | Pseudonymisierter CSV-Export, nur `consent_research = true`. Offline-Skript/CLI, kein offener Web-Endpunkt. | Server-CLI, Ausführung durch berechtigte Person |
+| e | **Forschungsexport** | Pseudonymisierter CSV-Export, nur `consent_research = true`, Alias durch zufällige Forschungs-ID ersetzt. Offline-Skript/CLI, kein offener Web-Endpunkt. | Server-CLI, Ausführung durch berechtigte Person |
 
 ```mermaid
 flowchart LR
@@ -115,7 +115,7 @@ Alle IDs sind zufällig (UUIDv4/ULID), nie aus Personendaten abgeleitet. Zeitste
 | Feld | Typ | Beschreibung |
 |---|---|---|
 | `id` | id | Primärschlüssel |
-| `code` | string | Klassencode für Lehrkraftzugang (zufällig, ausreichend lang) |
+| `code` | string | Klassenspezifischer Lehrkraft-Zugangscode (zufällig, ausreichend lang; im Pilot der einzige Lehrkraftzugang, kein Lehrkraft-Konto) |
 | `schuljahr` | string | z. B. `2026/27`; steuert Löschfrist |
 | `loeschdatum` | date | Automatische Löschung (Schuljahresende, konfigurierbar) |
 | `erstellt_am` | timestamp | |
@@ -128,11 +128,13 @@ Kein Schulname, keine Lehrkraftnamen im Pilot, sofern nicht zwingend (Datenspars
 |---|---|---|
 | `id` | id | |
 | `klasse_id` | id | FK |
-| `modul` | enum | `lerndetektive` · `strategiekurs` · `profil` |
+| `art` | enum | `haupt` · `folge` (Hauptstunde bzw. Folgestunde) |
+| `bezug_sitzung_id` | id/null | Nur bei `art = folge`: FK auf die zugehörige Hauptstunde |
 | `phase` | enum | `offen` · `laeuft` · `beendet` (steuert Beitritt, Ende) |
 | `join_token` | string | Kurzlebiger Token im QR am Beamer |
 | `gestartet_am` / `beendet_am` | timestamp | |
-| `bedingungs_plan` | json | Zuordnung Items→Bedingung, Reihenfolge (Latin Square), siehe [02](02-lerndetektive-experiment.md) |
+
+Eine Sitzung umfasst alle Module einer Stunde (Start, Lerndetektive, Strategie-Parcours, Profil); es gibt kein Einzel-Modulfeld an der Sitzung. Die Bedingungszuordnung (Latin Square, [02](02-lerndetektive-experiment.md)) liegt pro Teilnehmer (`rotation`, `seed`), nicht pro Sitzung.
 
 ### 4.3 Teilnehmer
 
@@ -144,9 +146,10 @@ Kein Schulname, keine Lehrkraftnamen im Pilot, sofern nicht zwingend (Datenspars
 | `alias_secret` | string | Im Lernausweis-QR; Hash gespeichert, nicht Klartext |
 | `consent_research` | bool | Von der Lehrkraft gesetzt (Default `false`) |
 | `consent_gesetzt_am` | timestamp | Nachvollziehbarkeit |
-| `daz_hilfen` | bool | Optional: Vorlesefunktion standardmäßig an (siehe [02](02-lerndetektive-experiment.md)) |
+| `rotation` | enum | `ROT1` · `ROT2` · `ROT3` (Latin-Square-Rotation, siehe [02](02-lerndetektive-experiment.md); R0–R4 bezeichnen ausschließlich Forschungsphasen) |
+| `seed` | int | Zufallssamen für Itemreihenfolge/Zuordnung, reproduzierbar |
 
-Keine Namen, kein Geburtsdatum, keine Geräte-ID.
+Keine Namen, kein Geburtsdatum, keine Geräte-ID. Die Vorlesefunktion ist für jedes Kind an; es wird kein Barrierefreiheits- oder DaZ-Merkmal pro Kind gespeichert.
 
 ### 4.4 Ereignis (generischer Envelope)
 
@@ -157,14 +160,33 @@ Jede Interaktion wird als Ereignis erfasst. Der Envelope ist für alle Module gl
 | `id` | id | Client-generiert (UUID) |
 | `sitzung` | id | Sitzungs-ID |
 | `teilnehmer_alias` | string | Alias des Kindes |
-| `typ` | string | z. B. `item_gezeigt`, `antwort_abgegeben`, `ziel_gesetzt`, `hilfe_geoeffnet`, `hinweis_genutzt`, `wiederholung_nach_fehler`, `sicherheit_vorher` |
+| `modul` | enum | `start` · `lerndetektive` · `parcours` · `profil` |
+| `typ` | string | Ereignistyp, siehe Payload-Tabelle unten und [02](02-lerndetektive-experiment.md) §9 |
 | `zeitstempel` | timestamp | Client-Zeit (UTC); Server ergänzt `empfangen_am` |
 | `client_seq` | int | Monoton steigend pro Teilnehmer und Sitzung, lückenlos vergeben |
 | `payload` | json | Typspezifisch, per zod je `typ` validiert |
 
 Eindeutigkeit/Idempotenz: `UNIQUE(sitzung, teilnehmer_alias, client_seq)`. Doppelter Upload wird ignoriert (Antwort: bereits vorhanden).
 
-**Experimentspezifische Payloads** (Präferenzfragen, Lernphase, Bedingungen `wort` / `bild` / `bild_wort`, Sofort- und verzögerter Test) sind in [02-lerndetektive-experiment.md](02-lerndetektive-experiment.md) spezifiziert. Prozessspuren des Strategiekurses (Ziel gesetzt, Beispiel geöffnet, Hinweis genutzt, Wiederholung nach Fehler, Sicherheit vor/nach Ergebnis) werden in [01-konzept.md](01-konzept.md) beschrieben und in `packages/shared` als Payload-Schemas geführt.
+**Lerndetektive-Payloads** (Präferenzfragen, Lernphase, Bedingungen `wort` / `bild` / `bild_wort`, Sofort- und verzögerter Test) sind abschließend in [02-lerndetektive-experiment.md](02-lerndetektive-experiment.md) §9 definiert (u. a. `rt_ms`, `test` ∈ `sofort`|`verzoegert`, `zeitpunkt` ∈ `vorher`|`nachher`). Die Feldnamen dort gelten auch hier. Die Payloads von Strategie-Parcours und Profil definiert dieses Dokument:
+
+| `typ` | `modul` | Payload |
+|---|---|---|
+| `ziel_gesetzt` | parcours | `{station, ziel: 1..5}` |
+| `sicherheit_vorher` | parcours | `{station, smiley: 1..4}` |
+| `aufgabe_gezeigt` | parcours | `{station, aufgabe_id}` |
+| `beispiel_geoeffnet` | parcours | `{station, aufgabe_id}` |
+| `hinweis_genutzt` | parcours | `{station, aufgabe_id, stufe: 1\|2}` |
+| `antwort_abgegeben` | parcours | `{station, aufgabe_id, korrekt, versuch: 1\|2, rt_ms}` |
+| `aufgabe_uebersprungen` | parcours | `{station, aufgabe_id}` |
+| `hilfreich_gewaehlt` | parcours | `{station, strategien: string[]}` |
+| `profil_angezeigt` | profil | `{karten_ids, superkraft}` |
+| `profil_passt` | profil | `{smiley: 1..4}` (RQ6) |
+| `superkraft_ausprobiert` | profil | `{antwort: "ja"\|"ein_bisschen"\|"nein"}` (Folgestunde) |
+| `hilfe_angefordert` | modulübergreifend | `{}` |
+| `pause` | modulübergreifend | `{aktiv}` |
+
+Die Schemas werden in `packages/shared` als zod-Payload-Schemas je `typ` geführt.
 
 ### 4.5 Antwort
 
@@ -177,9 +199,9 @@ Abgeleitete, abfragefreundliche Sicht auf Antwort-Ereignisse (wird beim Ingest m
 | `teilnehmer_id` | id | FK |
 | `item_id` | string | Verweis in `/data` |
 | `bedingung` | enum/null | `wort` · `bild` · `bild_wort` (nur Experiment) |
-| `testzeitpunkt` | enum/null | `sofort` · `verzoegert` |
+| `test` | enum/null | `sofort` · `verzoegert` |
 | `korrekt` | bool/null | |
-| `antwortzeit_ms` | int | |
+| `rt_ms` | int | Antwortzeit in ms |
 | `versuch` | int | Nr. des Versuchs (für "Wiederholung nach Fehler") |
 
 ### 4.6 Profil
@@ -206,7 +228,7 @@ sequenceDiagram
   participant K as Kind (iPad)
   participant Q as IndexedDB-Queue
 
-  L->>S: Sitzung starten (Klassencode, Modul)
+  L->>S: Sitzung starten (Klassencode, Art)
   S-->>L: Sitzung (phase=offen), join_token
   L->>L: QR am Beamer anzeigen
   K->>K: Lernausweis-QR scannen (Alias + Secret)
@@ -228,8 +250,8 @@ sequenceDiagram
 ```
 
 Echtzeit-Regeln:
-- **Fortschritt ist Live, Auswertung ist Aggregat.** Das Cockpit zeigt Fortschritt (wer ist wo) und Klassenaggregate; Einzelergebnisse erst in der Profilansicht der Lehrkraft.
-- **Klassenaggregate** im Experiment (Präferenzgruppe × Bedingung) werden nur ab einer Mindestgruppengröße angezeigt, damit einzelne Kinder nicht erkennbar sind (Schwellwert: Festlegung in Phase P3, siehe §11).
+- **Fortschritt ist Live, Auswertung ist Aggregat.** Der Live-Fortschritt (wer ist wo) erscheint nur auf dem Lehrkraftgerät, nie am Beamer. Pro Alias sieht die Lehrkraft ausschließlich die Profilkarten (Stärken-Karten, Lern-Superkraft) und die Prozessindikatoren in Worten – **nie** einzelne Lerndetektive-Ergebnisse (Vorliebe, Erkennungswerte).
+- **Klassenaggregate** (Beamer und Cockpit): Jede angezeigte Untergruppe braucht mindestens 5 Kinder; kleinere Gruppen werden zu „Andere“ zusammengefasst. Die Beamer-Grafik zeigt standardmäßig „Alle“; optional ist eine Aufteilung nach der *Vermutung* der Kinder (V4) möglich, beschriftet „Vermutet: Hören+Lesen / Bilder / Beides“ – nie nach Vorliebetyp.
 - **Verbindungsverlust** stört das Kind nicht: Die Lernaktivität läuft lokal weiter, das Cockpit markiert das Kind als "offline/verzögert".
 - **Resume**: Beitritt mit bereits bekanntem Alias liefert den Server-Stand (höchste `client_seq`, Bearbeitungsfortschritt) zurück.
 - **Kein Ranking im Live-Kanal**: Der Live-Kanal transportiert keine Ranglisten- oder Vergleichsdaten.
@@ -279,12 +301,14 @@ Bis zur Klärung wird konservativ geplant: kein Datenhalt allein auf dem Gerät.
 
 | | Stufe 1: Demo | Stufe 2: Pilot (echte Klassen) |
 |---|---|---|
-| Zweck | Vorführung, Review, Usability-Tests mit Dummy-Daten | Echter Unterricht, echte Kinder-Aliasdaten |
+| Zweck | Vorführung, Review, Usability-Tests mit Dummy-Daten | Echter Unterricht, echte Kinder-Aliasdaten; **muss vor dem Usability-Pilot R2 (Mär–Apr 2027, bereits mit echten Kindern) live sein** |
 | Frontend | **GitHub Pages** oder **Vercel** (statischer Build) | Statisch via **Caddy/nginx** auf EU-Host |
 | Backend | keines; **Demo-Modus** läuft im Browser mit Mock-Daten | API + DB im Docker-Compose-Stack |
 | Daten | nur synthetisch, keine echten Kinder, keine echten Aliasse | Pseudonyme Aliasdaten, Einwilligungen nach [04](04-datenschutz-genehmigungen.md) |
 | Hoster | GitHub/Vercel (US-Unternehmen) | Deutscher/EU-Host mit **AVV**: z. B. Hetzner, IONOS oder Schulträger-Server |
 | TLS | durch Plattform | Caddy (automatisch) oder nginx + Zertifikat |
+
+Zeitliche Konsequenz: Stufe 2 (EU-Host mit AVV) ist spätestens früh/mitte März 2027 live (Phase P4), weil bereits R2 mit echten Kindern läuft. Phase P5 härtet den Betrieb für R3 (Löschjobs, Forschungsexport).
 
 ### 7.1 Warum keine US-Hoster im Pilot
 
@@ -313,7 +337,7 @@ Demo-Modus: `apps/web` enthält einen Mock-Adapter hinter derselben Schnittstell
 | **CSP** | Strikte Content-Security-Policy: `default-src 'self'`; kein `unsafe-inline` für Skripte; `connect-src` nur eigene API-Origin; `img/media/font-src 'self'`; `frame-ancestors 'none'`. Gesetzt als HTTP-Header am Webserver (Caddy/nginx). |
 | **Keine Drittinhalte** | Keine CDNs, keine Webfonts (Schrift selbst gehostet), keine Analytics/Tracker/SDKs, keine eingebetteten Dienste, keine externen Links im Kinderbereich. |
 | **Transport** | HTTPS/TLS, HSTS; keine Mixed Content. |
-| **Zugang Lehrkraft** | Klassenspezifischer Zugangscode **oder** Lehrkraft-Login (Entscheidung in P3, §11). Code ausreichend lang/zufällig; Sitzungstoken mit Ablaufzeit. Später ggf. SCHULE@BW-SSO (§9). |
+| **Zugang Lehrkraft** | Entschieden: klassenspezifischer Lehrkraft-Zugangscode, kein Lehrkraft-Konto, keine personenbezogenen Lehrkraftdaten im System. Code ausreichend lang/zufällig; Sitzungstoken mit Ablaufzeit. Option für später: Lehrkraft-Login bzw. SCHULE@BW-SSO (§9). |
 | **Zugang Kind** | Alias + Secret aus Lernausweis; Secret nur gehasht gespeichert; Beitritt nur mit gültigem `join_token` einer offenen Sitzung. |
 | **Rate Limiting** | Auf Beitritt, Login/Code-Eingabe und Ingest (pro IP und pro Alias); Schutz vor Raten von Codes. Hinweis: Schul-NAT bündelt viele Geräte hinter einer IP, Grenzwerte entsprechend großzügig und pro Alias zusätzlich. |
 | **Eingabevalidierung** | zod-Schemas serverseitig für jedes Ereignis; Größenlimits; keine Freitexteingaben von Kindern im Pilot (kein Chat, kein UGC; vgl. Dossier §5.1). |
@@ -348,12 +372,13 @@ Der Anspruch "SSO-ready" bedeutet architektonisch: Lehrkraft-Auth als austauschb
 | Phase | Regel |
 |---|---|
 | **Erhebung** | Nur Alias, Ereignisse, Antworten; keine Klarnamen. `consent_research` wird von der Lehrkraft nach Vorliegen der Einwilligungen gesetzt. |
-| **Nutzung im Unterricht** | Cockpit und Profil für die Lehrkraft, Klassenaggregate am Beamer. Kein Export dieser Daten ohne Einwilligung. |
-| **Forschungsexport** | Pseudonymisierter CSV-Export **nur** für Teilnehmer mit `consent_research = true`; Spalten ohne Direktidentifikatoren (Alias wird durch Export-Pseudonym ersetzt, Zuordnung nicht im Export). Ausführung als Server-CLI durch berechtigte Person; Export-Protokoll (wer/wann/Umfang). |
-| **Anonymisierung** | Nach Abschluss der Analyse werden Forschungsdaten anonymisiert (Zuordnungstabellen gelöscht, Zeitstempel/Klassenbezug gegröbert); Maßnahmen und Wirksamkeit: zu verifizieren (R0). |
-| **Automatische Löschung** | Täglicher Job löscht Klassen samt Sitzungen, Teilnehmern, Ereignissen, Antworten und Profilen nach `loeschdatum` (Schuljahresende). Backups folgen derselben Frist. |
-| **Vorzeitige Löschung** | Lehrkraft/Admin kann eine Klasse oder ein Kind löschen (z. B. bei Widerruf); Wirkung auf bereits exportierte, pseudonymisierte Daten wird in [04](04-datenschutz-genehmigungen.md) geklärt. |
-| **Nicht-einwilligende Kinder** | Nehmen am Unterricht teil; ihre Daten werden laufend nicht für Forschung verwendet (nie im Export) und spätestens zum Löschtermin entfernt. |
+| **Nutzung im Unterricht** | Cockpit (Profilkarten und Prozessindikatoren je Alias, Live-Fortschritt nur am Lehrkraftgerät), Klassenaggregate am Beamer (Mindestgröße 5). Spur A (schulischer Einsatz): Auch Daten nicht einwilligender Kinder werden für die Stunde verarbeitet, inkl. Klassengrafik und eigenem Profil. |
+| **Forschungsexport** | Enthält nur Kinder mit `consent_research = true` und ersetzt den Alias zum Exportzeitpunkt durch eine zufällige Forschungs-ID (Zuordnung nicht im Export). Ausführung als Server-CLI durch berechtigte Person, **vor** der Löschung der Serverdaten; Export-Protokoll (wer/wann/Umfang). |
+| **Löschung Serverdaten** | Alle Serverdaten (alle Klassen, Sitzungen, Ereignisse, Profile, Backups) werden zum Schuljahresende gelöscht (Datum: zu verifizieren (R0)); die letzten verzögerten Tests aus R3 müssen vorher abgeschlossen sein. Täglicher Job löscht Klassen nach `loeschdatum`. |
+| **Papierlisten** | Lehrkräfte vernichten die Papierlisten Alias↔Name zum Schuljahresende. Ab dann sind die Forschungsdaten anonym; bis dahin ist Widerruf der Einwilligung möglich. |
+| **Auswertung** | Die Analyse (R4, Aug–Okt 2027) arbeitet ausschließlich mit dem anonymen Export. |
+| **Vorzeitige Löschung** | Lehrkraft/Admin kann eine Klasse oder ein Kind löschen (z. B. bei Widerruf); Wirkung auf bereits exportierte Daten: siehe [04](04-datenschutz-genehmigungen.md) §7. |
+| **Nicht-einwilligende Kinder** | Unter Spur A (schulischer Einsatz) werden ihre Daten für die Stunde verarbeitet, einschließlich Klassengrafik und eigenem Profil. Sie gelangen nie in den Forschungsexport und werden zum Schuljahresende mit allen Serverdaten gelöscht. |
 
 Rechtliche Grundlagen, Fristen, Einwilligung und Genehmigungen: [04-datenschutz-genehmigungen.md](04-datenschutz-genehmigungen.md); Forschungsdesign: [05-forschungsplan.md](05-forschungsplan.md).
 
@@ -362,16 +387,16 @@ Rechtliche Grundlagen, Fristen, Einwilligung und Genehmigungen: [04-datenschutz-
 ## 11. Offene Punkte
 
 1. **Live-Kanal**: WebSocket oder SSE (Prototyp in P3 entscheiden).
-2. **Lehrkraftzugang**: klassenspezifischer Code vs. Login; Sicherheits- und Komfortabwägung mit Pilotlehrkräften.
-3. **Mindestgruppengröße** für Klassenaggregate im Cockpit festlegen.
+2. ~~Lehrkraftzugang~~ **Entschieden**: klassenspezifischer Zugangscode im Pilot; Lehrkraft-Login nur als Option für später.
+3. ~~Mindestgruppengröße~~ **Entschieden**: ≥ 5 Kinder je angezeigter Untergruppe, sonst „Andere“ (§5).
 4. **Safari/WebKit-Speicherverhalten** (Eviction, Quoten) auf echten iPads: zu verifizieren (R0).
 5. **Shared iPad und Gastsitzung**: Verhalten von IndexedDB/Service Worker/Kamera: zu verifizieren (R0).
 6. **Web-Clip-Verteilung** in Relution bzw. Jamf (Konfiguration, Offline-Start): zu verifizieren (R0).
 7. **SCHULE@BW-SSO**: Protokoll und Onboarding-Anforderungen: zu verifizieren (R0).
 8. **Lokale Verschlüsselung** im Browser und Ausschluss von iCloud-Backup per MDM: zu verifizieren (R0).
 9. **Logging/IP-Handling** auf dem Webserver (Aufbewahrung, Kürzung): Abstimmung mit Datenschutzbeauftragtem.
-10. **Hosting-Auswahl** (Hetzner/IONOS/Schulträger) und AVV-Konditionen; Standort der Backups.
+10. **Hosting-Auswahl** (Hetzner/IONOS/Schulträger) und AVV-Konditionen; Standort der Backups. Stufe 2 muss vor R2 (früh/mitte März 2027) live sein.
 11. **Drittlandthematik** bei Demo-Stufe (GitHub/Vercel): Ausschluss echter Daten sicherstellen, rechtliche Bewertung zu verifizieren (R0).
-12. **Anonymisierungsverfahren** nach Analyse (Technik und Nachweis).
+12. **Anonymisierungsverfahren** des Exports (Technik und Nachweis; Re-Identifikationsrisiko bei kleinen Klassen).
 13. **Skalierung**: ab wann Wechsel von SQLite auf Postgres (Klassenzahl, parallele Sitzungen)?
-14. **Barrierefreiheit/DaZ**: Umsetzung der Vorlesefunktion (lokale Audio-Dateien vs. Browser-TTS ohne Drittanfrage), siehe [02](02-lerndetektive-experiment.md).
+14. **Barrierefreiheit/DaZ**: Umsetzung der Vorlesefunktion (für alle Kinder an, kein Merkmal gespeichert) (lokale Audio-Dateien vs. Browser-TTS ohne Drittanfrage), siehe [02](02-lerndetektive-experiment.md).
