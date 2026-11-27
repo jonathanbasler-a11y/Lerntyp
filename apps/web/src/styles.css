@@ -121,3 +121,81 @@ h2 { font-size: 1.2rem; margin: 8px 0 0; }
   .btn, .karte { transition: transform 0.1s; }
   .btn:active:not(:disabled), .karte:active { transform: scale(0.98); }
 }
+
+/* ---------- Kinder-Ablauf ---------- */
+.kind { width: 100%; max-width: 760px; display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+.kind .screen { max-width: none; }
+.kind-leiste { display: flex; justify-content: flex-end; align-items: center; gap: 12px; }
+.kind-leiste .btn { min-height: 48px; padding: 8px 18px; font-size: 0.9rem; }
+.aussage { font-size: 1.6rem; }
+.antworten { display: flex; gap: 12px; width: 100%; flex-wrap: wrap; justify-content: center; }
+.antwort-knopf {
+  flex: 1 1 160px;
+  min-height: 132px;
+  background: var(--bg);
+  border: 3px solid var(--line);
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+}
+.antwort-knopf:active { border-color: var(--primary); }
+.antwort-knopf:focus-visible { outline: 4px solid var(--focus); outline-offset: 2px; }
+.antwort-symbol { font-size: 2.6rem; line-height: 1; }
+
+.lern-buehne { min-height: 460px; display: flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 24px; }
+.lern-inhalt { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.lern-wort { font-size: 4rem; font-weight: 700; margin: 0; line-height: 1.1; }
+.lern-wort-klein { font-size: 2.6rem; }
+.platzhalter { width: min(260px, 60vw); height: auto; }
+.test-wort { font-size: 3.6rem; font-weight: 700; margin: 12px 0; line-height: 1.1; }
+.btn-gross { min-width: 200px; min-height: 80px; font-size: 1.2rem; }
+.sterne { width: min(360px, 90%); height: auto; }
+.zahl-knopf { min-width: 64px; }
+
+/* ---------- Demo-Steuerung ---------- */
+.app-mit-demoleiste .main { padding-bottom: 170px; }
+.demo-steuerung {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fbf3dc;
+  border-top: 4px dashed var(--accent);
+  padding: 8px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+}
+.demo-steuerung-titel { font-size: 0.95rem; }
+.demo-steuerung-phase { color: var(--ink-soft); font-size: 0.85rem; }
+.demo-steuerung .btn { min-height: 48px; padding: 6px 16px; font-size: 0.9rem; }
+
+/* ---------- Cockpit und Beamer ---------- */
+.screen-cockpit { max-width: 980px; }
+.row-links { justify-content: flex-start; }
+.phasen { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.phase { padding: 8px 14px; border-radius: 999px; border: 2px solid var(--line); font-size: 0.9rem; }
+.phase.getan { background: #e6f0f0; color: var(--primary); border-color: transparent; }
+.phase.aktuell { background: var(--primary); color: var(--primary-ink); border-color: var(--primary); font-weight: 700; }
+.marke { font-size: 0.75rem; color: var(--ink-soft); border: 1px dashed var(--line); border-radius: 999px; padding: 0 8px; }
+.flagge { font-size: 0.8rem; font-weight: 700; background: var(--accent); color: #3a2a00; border-radius: 999px; padding: 0 10px; }
+.flagge-hilfe { background: #f2c1b8; }
+.simuliert { margin: 0; padding: 10px 16px; border: 3px dashed #b0457f; background: #fdeaf3; border-radius: 8px; font-weight: 700; text-align: center; }
+.diagramm { margin: 8px 0; }
+.diagramm svg { width: 100%; height: auto; display: block; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.leitfaden { margin-top: 12px; }
+.leitfaden summary { font-weight: 700; cursor: pointer; min-height: 48px; display: flex; align-items: center; }
+.leitfaden li { margin-bottom: 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+[aria-pressed='true'].btn-secondary { background: var(--primary); color: var(--primary-ink); }

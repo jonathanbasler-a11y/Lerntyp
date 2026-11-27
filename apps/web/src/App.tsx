@@ -1,35 +1,28 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ApiClient } from './api/client';
 import { createApiClient } from './api/client';
 import { DemoBanner } from './components/DemoBanner';
-import { Ablauf } from './screens/Ablauf';
+import { DemoSteuerung } from './components/DemoSteuerung';
 import { Cockpit } from './screens/Cockpit';
-import { Fertig } from './screens/Fertig';
+import { Kind } from './screens/Kind';
 import { Lernausweis } from './screens/Lernausweis';
 import { Start } from './screens/Start';
-import { demo } from './demoData';
+import { t } from './text';
 
-export type Screen = 'start' | 'lernausweis' | 'ablauf' | 'fertig' | 'cockpit';
+export type Screen = 'start' | 'lernausweis' | 'kind' | 'cockpit';
 
 export function App() {
   const [screen, setScreen] = useState<Screen>('start');
   const [alias, setAlias] = useState<string | null>(null);
-  const client = useRef<Promise<ApiClient> | null>(null);
+  const [client, setClient] = useState<ApiClient | null>(null);
 
   useEffect(() => {
-    client.current = createApiClient();
+    let aktiv = true;
+    void createApiClient().then((c) => aktiv && setClient(c));
+    return () => {
+      aktiv = false;
+    };
   }, []);
-
-  const waehleAlias = async (a: string) => {
-    setAlias(a);
-    try {
-      const c = await (client.current ??= createApiClient());
-      await c.joinSession(demo.sitzungscode, a);
-    } catch {
-      // Demo läuft auch ohne Aufzeichnung weiter.
-    }
-    setScreen('ablauf');
-  };
 
   const zumStart = () => {
     setAlias(null);
@@ -37,15 +30,24 @@ export function App() {
   };
 
   return (
-    <div className="app">
+    <div className={__DEMO__ && screen === 'kind' ? 'app app-mit-demoleiste' : 'app'}>
       {__DEMO__ && <DemoBanner />}
       <main className="main">
         {screen === 'start' && <Start onKind={() => setScreen('lernausweis')} onLehrkraft={() => setScreen('cockpit')} />}
-        {screen === 'lernausweis' && <Lernausweis onWaehle={waehleAlias} onZurueck={zumStart} />}
-        {screen === 'ablauf' && alias && <Ablauf onFertig={() => setScreen('fertig')} onZurueck={() => setScreen('lernausweis')} />}
-        {screen === 'fertig' && <Fertig onZumStart={zumStart} />}
-        {screen === 'cockpit' && <Cockpit onZurueck={zumStart} />}
+        {screen === 'lernausweis' && (
+          <Lernausweis
+            onWaehle={(a) => {
+              setAlias(a);
+              setScreen('kind');
+            }}
+            onZurueck={zumStart}
+          />
+        )}
+        {screen === 'kind' && alias && client && <Kind key={alias} client={client} alias={alias} onZumStart={zumStart} />}
+        {screen === 'cockpit' && client && <Cockpit client={client} onZurueck={zumStart} onZumKind={alias ? () => setScreen('kind') : null} />}
+        {(screen === 'kind' || screen === 'cockpit') && !client && <p className="hint">{t('kind.laedt.text')}</p>}
       </main>
+      {__DEMO__ && screen === 'kind' && client && <DemoSteuerung client={client} onLehrkraft={() => setScreen('cockpit')} onStart={zumStart} />}
     </div>
   );
 }

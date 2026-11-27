@@ -1,0 +1,46 @@
+{
+  "hinweis": "Nur für die Demo: erfundene Aliasse und Antwortwahrscheinlichkeiten. Die Antworten entstehen, indem die echte Ablauf-Logik durchlaufen wird. Kein Forschungsergebnis.",
+  "seed": 4711,
+  "kinder": [
+    "Marder-03",
+    "Luchs-12",
+    "Biber-21",
+    "Rabe-35",
+    "Specht-07",
+    "Dohle-18",
+    "Falke-26",
+    "Wiesel-31",
+    "Molch-09",
+    "Lachs-15",
+    "Hirsch-22",
+    "Reh-30",
+    "Spatz-05",
+    "Fink-38",
+    "Storch-44",
+    "Kranich-16",
+    "Maulwurf-29",
+    "Eichhorn-13",
+    "Salamander-37",
+    "Waschbär-24",
+    "Pinguin-11",
+    "Delfin-40"
+  ],
+  "vermutung_verteilung": {
+    "wort": 7,
+    "bild": 7,
+    "bild_wort": 8
+  },
+  "treffer_sofort": {
+    "wort": 0.62,
+    "bild": 0.7,
+    "bild_wort": 0.84
+  },
+  "treffer_verzoegert": {
+    "wort": 0.42,
+    "bild": 0.5,
+    "bild_wort": 0.68
+  },
+  "fehlalarm": 0.1,
+  "streuung": 0.08,
+  "fehlt_in_folgestunde": 2
+}
