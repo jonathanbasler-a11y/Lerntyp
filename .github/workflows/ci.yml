@@ -1,9 +1,10 @@
 name: CI
 
 on:
+  # Einmal pro PR-Änderung (vorher lief CI doppelt: push auf den Branch + pull_request)
   pull_request:
   push:
-    branches-ignore: [main]
+    branches: [main]
 
 concurrency:
   group: ci-${{ github.ref }}

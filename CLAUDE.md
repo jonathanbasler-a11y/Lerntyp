@@ -1,6 +1,6 @@
 # CLAUDE.md – Lerntyp
 
-Tablet-Lern-App für Klassenstufe 4 in Baden-Württemberg (9–10 Jahre). Kinder erkunden gemeinsam im Unterricht, **wie** sie lernen: mit einem stärkenorientierten **Lernprofil** („Mein Lernprofil“: drei Stärken + eine Lern-Superkraft) und dem Klassenexperiment **Lerndetektive** (Bedingungen `wort`, `bild`, `bild_wort`). Lehrkräfte steuern die **Sitzung** über das **Lehrkraft-Cockpit**; Kinder nutzen einen **Lernausweis** mit **Alias**. Aktuell nur Dokumentation, noch kein Code.
+Tablet-Lern-App für Klassenstufe 4 in Baden-Württemberg (9–10 Jahre). Kinder erkunden gemeinsam im Unterricht, **wie** sie lernen: mit einem stärkenorientierten **Lernprofil** („Mein Lernprofil“: drei Stärken + eine Lern-Superkraft) und dem Klassenexperiment **Lerndetektive** (Bedingungen `wort`, `bild`, `bild_wort`). Lehrkräfte steuern die **Sitzung** über das **Lehrkraft-Cockpit**; Kinder nutzen einen **Lernausweis** mit **Alias**. Stand: Demo auf GitHub Pages mit dem vollständigen Lerndetektive-Experiment (Mock-Daten, synthetische Stimme, Bild-Werkzeuge). Offen: P3 (Server, getrennte Geräte) und P4 (Strategie-Parcours, Lernprofil).
 
 ## Die wichtigste Regel
 **Keine Lerntyp-Etiketten.** Kein UI-Text, kein Datenfeld, kein Ergebnis und kein Export ordnet einem Kind einen Typ, ein Niveau, eine Note, ein Ranking oder einen Vergleich zu. Profile beschreiben **beobachtetes Verhalten** (Vergangenheitsform, konkrete Station). Verbindliche Sprachregeln: `docs/01-konzept.md` §7.4. Hintergrund: Dossier §1.1.
@@ -38,7 +38,7 @@ Der Code richtet sich nach den Docs, nie umgekehrt. Widersprüche werden im Phas
 - **Projektkonvention statt Skill-Standardpfad:** ComfyUI-Ausgabe nach `art/ausgabe/<id>.png` (nicht eingecheckt), dann `npm run bilder:konvertieren -- art/ausgabe` → `apps/web/public/bilder/<id>.webp` (512×512), dann `npm run bilder:pruefen`.
 - Bilder ohne Buchstaben, Zahlen oder Personen; nur eigene, original erzeugte Bilder, keine Cliparts oder Fremdbilder.
 
-## Struktur (geplant, `docs/03-architektur.md` §3.1)
+## Struktur (`docs/03-architektur.md` §3.1)
 `apps/web` (PWA), `apps/api` (Fastify), `packages/shared` (zod-Schemas), `data/` (Inhalte), `deploy/` (Docker Compose), `docs/`.
 
 ## Begriffe
