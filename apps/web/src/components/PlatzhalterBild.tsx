@@ -9,7 +9,7 @@ function hash(s: string): number {
 }
 
 /**
- * Platzhalterbild: Farbe und Form nur nach Kategorie, ohne Buchstaben und ohne Wort,
+ * Platzhalterbild (ohne sichtbaren Text, nur `aria-label`): Farbe und Form nur nach Kategorie, ohne Buchstaben und ohne Wort,
  * damit die Bedingung „bild“ das Wort nicht verrät. Die echten Illustrationen kommen später.
  */
 export function PlatzhalterBild({ item }: { item: Item }) {
@@ -26,9 +26,6 @@ export function PlatzhalterBild({ item }: { item: Item }) {
       <g transform={`rotate(${drehung} 100 92) translate(30 22) scale(1.4)`}>
         <path d={stil.form} fill={stil.farbe} />
       </g>
-      <text x="100" y="196" textAnchor="middle" fontSize="15" fill="#55646d">
-        {t('bild.platzhalter')}
-      </text>
     </svg>
   );
 }

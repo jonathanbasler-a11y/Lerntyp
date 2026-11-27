@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { t } from '../text';
 
-/** Pause und Hilfe sind auf jedem Kinder-Bildschirm erreichbar (02 §8: kein Druck, keine Nachfrage). */
-export function KindLeiste({ onPause, onHilfe }: { onPause: () => void; onHilfe: () => void }) {
-  const [hilfeGesendet, setHilfeGesendet] = useState(false);
+const HILFE_ANZEIGE_MS = 10_000;
+
+/**
+ * Pause und Hilfe sind auf jedem Kinder-Bildschirm erreichbar (02 §8: kein Druck, keine Nachfrage).
+ * Die Bestätigung „Die Lehrkraft weiß Bescheid“ verschwindet beim nächsten Schritt oder nach 10 s.
+ */
+export function KindLeiste({ schrittId, onPause, onHilfe }: { schrittId: string; onPause: () => void; onHilfe: () => void }) {
+  const [hilfeBei, setHilfeBei] = useState<string | null>(null);
+  const zeigeHilfe = hilfeBei === schrittId;
+  const hilfeAktiv = hilfeBei !== null;
+  useEffect(() => {
+    if (!hilfeAktiv) return;
+    const timer = setTimeout(() => setHilfeBei(null), HILFE_ANZEIGE_MS);
+    return () => clearTimeout(timer);
+  }, [hilfeAktiv]);
   return (
     <div className="kind-leiste">
       <button
@@ -12,12 +24,12 @@ export function KindLeiste({ onPause, onHilfe }: { onPause: () => void; onHilfe:
         data-testid="hilfe-knopf"
         onClick={() => {
           onHilfe();
-          setHilfeGesendet(true);
+          setHilfeBei(schrittId);
         }}
       >
         {t('kind.hilfe')}
       </button>
-      {hilfeGesendet && (
+      {zeigeHilfe && (
         <span className="hint" role="status">
           {t('kind.hilfe.gesendet')}
         </span>

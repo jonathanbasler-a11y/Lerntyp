@@ -5,10 +5,12 @@ export interface Balken {
   bedingung: Bedingung;
   /** Anteil 0…1 (korrigierte Quote) oder `null`, wenn nicht berechenbar. */
   wert: number | null;
-  /** Zweite Reihe (Folgestunde): „nach einer Woche“ wird heller gezeichnet. */
+  /** Zweite Reihe (Folgestunde): „nach einer Woche“ hat gleiche Farbe, dunkleren Rand und anderes Muster. */
   verzoegert: boolean;
   /** Beschriftung unter dem Balken (nur wenn Platz ist). */
   label: string;
+  /** Zeilenbeschriftung der Screenreader-Tabelle; ohne Angabe „<Gruppe> – <Bedingung>“. */
+  srLabel?: string;
 }
 
 export interface BalkenGruppe {
@@ -56,8 +58,8 @@ export function vergleichGruppen(v: { sofort: Mittel; verzoegert: Mittel }): Bal
     id: b,
     label: bedingungLabel(b),
     balken: [
-      { bedingung: b, wert: v.sofort[b], verzoegert: false, label: t('beamer.sofort') },
-      { bedingung: b, wert: v.verzoegert[b], verzoegert: true, label: t('beamer.woche') },
+      { bedingung: b, wert: v.sofort[b], verzoegert: false, label: t('beamer.sofort'), srLabel: `${bedingungLabel(b)} – ${t('beamer.sofort_sr')}` },
+      { bedingung: b, wert: v.verzoegert[b], verzoegert: true, label: t('beamer.woche'), srLabel: `${bedingungLabel(b)} – ${t('beamer.woche_sr')}` },
     ],
   }));
 }

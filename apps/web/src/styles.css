@@ -131,7 +131,7 @@ h2 { font-size: 1.2rem; margin: 8px 0 0; }
 .antworten { display: flex; gap: 12px; width: 100%; flex-wrap: wrap; justify-content: center; }
 .antwort-knopf {
   flex: 1 1 160px;
-  min-height: 132px;
+  min-height: 104px;
   background: var(--bg);
   border: 3px solid var(--line);
   border-radius: var(--radius);
@@ -149,7 +149,7 @@ h2 { font-size: 1.2rem; margin: 8px 0 0; }
 }
 .antwort-knopf:active { border-color: var(--primary); }
 .antwort-knopf:focus-visible { outline: 4px solid var(--focus); outline-offset: 2px; }
-.antwort-symbol { font-size: 2.6rem; line-height: 1; }
+.antwort-symbol { font-size: 1.7rem; line-height: 1; }
 
 .lern-buehne { min-height: 460px; display: flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 24px; }
 .lern-inhalt { display: flex; flex-direction: column; align-items: center; gap: 12px; }
@@ -158,11 +158,20 @@ h2 { font-size: 1.2rem; margin: 8px 0 0; }
 .platzhalter { width: min(260px, 60vw); height: auto; }
 .test-wort { font-size: 3.6rem; font-weight: 700; margin: 12px 0; line-height: 1.1; }
 .btn-gross { min-width: 200px; min-height: 80px; font-size: 1.2rem; }
+.test-knoepfe { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: center; margin: 8px 0; }
+.btn-symbol { width: 1.4rem; height: 1.4rem; flex: none; }
+@media (max-width: 599px) {
+  .test-knoepfe { gap: 16px; margin: 0; }
+  .btn-gross { min-height: 64px; width: 100%; }
+  .test-wort { font-size: 3rem; margin: 4px 0; }
+  .lern-buehne { min-height: 320px; }
+}
 .sterne { width: min(360px, 90%); height: auto; }
 .zahl-knopf { min-width: 64px; }
 
 /* ---------- Demo-Steuerung ---------- */
-.app-mit-demoleiste .main { padding-bottom: 170px; }
+/* Der Inhalt reserviert genau die gemessene Höhe der Leiste (`--demo-hoehe`, gesetzt in DemoSteuerung). */
+.app-mit-demoleiste .main { padding-bottom: calc(var(--demo-hoehe, 170px) + 16px); }
 .demo-steuerung {
   position: fixed;
   left: 0;
@@ -177,9 +186,21 @@ h2 { font-size: 1.2rem; margin: 8px 0 0; }
   gap: 4px;
   z-index: 10;
 }
+.demo-steuerung-kopf { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 12px; }
 .demo-steuerung-titel { font-size: 0.95rem; }
-.demo-steuerung-phase { color: var(--ink-soft); font-size: 0.85rem; }
+.demo-steuerung-phase, .demo-steuerung-hinweis { color: var(--ink-soft); font-size: 0.85rem; }
+.demo-knoepfe { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; }
 .demo-steuerung .btn { min-height: 48px; padding: 6px 16px; font-size: 0.9rem; }
+.demo-einklappen { display: none; }
+.demo-steuerung.demo-eingeklappt { background: transparent; border-top: 0; padding: 0 8px 8px; align-items: flex-end; pointer-events: none; }
+.demo-steuerung.demo-eingeklappt .btn { pointer-events: auto; background: #fbf3dc; }
+@media (max-width: 599px) {
+  .demo-steuerung { padding: 4px 8px 6px; gap: 0; border-top-width: 3px; }
+  .demo-steuerung-kopf { display: none; }
+  .demo-knoepfe { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; gap: 8px; width: 100%; padding: 4px 0; }
+  .demo-knoepfe .btn { flex: none; white-space: nowrap; padding: 4px 12px; }
+  .demo-einklappen { display: inline-flex; }
+}
 
 /* ---------- Cockpit und Beamer ---------- */
 .screen-cockpit { max-width: 980px; }
@@ -192,10 +213,11 @@ h2 { font-size: 1.2rem; margin: 8px 0 0; }
 .flagge { font-size: 0.8rem; font-weight: 700; background: var(--accent); color: #3a2a00; border-radius: 999px; padding: 0 10px; }
 .flagge-hilfe { background: #f2c1b8; }
 .simuliert { margin: 0; padding: 10px 16px; border: 3px dashed #b0457f; background: #fdeaf3; border-radius: 8px; font-weight: 700; text-align: center; }
-.diagramm { margin: 8px 0; }
-.diagramm svg { width: 100%; height: auto; display: block; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.diagramm { margin: 8px 0; position: relative; min-width: 0; overflow-x: auto; }
+.diagramm svg { width: 100%; height: auto; max-height: 55vh; display: block; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
 .leitfaden { margin-top: 12px; }
 .leitfaden summary { font-weight: 700; cursor: pointer; min-height: 48px; display: flex; align-items: center; }
 .leitfaden li { margin-bottom: 8px; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 599px) { .diagramm svg { min-width: 560px; } }
 [aria-pressed='true'].btn-secondary { background: var(--primary); color: var(--primary-ink); }

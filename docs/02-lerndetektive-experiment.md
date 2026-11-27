@@ -40,10 +40,11 @@ Antwortformat: drei große Knöpfe mit Symbol: 👍 **stimmt** · 👎 **stimmt 
 | ID | Aussage (Entwurf) | Richtung |
 |---|---|---|
 | `U1` | „Jedes Kind lernt nur auf eine Art richtig gut: entweder mit Bildern oder mit Hören.“ | Mythos (Zustimmung = Mythos) |
-| `U2` | „Wie man am besten lernt, ist angeboren und bleibt immer gleich.“ | Mythos, essentialistisch |
-| `U3` | „Wie man am besten lernt, kann jedes Kind üben.“ | Wachstum (Zustimmung = kein Mythos) |
+| `U2` | „Wie du lernst, steht seit deiner Geburt fest und ändert sich nie.“ | Mythos, essentialistisch |
+| `U3` | „Gut lernen kann jedes Kind üben.“ | Wachstum (Zustimmung = kein Mythos) |
 
 - Angelehnt an die Essentialismus-Dimension bei Nancekivell et al. (Dossier §1.1). **Kindgerechte Adaption ist zu validieren (R0/R1):** Verständlichkeit im Co-Design prüfen.
+- U2 und U3 wurden nach dem ersten Demo-Test (November 2026) sprachlich vereinfacht („angeboren“ ist für 9-Jährige schwer). Sie bleiben Entwurf bis zur Prüfung in R1.
 - Gemischte Richtung gegen Ja-Sage-Tendenz (Dossier §3.2). Doppelte Verneinungen sind verboten.
 - Vor der Lernphase gibt es keine Rückmeldung zu diesen Antworten.
 - Die Aussagen nennen keine Typ-Bezeichnungen („Bild-Lerner“ o. Ä.), um den Mythos nicht erst einzuführen. Die Formulierungen werden in R1 noch einmal auf Neutralität geprüft.
@@ -193,6 +194,7 @@ Grafik „Sofort vs. nach einer Woche“ pro Bedingung, für die ganze Klasse. B
 |---|---|
 | Ton-Check fehlgeschlagen | Das Tablet meldet es der Lehrkraft (Cockpit). Wird der Ton nicht behoben, läuft das Experiment ohne Ton (`audio_ok=false`). Diese Daten gehen nicht in die Hauptauswertung ein, das Kind macht aber normal mit. |
 | Kind kommt zu spät | Es holt Überzeugungs-Aussagen (vorher) und Vorlieben nach, solange es noch nicht selbst gelernt hat, und lernt dann vollständig, falls die Lernphase noch freigegeben ist. Ist die Lehrkraft schon über die Lernphase hinaus, gibt es eine „Zuschauer-Rolle“ (keine Vorher-Messung, kein Sofort-Test, kein verzögerter Test) und eine kurze Ersatzaufgabe. |
+| Pause während der Lernphase | Das Ding, das gerade zu sehen war, kommt nach der Pause **nicht** wieder: Es war schon teilweise zu sehen, eine zweite Darbietung würde es doppelt einprägen und das Ergebnis seiner Bedingung verzerren. Die Lernphase gilt dann als unterbrochen (`abgebrochen=true`, Ausschlussregel 05 §6). Nach der Pause erscheint ein ruhiger Bildschirm „Weiter geht's“, bevor das nächste Ding kommt. |
 | Lehrkraft geht weiter, Kind noch nicht fertig | Die laufende Phase wird mit `abgebrochen=true` geschlossen; bereits gegebene Antworten bleiben gültig. Eine Lernphase wird nie neu gestartet. |
 | Kind fehlt in der Folgestunde | Nachholen bis +9 Tage ist möglich (Cockpit-Option). Danach fehlt der Wert. |
 | Gerätewechsel | Fortsetzen per Lernausweis. Bereits gezeigte Items werden nicht erneut gezeigt. Die Lernphase wird nicht neu gestartet; eine abgebrochene Lernphase wird markiert (`abgebrochen=true`). |

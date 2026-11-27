@@ -77,3 +77,28 @@ export async function testen(page: Page, n = 72): Promise<void> {
   }
   await expect(page.getByTestId('schritt-warten')).toBeVisible();
 }
+
+/** Von der Lernausweis-Auswahl bis zum ersten Sofort-Test-Wort (Schnellmodus). */
+export async function bisSofortTest(page: Page): Promise<void> {
+  await toncheck(page);
+  await ueberzeugungen(page);
+  await freigeben(page);
+  await vorlieben(page);
+  await page.getByTestId('vermutung-weiter').click();
+  await freigeben(page);
+  await page.getByTestId('lernen-los').click();
+  await expect(page.getByTestId('schritt-warten')).toBeVisible({ timeout: 60_000 });
+  await freigeben(page);
+  await expect(page.getByTestId('schritt-warten')).toBeVisible({ timeout: 10_000 });
+  await freigeben(page);
+  await expect(page.getByTestId('test-wort')).toBeVisible();
+}
+
+/** Lehrkraft-Cockpit bis zur Beamer-Grafik des Klassenergebnisses. */
+export async function zumBeamer(page: Page): Promise<void> {
+  await page.goto(BASE);
+  await page.getByTestId('rolle-lehrkraft').click();
+  for (let i = 0; i < 5; i++) await page.getByTestId('phase-weiter').click();
+  await page.getByTestId('tab-beamer').click();
+  await expect(page.getByTestId('diagramm-alle')).toBeVisible();
+}
