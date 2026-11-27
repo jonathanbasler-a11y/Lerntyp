@@ -172,7 +172,7 @@ Jede Ansicht mit Kinderdaten trägt den Hinweis: **„Nur zur Lernbegleitung –
 
 ## 9. Barrierefreiheit und Sprache
 
-- **DaZ und Leseschwäche:** Vorlesefunktion für alle Texte (vorproduzierte Audiodateien, keine Cloud-Sprachausgabe), einfache Sätze, Bildunterstützung.
+- **DaZ und Leseschwäche:** Vorlesefunktion für alle Texte (vorproduzierte Audiodateien mit einer synthetischen Stimme, siehe [02](02-lerndetektive-experiment.md) §5.1; keine Sprachausgabe zur Laufzeit), einfache Sätze, Bildunterstützung.
 - **Kein Zeitdruck** im Parcours. Die festen Darbietungszeiten im Experiment sind kein Leistungsdruck und werden den Kindern als „Detektiv-Regel“ erklärt.
 - **Farbsehschwäche:** Farben nie als einziges Unterscheidungsmerkmal (Satzglieder haben Farbe **und** Form oder Symbol).
 - **Motorik:** Drag-and-drop hat immer eine Tipp-Alternative.

@@ -16,7 +16,7 @@ Der Code richtet sich nach den Docs, nie umgekehrt. Widersprüche werden im Phas
 
 ## Unverletzliche Invarianten
 - **Nur Aliasse**, nie echte Namen (kein Namensfeld im Datenmodell; Zuordnung nur auf der Papierliste der Lehrkraft).
-- **Keine Drittanbieter**: keine SDKs, kein Analytics, keine CDNs, keine externen Schriften/Icons, keine Cloud-TTS. Keine externen Requests.
+- **Keine Drittanbieter**: keine SDKs, kein Analytics, keine CDNs, keine externen Schriften/Icons, keine Sprachausgabe zur Laufzeit. Keine externen Requests. Audio wird einmalig offline erzeugt (`npm run audio:erzeugen`, Piper) und als Datei ausgeliefert.
 - **Alle Inhalte, Items und UI-Texte liegen in `/data` (JSON, per zod geprüft).** Wenn du einen Text oder ein Item in `/src` hartkodierst: stopp.
 - **Null Dark Patterns:** keine Streaks, kein Countdown-Druck, keine FOMO-Hinweise, keine Ranglisten, keine Lootboxen/Zufallsbelohnungen, kein Autoplay, keine Endlos-Feeds, keine In-App-Käufe, keine externen Links; klares Sitzungsende („Fertig für heute“). Siehe `docs/01-konzept.md` §8.
 - **Deutsche Oberfläche.** Kinder-Texte: max. 2 kurze Sätze pro Bildschirm, Vorlese-Knopf.
@@ -26,11 +26,17 @@ Der Code richtet sich nach den Docs, nie umgekehrt. Widersprüche werden im Phas
 - Forschungsdaten nur für Teilnehmer mit `consent_research = true`; nicht einwilligende Kinder nehmen teil, ihre Daten gehen nie in den Export.
 
 ## Befehle
-**Noch kein Code – folgt in P1.** Geplant:
-- `npm run dev` – Entwicklungsserver (Demo-Modus)
+- `npm run dev` – Entwicklungsserver (Demo-Modus; `?schnell=1` kürzt die Zeiten, `?benennen=1` öffnet den Benennungstest)
 - `npx vitest run` – Unit- und Integrationstests
-- `npm run build` – statischer Build (`dist/`)
-- `npx playwright test` – E2E (iPad-Viewport, Offline-Szenarien)
+- `npm run lint` · `npm run validate:data` – Lint und Datenprüfung
+- `npm run build` · `npm run build:live` · `npm run check:live` – Demo-Build, Live-Build, Prüfung „kein Mock im Live-Build“
+- `npm run e2e -- --trace off` – Playwright (iPad-Viewport)
+- `npm run audio:erzeugen` · `npm run bilder:konvertieren -- art/ausgabe` · `npm run bilder:pruefen` – Medien
+
+## Bilder (game-art-pipeline-Skill)
+- Stil: `.art-style.json` (Thema `objekt`), Prompts: `art/lerndetektive-prompts.json`, Anleitung: `docs/07-bilder-erzeugen.md`.
+- **Projektkonvention statt Skill-Standardpfad:** ComfyUI-Ausgabe nach `art/ausgabe/<id>.png` (nicht eingecheckt), dann `npm run bilder:konvertieren -- art/ausgabe` → `apps/web/public/bilder/<id>.webp` (512×512), dann `npm run bilder:pruefen`.
+- Bilder ohne Buchstaben, Zahlen oder Personen; nur eigene, original erzeugte Bilder, keine Cliparts oder Fremdbilder.
 
 ## Struktur (geplant, `docs/03-architektur.md` §3.1)
 `apps/web` (PWA), `apps/api` (Fastify), `packages/shared` (zod-Schemas), `data/` (Inhalte), `deploy/` (Docker Compose), `docs/`.
