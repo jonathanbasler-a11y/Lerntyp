@@ -2,10 +2,12 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DemoSchema, TexteSchema } from '../packages/shared/src/data';
+import { LerndetektiveDatenSchema } from '../packages/shared/src/lerndetektive/daten';
 
 const FILES = [
   { rel: 'texte/de.json', schema: TexteSchema },
   { rel: 'demo/aliasse.json', schema: DemoSchema },
+  { rel: 'lerndetektive/experiment.json', schema: LerndetektiveDatenSchema },
 ] as const;
 
 /** Prüft alle Datendateien unter `dataDir`; gibt Fehlermeldungen zurück (leer = gültig). */
