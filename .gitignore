@@ -11,3 +11,6 @@ coverage/
 *.sqlite-journal
 playwright-report/
 test-results/
+dist-live/
+apps/web/dev-dist/
+playwright/.cache/
