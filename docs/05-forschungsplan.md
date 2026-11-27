@@ -15,7 +15,7 @@ Das Dossier liefert die wissenschaftliche Begründung (keine Lerntypen, sechs St
 |---|---|---|---|---|
 | L1 | Mehrere Angaben stammen aus kommerziellen Prüfungsportalen (Kompass-4-Schwellen, Termine 2026/27, Verteilung G/M/E, Dossier §2.1) | Zeitplanung der Studie; keine falschen Behauptungen in Elterninfos | Abgleich mit Quellen von Kultusministerium und IBBW | Verifizierte Faktenliste; korrigiertes Dossier |
 | L2 | Genehmigungsverfahren für Erhebungen an Schulen in BW: zuständige Stelle, Unterlagen, Fristen | Bestimmt den gesamten Zeitplan | Recherche der einschlägigen Verwaltungsvorschrift; Anfrage bei der zuständigen Stelle | Antragsfahrplan in [04](04-datenschutz-genehmigungen.md) |
-| L3 | Frei nutzbare, kindgerechte deutsche Items zu Strategienutzung und SRL. FEESS, SESSKO und LSL sind lizenzpflichtig (Dossier §3.1). | Profil-Validierung ohne Lizenzkosten | Literaturrecherche (Dignath, Stoeger, Souvignier); Anfrage bei Autorinnen und Autoren | Itemliste mit Lizenzstatus oder Entscheidung für eigene Items |
+| L3 | Frei nutzbare, kindgerechte deutsche Items zu Strategienutzung und SRL. FEESS, SESSKO und LSL sind vermutlich lizenzpflichtige Verlagstests (Instrumente: Dossier §3.1; *Lizenzstatus zu verifizieren, R0*). | Profil-Validierung ohne Lizenzkosten | Literaturrecherche (Dignath, Stoeger, Souvignier); Anfrage bei Autorinnen und Autoren | Itemliste mit Lizenzstatus oder Entscheidung für eigene Items |
 | L4 | Erprobte Kreuzinteraktions- bzw. Modalitätsparadigmen für 9- bis 10-Jährige; faires Testformat ([02](02-lerndetektive-experiment.md) §6.2) | Validität von RQ1/RQ2 | Systematische Suche (Pashler et al. 2008 und Folgestudien; Studien zum Bildüberlegenheitseffekt bei Kindern) | Begründete Wahl des Paradigmas, ggf. Anpassung von 02 |
 | L5 | Verhalten von PWAs auf Geteiltem iPad (Speicher-Löschung, Gastsitzungen, Web-Clips über Relution/Jamf, Kamera für QR) | Technische Machbarkeit im Klassenzimmer | Gerätetests mit 2–3 iPads im Shared-iPad-Modus; Gespräch mit Kreismedienzentrum | Testprotokoll; Anpassungen in [03](03-architektur.md) |
 | L6 | Barrierefreiheit für DaZ und Leseschwäche: Sprachniveau, Audio, Symbole | Faire Teilnahme aller Kinder | Leitfäden für Einfache Sprache; Gespräch mit DaZ-Lehrkraft | Sprachleitfaden für alle App-Texte |
@@ -42,10 +42,10 @@ Heute ist der 27.11.2026. Die Phase von Kompass 4 und der Grundschulempfehlung (
 | Phase | Zeitraum | Inhalt | Ergebnis / Tor |
 |---|---|---|---|
 | **R0 Grundlagen** | Dez 2026 – Jan 2027 | L1–L10; Partnerschaft mit einer Pädagogischen Hochschule; Anträge (Ethikvotum, Schulbehörde) einreichen; Simulation zur Stichprobengröße | **Tor 0:** Anträge eingereicht; Paradigma festgelegt |
-| **R1 Co-Design** | Jan – Feb 2027 | 5–8 Interviews mit Lehrkräften; 2 Co-Design-Runden mit je 4–6 Kindern (Papierprototypen; Verständlichkeit von U/V-Items; Benennungstest der Bilder); außerhalb des Unterrichts, mit Einwilligung | **Tor 1:** Konzept und Items überarbeitet; Klick-Prototyp |
-| **R2 Usability-Pilot** | Mär – Apr 2027 | 1–2 Klassen; komplette Stunde + Folgestunde mit App-Version P4; Think-Aloud mit 4–6 Kindern; Messung von Zeiten, Deckeneffekt, Sync-Verlusten | **Tor 2:** RQ4-Ziele erreicht; Itemzahl/Timing fixiert; **Präregistrierung (OSF)** |
-| **R3 Feldstudie** | Mai – Jul 2027 | 6–10 Klassen (Ziel ca. 150 Kinder mit Einwilligung, bestätigt durch Simulation); die Hälfte als Wartekontrolle (RQ3) | **Tor 3:** Datensatz komplett; Löschfristen eingeleitet |
-| **R4 Auswertung und Bericht** | Aug – Okt 2027 | Analyse nach Präregistrierung; Rückmeldung an Schulen (Klassenebene); Bericht und ggf. Publikation | Bericht; Entscheidung über die Weiterentwicklung |
+| **R1 Co-Design** | Jan – Feb 2027: Lehrkräfte · Anfang März 2027: Kinder | Jan–Feb: 5–8 Interviews mit Lehrkräften (keine Kinder in der Übergangsphase). Anfang März: 2 Co-Design-Runden mit je 4–6 Kindern (Papierprototypen; Verständlichkeit von U/V-Items; Benennungstest der Bilder), außerhalb des Unterrichts, mit Einwilligung | **Tor 1:** Konzept und Items überarbeitet; Klick-Prototyp |
+| **R2 Usability-Pilot** | Mitte März – Apr 2027 | 1–2 Klassen; komplette Stunde + Folgestunde mit App-Version P4 **auf EU-Hosting (Stufe 2)**, da echte Kinderdaten anfallen; Think-Aloud mit 4–6 Kindern; Messung von Zeiten, Deckeneffekt, Sync-Verlusten | **Tor 2:** RQ4-Ziele erreicht; Itemzahl/Timing fixiert; **Präregistrierung (OSF)** |
+| **R3 Feldstudie** | Mai – Jul 2027 | 6–10 Klassen (Ziel ca. 150 Kinder mit Einwilligung, bestätigt durch Simulation); die Hälfte als Wartekontrolle (RQ3). Letzte verzögerte Tests vor Schuljahresende; danach Forschungsexport (nur Einwilligungen, Alias durch zufällige Forschungs-ID ersetzt), **dann** Löschung auf dem Server | **Tor 3:** Export vollständig; Serverdaten gelöscht; Papierlisten vernichtet (ab dann sind die Forschungsdaten anonym, [04](04-datenschutz-genehmigungen.md) §7) |
+| **R4 Auswertung und Bericht** | Aug – Okt 2027 | Analyse nach Präregistrierung, ausschließlich auf dem anonymen Export; Rückmeldung an Schulen (Klassenebene); Bericht und ggf. Publikation | Bericht; Entscheidung über die Weiterentwicklung |
 
 **Planungsregeln:**
 - Die Folgestunde (+7 Tage) darf **nicht über Ferien** fallen. Die Pfingstferien in BW werden berücksichtigt (*Termine 2027 zu verifizieren*).
@@ -59,15 +59,15 @@ Heute ist der 27.11.2026. Die Phase von Kompass 4 und der Grundschulempfehlung (
 - **Zwischen den Kindern:** Vorliebe-Gruppe (gemessen, nicht zugewiesen).
 - **Zwischen den Klassen (RQ3):** **Wartekontrollgruppe**, randomisiert auf Klassenebene.
   - Kontrollklassen beantworten `U1`–`U3` zweimal im Abstand von einer Woche, ohne Experiment.
-  - Danach bekommen sie die vollständige Stunde, damit keine Klasse benachteiligt wird.
+  - Danach bekommen sie die vollständige Stunde, damit keine Klasse benachteiligt wird, einschließlich der Nachbesprechung des Mythos ([02](02-lerndetektive-experiment.md) §3).
 
 ### 5.2 Stichprobe
 
 - **Einschluss:** Klassen der Stufe 4 an öffentlichen Grundschulen in BW. Kinder nehmen am Unterricht teil, unabhängig von der Einwilligung. In die Analyse gehen nur Kinder mit Einwilligung (der Sorgeberechtigten) **und** Zustimmung (des Kindes) ein.
 - **Größe:**
   - Die Planung erfolgt per **Simulation** in R0, mit Effektannahmen aus der Literatur und aus R2.
-  - Als Orientierung: Für H2 (Bildüberlegenheit, meist mittlerer bis großer Effekt) genügen deutlich unter 100 Kinder.
-  - Treibend sind **H1 (Äquivalenztest der Interaktion)** und **H3 (Klassen-Cluster)**. Daher das Ziel von ca. 150 Kindern in 6–10 Klassen.
+  - Als Orientierung (Annahme, *zu verifizieren in R0, L4*): Wenn die Bildüberlegenheit wie erwartet mittel bis groß ist, genügen für H2 deutlich unter 100 Kinder.
+  - Treibend sind **H1 (Äquivalenztest der Interaktion)** und **H3 (Klassen-Cluster)**. Daher das Ziel von ca. 150 Kindern in 6–10 Klassen. *Abweichung vom ursprünglichen Konzeptplan (5–8 Klassen, 100–150 Kinder):* Die Wartekontrollgruppe halbiert die Experimentklassen, daher mehr Klassen.
 - **Einwilligungsquote:** Ziel ≥ 70 %. Sie wird als möglicher Selektions-Bias berichtet.
 
 ### 5.3 Instrumente

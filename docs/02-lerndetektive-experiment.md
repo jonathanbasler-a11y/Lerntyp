@@ -10,6 +10,7 @@
 - **RQ1:** Sagt die Vorliebe eines Kindes voraus, welche Bedingung ihm am meisten hilft (Kreuzinteraktion)?
 - **RQ2:** Ist *Bild + Wort* in allen Vorliebe-Gruppen überlegen?
 - **RQ3:** Verändern sich die Überzeugungen der Kinder zu Lerntypen vom Vorher zum Nachher?
+- RQ4–RQ6 (Durchführbarkeit, Lehrkraft-Akzeptanz, Profil-Erleben) betreffen die ganze Stunde, siehe [05](05-forschungsplan.md) §3.
 
 **Unverrückbare Regel:** Kein Kind bekommt seine Vorliebe oder sein Einzelergebnis als Etikett zurück. Ergebnisse gibt es nur auf Klassenebene.
 
@@ -17,8 +18,7 @@
 
 | Teil | Dauer | Inhalt |
 |---|---|---|
-| **Hauptstunde** | ca. 20 Min. | |
-| 0 Ton-Check | 1 Min. | Kopfhörer prüfen (`audio_check`) |
+| **Hauptstunde** | ca. 20 Min. | (Ton-Check `audio_check` liegt davor in der Startphase, [01](01-konzept.md) §6.1) |
 | 1 Überzeugungen (vorher) | 1,5 Min. | 3 Aussagen (§3) |
 | 2 Vorlieben und Vermutung | 1,5 Min. | 4 Fragen (§4) |
 | 3 Lernphase | ca. 3,5 Min. | 36 Dinge, je 4 s, in 3 Bedingungen (§5) |
@@ -28,7 +28,8 @@
 | **Folgestunde (+7 Tage)** | ca. 15 Min. | |
 | 7 Verzögerter Test | ca. 5 Min. | Gleiche 36 Dinge, neue Ablenker (§6) |
 | 8 Überzeugungen (nachher) | 1,5 Min. | Dieselben 3 Aussagen |
-| 9 Vergleich und Abschluss | ca. 6 Min. | Sofort vs. nach einer Woche; Botschaft *Häppchen-Lernen* |
+| 9 Vergleich und Nachbesprechung | ca. 6 Min. | Sofort vs. nach einer Woche; Botschaft *Häppchen-Lernen*; Auflösung des Mythos (§3) |
+| 10 Superkraft-Reflexion | ca. 1,5 Min. | „Hast du deine Superkraft ausprobiert?“ (`superkraft_ausprobiert`, RQ6) |
 
 Die Zeiten sind Planwerte. Sie werden im Usability-Pilot R2 gemessen und angepasst.
 
@@ -38,13 +39,15 @@ Antwortformat: drei große Knöpfe mit Symbol: 👍 **stimmt** · 👎 **stimmt 
 
 | ID | Aussage (Entwurf) | Richtung |
 |---|---|---|
-| `U1` | „Jedes Kind ist entweder ein Bild-Lerner oder ein Hör-Lerner.“ | Mythos (Zustimmung = Mythos) |
-| `U2` | „Wer gern Bilder mag, kann mit Wörtern nicht gut lernen.“ | Mythos, essentialistisch |
+| `U1` | „Jedes Kind lernt nur auf eine Art richtig gut: entweder mit Bildern oder mit Hören.“ | Mythos (Zustimmung = Mythos) |
+| `U2` | „Wie man am besten lernt, ist angeboren und bleibt immer gleich.“ | Mythos, essentialistisch |
 | `U3` | „Wie man am besten lernt, kann jedes Kind üben.“ | Wachstum (Zustimmung = kein Mythos) |
 
 - Angelehnt an die Essentialismus-Dimension bei Nancekivell et al. (Dossier §1.1). **Kindgerechte Adaption ist zu validieren (R0/R1):** Verständlichkeit im Co-Design prüfen.
 - Gemischte Richtung gegen Ja-Sage-Tendenz (Dossier §3.2). Doppelte Verneinungen sind verboten.
 - Vor der Lernphase gibt es keine Rückmeldung zu diesen Antworten.
+- Die Aussagen nennen keine Typ-Bezeichnungen („Bild-Lerner“ o. Ä.), um den Mythos nicht erst einzuführen. Die Formulierungen werden in R1 noch einmal auf Neutralität geprüft.
+- **Pflicht-Nachbesprechung:** Direkt nach der Nachher-Messung (Folgestunde, Teil 9) wird der Mythos aufgelöst. Kein Kind verlässt die Studie mit der Mythos-Aussage als letztem Eindruck. Das gilt auch für die Wartekontrollklassen ([05](05-forschungsplan.md) §5.1).
 
 ## 4. Vorlieben und Vermutung
 
@@ -93,6 +96,8 @@ Antwortformat: drei Bildkarten.
 
 Vokabelpaare (Fremdwort ↔ Bedeutung) sind eine Alternative mit höherer Augenscheinvalidität, aber mit Testformat-Problemen (siehe §6.2). Sie werden in R0 als Variante geprüft.
 
+> **Abweichung vom ursprünglichen Konzeptplan:** Dort waren neutrale neue Items vorgesehen (Fantasietiere oder Tiernamen in einer Fremdsprache). Diese Spezifikation wählt aus den oben genannten Gründen bekannte Dinge. Die endgültige Entscheidung fällt in R0 (Lücke L4 in [05](05-forschungsplan.md)).
+
 ### 5.2 Bedingungen
 
 | Bedingung | Bildschirm | Ton |
@@ -108,13 +113,22 @@ Vokabelpaare (Fremdwort ↔ Bedeutung) sind eine Alternative mit höherer Augens
 
 | Rotation | Set A | Set B | Set C |
 |---|---|---|---|
-| R1 | `wort` | `bild` | `bild_wort` |
-| R2 | `bild` | `bild_wort` | `wort` |
-| R3 | `bild_wort` | `wort` | `bild` |
+| ROT1 | `wort` | `bild` | `bild_wort` |
+| ROT2 | `bild` | `bild_wort` | `wort` |
+| ROT3 | `bild_wort` | `wort` | `bild` |
+
+Die Rotationen heißen `ROT1`–`ROT3`, damit sie nicht mit den Forschungsphasen R0–R4 verwechselt werden.
 
 - **Zuweisung:** Die Rotation ergibt sich beim Beitritt aus einem fortlaufenden Zähler pro Sitzung modulo 3, damit die Rotationen innerhalb einer Klasse gleich häufig vorkommen. Das Ereignis `rotation_zugewiesen` wird gespeichert.
 - **Reihenfolge:** Alle 36 Dinge werden **gemischt** dargeboten (pseudozufällig, höchstens 2 gleiche Bedingungen hintereinander). Der Zufalls-Seed wird gespeichert, sodass die Reihenfolge reproduzierbar ist.
 - Die ersten und die letzten 2 Positionen sind **Puffer-Items** aus Set F. Sie werden nicht getestet, um Primacy- und Recency-Effekte abzufangen.
+
+### 5.4 Barrierefreiheit und DaZ
+
+Es gelten die Regeln aus [01](01-konzept.md) §9. Für das Experiment zusätzlich:
+- Alle Fragen (`U`, `V`) und Testreize werden vorgelesen. Die Bedingung `bild` braucht kein Lesen.
+- Die Bilder müssen auch für Kinder mit DaZ eindeutig benennbar sein. Der Benennungstest in R1 schließt Kinder mit DaZ ein.
+- Es wird kein Merkmal „DaZ“ pro Kind gespeichert; Hilfen stehen allen Kindern zur Verfügung.
 
 ## 6. Tests
 
@@ -135,7 +149,7 @@ Vokabelpaare (Fremdwort ↔ Bedeutung) sind eine Alternative mit höherer Augens
 
 | Einschränkung | Umgang |
 |---|---|
-| **Testformat-Passung:** Ein verbaler Testreiz begünstigt eher `wort`. Die Bildüberlegenheit gilt in der Literatur trotzdem als robust. | Bewusst konservativ: Wenn `bild_wort` trotzdem vorne liegt, ist der Befund stärker. Die Einordnung wird in R0 anhand der Literatur geprüft. |
+| **Testformat-Passung:** Ein verbaler Testreiz begünstigt eher `wort`. Die Bildüberlegenheit gilt in der Literatur trotzdem als robust (*Belege nicht im Dossier, zu verifizieren in R0, L4*). | Bewusst konservativ: Wenn `bild_wort` trotzdem vorne liegt, ist der Befund stärker. Die Einordnung wird in R0 anhand der Literatur geprüft. |
 | **Deckeneffekt:** Bild-Wiedererkennung ist oft nahe 100 %. | Wird in R2 gemessen. Stellschrauben sind Itemzahl, Darbietungszeit (3 s statt 4 s) und Länge der Pause-Aufgabe. |
 | **Kleine Itemzahl pro Bedingung (12):** Einzelergebnisse sind stark zufallsbehaftet. | Einer der Gründe, warum **es keine Einzelrückmeldung gibt**. Ausgewertet wird auf Klassen- und Studienebene. |
 | **Kein Kopfhörer / Ton defekt:** Dann fehlt der Bedingung `wort` der Ton. | Siehe §8. |
@@ -151,19 +165,19 @@ Die Kennwerte werden **pro Kind und Bedingung** berechnet (Ablenker gehören zu 
 ### 7.1 Beamer-Grafik
 
 - **Gruppiertes Balkendiagramm:**
-  - x-Achse: Vorliebe-Gruppen (`wort`, `bild`, `bild_wort`, `gemischt`) plus „Alle“.
-  - Pro Gruppe drei Balken für die Bedingungen.
+  - **Standardansicht:** „Alle Kinder“, mit drei Balken für die Bedingungen.
+  - **Optionale zweite Ansicht** (von der Lehrkraft eingeblendet): aufgeteilt nach der **Vermutung** der Kinder aus `V4`, beschriftet „Vermutet: Hören + Lesen“, „Vermutet: Bilder“, „Vermutet: Beides“. Es gibt keine Aufteilung nach Vorliebe-Gruppen und keine Bezeichnungen wie „Bild-Kinder“. Die Aufteilung nach Vorliebe-Gruppen (V1–V3) gibt es nur in der Forschungsauswertung.
   - y-Achse: „So viele Dinge wiedererkannt“, in Prozent der korrigierten Quote.
-- **Kleine Gruppen:** Vorliebe-Gruppen mit **weniger als 3 Kindern** werden in „Andere“ zusammengefasst, damit niemand identifizierbar wird. Die Mindestgröße bestätigt [04](04-datenschutz-genehmigungen.md).
+- **Kleine Gruppen:** Jede gezeigte Gruppe umfasst **mindestens 5 Kinder** ([01](01-konzept.md) §7.5). Kleinere Gruppen werden zu „Andere“ zusammengefasst. Hat keine Gruppe 5 Kinder, gibt es nur die Standardansicht.
 - **Barrierefreiheit:** Bedingungen sind durch Farbe **und** Muster (Schraffur) sowie durch Symbole unterscheidbar.
 - **Daten:** Die Grafik berechnet sich aus allen anwesenden Kindern (schulischer Zweck). Die Forschungsdaten bleiben davon getrennt, siehe [04](04-datenschutz-genehmigungen.md).
 
 ### 7.2 Gesprächsleitfaden für die Lehrkraft
 
 1. **Beobachten:** „Was fällt euch auf? Welcher Balken ist meistens am höchsten?“
-2. **Vermutung prüfen:** „Viele haben vorher gesagt, dass ihnen Bilder (oder Hören) am meisten helfen. Haben die *Bild*-Kinder am besten mit Bildern gelernt? Und die *Hör*-Kinder mit Hören?“
-3. **Erklären (Kindersprache):** „Wenn du ein Bild siehst und das Wort hörst, legt dein Gehirn zwei Spuren an, eine Bild-Spur und eine Wort-Spur. Zwei Spuren findet man leichter wieder. Das heißt *Doppelt merken*, und es funktioniert bei fast allen.“
-4. **Ehrlich bleiben:** Wenn das Klassenergebnis unklar ist oder anders aussieht: „Eine Klasse ist eine kleine Gruppe. Forscherinnen und Forscher machen das mit sehr vielen Klassen, und dort hilft *Bild + Wort* fast allen.“ (Das Klassenergebnis wird nie geschönt.)
+2. **Vermutung prüfen** (mit der optionalen zweiten Ansicht): „Ihr habt vorher vermutet, wie ihr euch die Dinge am besten merkt. Hat die Vermutung gestimmt? Haben die, die *Bilder* vermutet haben, wirklich mit Bildern am meisten behalten?“ Es wird immer über **Vermutungen** gesprochen, nie über „Bild-Kinder“ oder „Hör-Kinder“.
+3. **Erklären (Kindersprache), wenn *Bild + Wort* vorne liegt:** „Wenn du ein Bild siehst und das Wort hörst, legt dein Gehirn zwei Spuren an, eine Bild-Spur und eine Wort-Spur. Zwei Spuren findet man leichter wieder. Das heißt *Doppelt merken*.“
+4. **Ehrlich bleiben, wenn das Ergebnis anders aussieht:** „Eine Klasse ist eine kleine Gruppe, da kann der Zufall mitspielen. Deshalb machen Forscherinnen und Forscher solche Versuche mit sehr vielen Klassen.“ Die Lehrkraft nennt dann den Stand der Forschung, ohne das Klassenergebnis umzudeuten (Formulierung nach der Literaturprüfung in R0, L4). Das Klassenergebnis wird nie geschönt, und das erwartete Ergebnis wird den Kindern vorher nicht verraten.
 5. **Übertragen:** „Wo könntest du *Doppelt merken* nächste Woche benutzen? Zum Beispiel bei Lernwörtern: eine kleine Zeichnung neben das Wort.“
 
 ### 7.3 Folgestunde: Vergleich
@@ -188,11 +202,12 @@ Alle Ereignisse nutzen den Envelope aus [03-architektur.md](03-architektur.md) �
 | `typ` | Payload |
 |---|---|
 | `audio_check` | `{ ok: boolean }` |
-| `rotation_zugewiesen` | `{ rotation: "R1"\|"R2"\|"R3", seed: number }` |
+| `rotation_zugewiesen` | `{ rotation: "ROT1"\|"ROT2"\|"ROT3", seed: number }` (zusätzlich als Feld am `Teilnehmer` gespeichert, [03](03-architektur.md) §4) |
 | `ueberzeugung_beantwortet` | `{ item_id: "U1".."U3", antwort: "stimmt"\|"stimmt_nicht"\|"weiss_nicht", zeitpunkt: "vorher"\|"nachher", rt_ms: number }` |
 | `vorliebe_beantwortet` | `{ item_id: "V1".."V4", antwort: "wort"\|"bild"\|"bild_wort", rt_ms: number }` |
 | `item_gezeigt` | `{ item_id, set: "A".."F", bedingung: "wort"\|"bild"\|"bild_wort"\|"puffer", position: number, audio_ok: boolean }` |
 | `antwort_abgegeben` | `{ item_id, test: "sofort"\|"verzoegert", alt: boolean, antwort: "dabei"\|"nicht_dabei", rt_ms: number, position: number }` |
+| `superkraft_ausprobiert` | `{ antwort: "ja"\|"ein_bisschen"\|"nein" }` (Folgestunde; Definition in [03](03-architektur.md) §4.4) |
 | `phase_abgeschlossen` | `{ phase: "lernen"\|"pause"\|"sofort_test"\|"verzoegert_test", abgebrochen: boolean }` |
 
 Abgeleitete Werte (Vorliebe-Gruppe, Kennwerte nach §6.3) werden serverseitig berechnet und **nie** an das Kinder-Tablet zurückgegeben.
@@ -209,7 +224,7 @@ Alle Items, Texte und Rotationen stehen in `/data/lerndetektive/` und nicht im C
   "items": [
     { "id": "kerze", "set": "A", "wort": "Kerze", "bild": "kerze.svg", "audio": "kerze.mp3", "silben": 2 }
   ],
-  "rotationen": { "R1": { "A": "wort", "B": "bild", "C": "bild_wort" } },
+  "rotationen": { "ROT1": { "A": "wort", "B": "bild", "C": "bild_wort" } },
   "ueberzeugungen": [ { "id": "U1", "text": "…", "audio": "u1.mp3", "richtung": "mythos" } ],
   "vorlieben": [ { "id": "V1", "text": "…", "audio": "v1.mp3" } ]
 }

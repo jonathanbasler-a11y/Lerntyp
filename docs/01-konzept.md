@@ -16,7 +16,7 @@ Die App beantwortet diese Frage **nicht** mit einem Lerntyp-Etikett („Du bist 
 
 | Befund (Dossier §1.1) | Konsequenz für das Produkt |
 |---|---|
-| Die Passungshypothese („Unterricht passend zum Lerntyp verbessert Lernen“) ist empirisch nicht gestützt. In Meta-Analysen ist der Passungseffekt nahe null, und die nötige Kreuzinteraktion zeigt sich selten. | Die App ordnet keinem Kind einen Typ zu und filtert keine Inhalte nach Typ. |
+| Die Passungshypothese („Unterricht passend zum Lerntyp verbessert Lernen“) ist empirisch nicht überzeugend belegt. In Meta-Analysen ist der Passungseffekt nahe null; wo kleine Effekte gefunden wurden (z. B. g = 0,31 über 21 Studien), zeigte sich die nötige Kreuzinteraktion nur selten. Das ist zu selten und zu klein, um Kinder nach Typen zu sortieren. | Die App ordnet keinem Kind einen Typ zu und filtert keine Inhalte nach Typ. |
 | Wer Lerntypen als angeboren versteht (Essentialismus), läuft Gefahr, Lernschwierigkeiten als dauerhaft „falsche Passung“ zu deuten. | Profile beschreiben, was ein Kind **heute getan hat**, nicht, was es **ist**. |
 | Über 97 % der Lehramtsstudierenden stimmen dem Mythos zu. Gut erklärende Interventionen reduzieren diesen Glauben deutlich und dauerhaft (d ≈ 1,8–2,0). | Das Klassenexperiment und der Elternbrief nutzen diesen Conceptual-Change-Ansatz. |
 
@@ -34,7 +34,7 @@ Die App beantwortet diese Frage **nicht** mit einem Lerntyp-Etikett („Du bist 
 **Setting:**
 - Eine Schulstunde (45 Min.) plus eine **Folgestunde (15 Min.) eine Woche später** für den verzögerten Test.
 - Geteilte Schul-iPads (1:1, notfalls 1:2), ein Lehrkraftgerät am Beamer, **Kopfhörer pro Tablet** (wegen der Audio-Bedingung im Experiment).
-- **Zeitfenster im Schuljahr:** nicht während der Übergangsphase Kompass 4 / Grundschulempfehlung (Mitte November bis Ende Februar, Dossier §2.1). Bevorzugt März bis Juli.
+- **Zeitfenster im Schuljahr:** nicht während der Übergangsphase Kompass 4 / Grundschulempfehlung (Mitte November bis Ende Februar, Dossier §2.1; *Termine zu verifizieren, R0/L1*). Bevorzugt März bis Juli.
 
 ## 4. Leitprinzipien
 
@@ -69,13 +69,13 @@ Diese sechs Strategien sind die einzigen *Lern-Superkräfte* der App. Jedes Kind
 | Zeit | Phase | Kinder-Tablet | Lehrkraft / Beamer | Erhobene Daten |
 |---|---|---|---|---|
 | 0–5 | **Start** | Lernausweis-QR scannen, Kopfhörer aufsetzen, Ton-Check | Sitzung starten, QR-Code der Sitzung zeigen, Beitrittsliste (Aliase) | Beitritt, Gerätewechsel |
-| 5–25 | **Lerndetektive** | Vorliebe-Fragen → Lernphase in 3 Bedingungen → Sofort-Test | Steuert die Phasen synchron; danach Klassenergebnis am Beamer und Gespräch | Vorlieben, Antworten pro Bedingung, Zeiten (siehe [02](02-lerndetektive-experiment.md)) |
-| 25–40 | **Strategie-Parcours** | 3 Stationen mit *Planen – Üben – Prüfen* | Live-Fortschritt: wer wo ist und wer Hilfe braucht (ohne Leistungsanzeige) | Prozessspuren (Abschnitt 7.3) |
-| 40–45 | **Mein Lernprofil** | Drei Stärken-Karten, eine Lern-Superkraft, Tipp für zu Hause | Abschluss: „Welche Superkraft probierst du diese Woche?“ | Gewählte Superkraft |
+| 5–25 | **Lerndetektive** | Überzeugungs-Aussagen → Vorliebe-Fragen und Vermutung → Lernphase in 3 Bedingungen → Pause-Aufgabe → Sofort-Test | Steuert die Phasen synchron; danach Klassenergebnis am Beamer und Gespräch | Überzeugungen, Vorlieben, Antworten pro Bedingung, Zeiten (siehe [02](02-lerndetektive-experiment.md) §2) |
+| 25–40 | **Strategie-Parcours** | 3 Stationen mit *Planen – Üben – Prüfen* | Live-Fortschritt **nur auf dem Lehrkraftgerät**, nicht am Beamer: wer wo ist und wer Hilfe braucht (ohne Leistungsanzeige) | Prozessspuren (Abschnitt 7.3) |
+| 40–45 | **Mein Lernprofil** | Drei Stärken-Karten, eine Lern-Superkraft, Tipp für zu Hause; „Passt das zu dir?“ (4 Smileys) | Abschluss: „Welche Superkraft probierst du diese Woche?“ | Gewählte Superkraft, Profil-Erleben (RQ6) |
 
 ### 6.2 Folgestunde (15 Min., eine Woche später)
 
-Verzögerter Test der Lerndetektive-Inhalte (ohne erneutes Lernen). Am Beamer folgt der Vergleich „sofort vs. nach einer Woche“, was das *Häppchen-Lernen* sichtbar macht. Danach eine kurze Reflexion: „Hast du deine Superkraft ausprobiert?“
+Verzögerter Test der Lerndetektive-Inhalte (ohne erneutes Lernen), danach die Überzeugungs-Aussagen (nachher). Am Beamer folgt der Vergleich „sofort vs. nach einer Woche“, was das *Häppchen-Lernen* sichtbar macht, mit Nachbesprechung des Mythos. Zum Schluss eine kurze Reflexion: „Hast du deine Superkraft ausprobiert?“ (ja / ein bisschen / nein). Der Zeitplan steht in [02](02-lerndetektive-experiment.md) §2.
 
 ## 7. Module
 
@@ -106,7 +106,9 @@ Drei Stationen à ca. 5 Minuten, angelehnt an den Bildungsplan BW V2 (Dossier §
 
 1. **Planen:** „Wie viele von 5 schaffst du?“ (Ziel wählen) und „Wie sicher bist du?“ (4 Smileys).
 2. **Üben:** Aufgaben lösen. Das Musterbeispiel und gestufte Hinweise (1: Strategie-Tipp, 2: Teil-Lösung) sind jederzeit freiwillig verfügbar. Nach einem Fehler gibt es eine sofortige, erklärende Rückmeldung und einen zweiten Versuch.
-3. **Prüfen:** Ergebnis neben Ziel und Einschätzung („Du hast 4 geschafft, du hattest 3 geplant“) und die Frage: „Was hat dir geholfen?“ (Auswahl aus Strategie-Symbolen).
+3. **Prüfen:** Ergebnis neben dem eigenen Ziel und der Einschätzung („Du hast dein Ziel erreicht“ bzw. „Du hast 4 geschafft, du hattest 3 geplant“) und die Frage: „Was hat dir geholfen?“ (Auswahl aus Strategie-Symbolen).
+
+   *Ausnahme von der Zahlen-Regel:* Nur hier sieht das Kind eine Anzahl, und zwar ausschließlich als Vergleich mit **seinem eigenen** Ziel. Das ist Selbstkalibrierung, keine Bewertung. Es gibt keine Punkte, keine Prozentwerte und keine Vergleiche mit anderen; im Lernprofil erscheinen keine Zahlen (§7.4).
 
 **Prozessspuren** (Definition der Ereignisse in [03-architektur.md](03-architektur.md)):
 
@@ -144,12 +146,14 @@ Gibt es zu wenige Daten (z. B. abgebrochene Sitzung), zeigt die App eine allgeme
 | Ansicht | Inhalt | Nicht enthalten |
 |---|---|---|
 | **Sitzung steuern** | Phasen starten, pausieren und beenden (alle Tablets synchron); Beitritts-QR | – |
-| **Live-Fortschritt** | Alias, aktuelle Phase oder Station, Handzeichen „Ich brauche Hilfe“, Ton-Problem | Punktzahlen, Ranglisten |
-| **Klassenergebnis Lerndetektive** | Beamer-Grafik: Behaltensleistung nach Bedingung, gegliedert nach Vorliebe-Gruppe; Gesprächsleitfaden | Einzelergebnisse |
-| **Einzelprofile** | Pro Alias die Stärken-Karten und die Superkraft, dazu die Indikatoren in Worten | Vergleichswerte, Ranking |
+| **Live-Fortschritt** (nur Lehrkraftgerät, nie am Beamer) | Alias, aktuelle Phase oder Station, Handzeichen „Ich brauche Hilfe“, Ton-Problem | Punktzahlen, Ranglisten |
+| **Klassenergebnis Lerndetektive** | Beamer-Grafik: Behaltensleistung nach Bedingung für **alle** Kinder; optional aufgeteilt nach der **Vermutung** der Kinder (jede gezeigte Gruppe ≥ 5 Kinder, sonst „Andere“); Gesprächsleitfaden ([02](02-lerndetektive-experiment.md) §7) | Einzelergebnisse, Gruppen nach „Typ“ |
+| **Einzelprofile** | Pro Alias die Stärken-Karten und die Superkraft, dazu die Indikatoren in Worten | Ergebnisse aus den Lerndetektiven (Vorlieben, Wiedererkennung), Vergleichswerte, Ranking |
 | **Vorbereitung** | Lernausweise drucken, Elternbrief, Einwilligungsstatus pro Alias setzen | Namen |
 
-Jede Ansicht mit Kinderdaten trägt den Hinweis: **„Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.“**
+Jede Ansicht mit Kinderdaten trägt den Hinweis: **„Nur zur Lernbegleitung – nicht für die Grundschulempfehlung oder Kompass 4.“** Diese Formulierung ist verbindlich; alle anderen Dokumente und der Code verwenden genau diesen Wortlaut.
+
+**Mindestgröße für Aggregate:** Jede in einer Grafik oder im Cockpit gezeigte Teilgruppe umfasst **mindestens 5 Kinder**. Kleinere Gruppen werden zu „Andere“ zusammengefasst.
 
 ### 7.6 Eltern
 
@@ -162,7 +166,7 @@ Jede Ansicht mit Kinderdaten trägt den Hinweis: **„Nur zur Lernbegleitung –
 - **Text in Häppchen:** maximal 2 kurze Sätze pro Bildschirm. Jeder Text hat einen **Vorlese-Knopf**.
 - **Touch:** große Ziele (mind. 48 × 48 pt), keine Gesten außer Tippen und Ziehen.
 - **Rückmeldung:** sofort, sachlich und erklärend („*Hund* → verlängere: *Hunde*, man hört *d*“). Kein Fehler-Ton, keine roten Kreuze.
-- **Belohnung:** keine Punkte oder Münzen. Abschlussmomente sind die Profilkarten und die Klassenauswertung.
+- **Belohnung:** keine Punkte oder Münzen (die Anzahl gelöster Aufgaben im Prüfen-Schritt ist keine Belohnung, sondern Selbstkalibrierung, §7.3). Abschlussmomente sind die Profilkarten und die Klassenauswertung.
 - **Klares Ende:** Nach „Mein Lernprofil“ kommt ein Abschlussbildschirm „Fertig für heute“. Es gibt keinen Weiter-Knopf zu neuen Inhalten.
 - **Verbotene Muster (Dossier §4.3, DSA Art. 25):** Streaks, Countdown-Druck, FOMO-Hinweise, Ranglisten, Lootboxen, Zufallsbelohnungen, Autoplay, Endlos-Feeds, In-App-Käufe, externe Links.
 
@@ -208,5 +212,5 @@ Jede Ansicht mit Kinderdaten trägt den Hinweis: **„Nur zur Lernbegleitung –
 
 1. Endgültiger Produktname für Kinder (Co-Design R1).
 2. Wie viele Kopfhörer sind an Pilotschulen vorhanden? Wenn keine da sind: Fallback für die Bedingung `wort` (siehe [02](02-lerndetektive-experiment.md), §8).
-3. Sollen Lehrkräfte Einzelprofile sehen, oder reicht die Klassenebene? (Akzeptanz und Datenschutz, R1-Interviews)
+3. ~~Sollen Lehrkräfte Einzelprofile sehen?~~ **Entschieden:** ja, aber nur Profilkarten und Indikatoren in Worten, nie Experimentergebnisse (§7.5). Überprüfung nach den Lehrkraft-Interviews in R1.
 4. Inhalte der drei Parcours-Stationen mit Lehrkräften abstimmen (R1). Sollen OER vom Landesbildungsserver (CC BY 4.0) genutzt werden?
